@@ -1,0 +1,23 @@
+.div {
+  background-color: aqua;
+  height: 100vh;
+  color: black;
+  margin-left: var(--sidebar-total-width);
+  max-width: calc(100% - var(--sidebar-total-width));
+}
+
+.content{
+  margin: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .div {
+    margin: 0;
+  }
+  .content{
+    margin: 0;
+  }
+  .homepage{
+    margin: 10px;
+  }
+}

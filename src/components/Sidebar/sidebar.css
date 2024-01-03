@@ -1,0 +1,134 @@
+.sideBar {
+  flex: 2;
+  position: fixed;
+  padding: 2.5rem;
+  top: var(--sidebar-margin-tb);
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  min-height: calc(100vh - 2 * var(--sidebar-margin-tb));
+  z-index: 10;
+  background-color: rgb(233, 124, 124); /* semi-transparent white */
+  border-radius: 10px;
+  margin-left: var(--sidebar-margin);
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.copywrite {
+  transform: rotate(-180deg);
+  writing-mode: vertical-lr;
+  transition: 0.35s ease-out;
+}
+
+.nav_item {
+  transition: 0.35s ease-out;
+}
+
+.nav_item:hover {
+  color: rgba(42, 90, 187, 0.998);
+  transform: scale(1.4);
+}
+
+@media screen and (max-width: 500px) {
+  .sideBar {
+    position: fixed; /* Ensures the sidebar is fixed at the bottom */
+    width: 100%; /* Full width */
+    height: 60px; /* Adjusted height for mobile */
+    bottom: 10px; /* Position at the bottom */
+    left: 0;
+    right: 0;
+    top: auto; /* Override any top property */
+    flex-direction: row; /* Align items horizontally */
+    padding: 10px; /* Remove vertical padding on mobile */
+    z-index: 10; /* Ensure it stays on top of other content */
+    min-height: auto; /* Override minimum height */
+    justify-content: center;
+    margin: 0;
+    border: 2px solid rgba(0, 0, 0, 0.959);
+  }
+  .nav {
+    flex: 1;
+  }
+  .copywrite {
+    display: none; /* Hide copywrite in mobile view */
+  }
+
+  .logo {
+    display: none; /* Hide logo in mobile view if necessary */
+  }
+
+  .nav_list {
+    width: 100%; /* Ensure full width of sidebar */
+    flex-direction: row;
+    justify-content: space-evenly; /* Evenly distribute space between items */
+    align-items: center; /* Align items vertically in the center */
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .sideBar {
+    position: fixed; /* Ensures the sidebar is fixed at the bottom */
+    width: 60px; /* Circle size */
+    height: 60px; /* Circle size */
+    bottom: 10px; /* Position at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust horizontal centering */
+    border-radius: 50%; /* Make it a circle */
+    padding: 0; /* Remove padding */
+    z-index: 10; /* Ensure it stays on top of other content */
+    justify-content: center;
+    align-items: center; /* Center items inside the circle */
+    overflow: hidden; /* Hide elements outside the circle */
+    transition: width 0.8s ease, height 0.5s ease; /* Smooth transition for expanding */
+  }
+
+  .sideBar:hover {
+    width: 100%; /* Full width on hover */
+    height: 60px; /* Height remains the same */
+    border-radius: 0; /* Remove border-radius to return to bar shape */
+    bottom: 10px; /* Position at the bottom */
+    left: 0; /* Align to the left */
+    transform: none; /* Remove transform */
+  }
+
+  .nav_list {
+    display: none; /* Initially hide nav items */
+  }
+
+  .sideBar:hover .nav_list {
+    display: flex; /* Show nav items on hover */
+    width: 100%; /* Full width of sidebar */
+    justify-content: space-evenly; /* Evenly distribute space between items */
+    align-items: center; /* Align items vertically in the center */
+  }
+
+  .copywrite,
+  .logo {
+    display: none; /* Always hide in this view */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sideBar {
+    display: none;
+    transition: 1s ease-in-out;
+  }
+
+  .nav_list {
+    display: none; /* Initially hide nav items */
+  }
+
+  .copywrite,
+  .logo {
+    display: none; /* Always hide in this view */
+  }
+}

@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  /* Define variables */
+  --sidebar-width: 60px;
+  --sidebar-padding: 2.5rem;
+  --sidebar-border: 1px;
+  --sidebar-margin: 10px;
+  --sidebar-margin-tb: 10px;
+
+  /* Calculate total sidebar offset */
+  --sidebar-total-width: calc(
+    var(--sidebar-width) + var(--sidebar-padding) / 2 + var(--sidebar-border) +
+      var(--sidebar-margin)
+  );
+
+  --page-margin: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    /* Adjust variables for mobile view if needed */
+    --sidebar-total-width: 0px;
+  }
+}
+
+.noLink {
+  text-decoration: none;
+  font-style: inherit;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
