@@ -1,0 +1,198 @@
+:root {
+  --profile: 22vw;
+}
+
+.hero {
+  margin-left: var(--sidebar-total-width);
+  max-width: calc(100% - var(--sidebar-total-width));
+  background-color: rgb(2, 29, 44);
+  height: 100vh;
+  padding: 10px 3%;
+  border-radius: 10px;
+}
+
+.headerImage {
+  min-height: 210px;
+  width: 95%;
+  border-radius: 10px;
+  height: 25vw; /* Impressive */
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  object-fit: fill;
+  object-position: center;
+}
+
+.profile {
+  max-width: 200px;
+  max-height: 200px;
+  width: var(--profile);
+  height: var(--profile);
+  background-color: transparent;
+  z-index: 10;
+  border-radius: 50%;
+  position: relative;
+  bottom: 16%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid wheat;
+  border-bottom: 3.5px solid rgb(213, 219, 23);
+}
+
+.headerImage:hover {
+  box-shadow: 0 0 0 5px white; /* Creates an outward 'border' effect */
+}
+
+.header {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.profileImage {
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.smallImage {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  overflow: hidden;
+  padding: 10px 0px 10px 10px; /* Edit made after test of adding 10px of padding on left */
+  color: #f5f5f5; /*Soft white for better readability */
+  width: 80%;
+  height: 42%;
+  position: absolute;
+  bottom: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  /* gap: 0.6rem; */
+  justify-content: space-evenly;
+  font-family: "Playfair Display", serif;
+  word-spacing: 10px;
+  box-shadow: 3px 5px 0 3px rgba(185, 58, 58, 0.917);
+  border-radius: 7px;
+  /* background-color: black; */
+}
+
+.name {
+  font-family: "Pacifico", cursive;
+  letter-spacing: 3px;
+  color: #1b6bd4; /* Maintained color scheme */
+}
+
+.typewriter {
+  font-size: 1.5rem; /* Adjusted font size */
+  font-family: "Quicksand", sans-serif;
+  margin: 10px 0px;
+}
+
+.learn {
+  margin: 14px 0px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #b83b3b;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: 200px;
+}
+
+.learn:hover {
+  background-color: #a73030; /* Slightly darker on hover */
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translate(0, -5px);
+}
+
+.social-icons a:hover i {
+  color: #0e9fd8;
+}
+
+.whoAmI {
+  /* font-family: "Playfair Display", serif; */
+  font-family: "Tektur", sans-serif;
+  font-size: larger;
+  display: inline;
+}
+
+@media screen and (max-width: 850px) {
+  .profile {
+    width: 170px;
+    height: 170px;
+  }
+  .text {
+    bottom: 90px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 3.2vw;
+    height: 48%;
+  }
+
+  .typewriter {
+    font-size: 20px;
+  }
+  .whoAmI {
+    font-size: 20px;
+  }
+
+  .social-icons {
+    font-size: 23px;
+  }
+}
+
+@media screen and (min-height: 900px) {
+  /* .text {
+    bottom: 16vh;
+  } */
+  .profile {
+    bottom: 11vh;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  .text {
+    bottom: 90px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 3.2vh;
+    height: 48%;
+    bottom: 13vh;
+  }
+  .headerImage {
+    height: 30vh;
+  }
+  .profile {
+    bottom: 8vh;
+  }
+}
+@media screen and (max-height: 678px) {
+  .text {
+    bottom: 25px;
+    font-size: 11px;
+  }
+}

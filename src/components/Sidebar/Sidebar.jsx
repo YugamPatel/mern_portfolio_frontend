@@ -1,13 +1,12 @@
 import "./sidebar.css";
-import React, { useState } from "react";
 
 const Sidebar = () => {
+
   return (
     <div className="sideBar">
+      
       <div class="logo">
-        <a href="" className="noLink">
-          <h1>Y.</h1>
-        </a>
+        <h1>Y.</h1>
       </div>
 
       <nav className="nav">

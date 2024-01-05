@@ -6,18 +6,17 @@
   max-width: calc(100% - var(--sidebar-total-width));
 }
 
-.content{
+/* .content{
+  margin: 10px;
+} */
+
+.homepage{
   margin: 10px;
 }
 
-@media screen and (max-width: 500px) {
-  .div {
-    margin: 0;
-  }
-  .content{
-    margin: 0;
-  }
+@media screen and (max-width: 634px) {
   .homepage{
-    margin: 10px;
+    margin: 0px;
   }
+
 }

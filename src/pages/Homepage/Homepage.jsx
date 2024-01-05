@@ -1,16 +1,13 @@
 import React from "react";
 import "./homepage.css";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import Hero from "../../components/Hero/Hero";
 
 const Homepage = () => {
   return (
     <div className="homepage">
-      <div className="content">
-        <div className="div">hi</div>
-        <div className="div">hi</div>
-        <div className="div">hi</div>
-        <Sidebar></Sidebar>
-      </div>
+      <Sidebar></Sidebar>
+      <Hero></Hero>
     </div>
   );
 };
