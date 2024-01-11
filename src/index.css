@@ -3,8 +3,9 @@
   box-sizing: border-box;
   margin: 0;
 }
-body {
+html,body {
   background: linear-gradient(to bottom, #593c93, #8c92ac, #003366, #333333);
+  scroll-behavior: smooth;
 }
 
 /*  TO BE CHECKED BEFORE DEPLOYMENT ------------
@@ -33,13 +34,6 @@ body {
   --mouse_h: 20px;
 }
 
-@media screen and (max-width: 634px) {
-  :root {
-    /* Adjust variables for mobile view if needed */
-    --sidebar-total-width: 0px;
-  }
-}
-
 .noLink {
   text-decoration: none;
   font-style: inherit;
@@ -56,15 +50,14 @@ li {
   left: 0;
   right: 0;
   height: 6px;
-  background-color:cadetblue;
+  background-color: cadetblue;
   transform-origin: 0%;
   border-radius: 5px;
-  transition: 0.7s ease-in-out;
+  transition: 0.3s ease;
 }
 
 ::-webkit-scrollbar {
-  height: 2px;
-  width: 7px;
+  width: 5.4px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -74,6 +67,93 @@ li {
     rgb(255, 0, 0),
     rgba(229, 255, 0, 0.881)
   ); */
-  background-color: #c8b237f2;
+  background-color: rgba(196, 6, 6, 0.911);
   -webkit-border-radius: 2ex;
+}
+
+@media screen and (max-width: 850px) {
+  .hero {
+    background-color: rgb(2, 29, 44);
+    background-image: none;
+  }
+  .headerImage {
+    opacity: 1;
+    box-shadow: none;
+  }
+  .profile {
+    width: 170px;
+    height: 170px;
+  }
+  .text {
+    /* bottom: 90px; */
+    bottom: 5%; /* Edit made after test of adding 10px of padding */
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 3.2vw;
+    height: 48%;
+  }
+
+  .typewriter {
+    font-size: 20px;
+  }
+  .whoAmI {
+    font-size: 20px;
+  }
+
+  .social-icons {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 634px) {
+  /* Edit made after test of adding 10px of padding */
+  :root {
+    /* Adjust variables for mobile view if needed */
+    --sidebar-total-width: 0px;
+  }
+
+  /* Edit made after test of adding 10px of padding */
+  .homepage {
+    margin: 0px;
+  }
+  .headerImage {
+    opacity: 1;
+    box-shadow: none;
+  }
+  /* Edit made after test of adding 10px of padding */
+  .text {
+    bottom: 11%;
+  }
+}
+
+@media screen and (min-height: 900px) {
+  /* .text {
+    bottom: 16vh;
+  } */
+  .profile {
+    bottom: 11vh;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  .text {
+    /* bottom: 90px; */
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 3.2vh;
+    height: 48%;
+    bottom: 13vh;
+  }
+  .headerImage {
+    height: 30vh;
+  }
+  .profile {
+    bottom: 8vh;
+  }
+}
+@media screen and (max-height: 678px) {
+  .text {
+    bottom: 25px;
+    font-size: 11px;
+  }
 }

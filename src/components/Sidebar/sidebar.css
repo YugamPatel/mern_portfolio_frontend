@@ -51,6 +51,11 @@
   padding: 10px 15px;
 }
 
+.logo h1::selection {
+  background-color: transparent;
+  color: paleturquoise;
+}
+
 /*  TO BE CHECKED BEFORE DEPLOYMENT ------------
  -----------------------------------------------
  -----------------------------------------------

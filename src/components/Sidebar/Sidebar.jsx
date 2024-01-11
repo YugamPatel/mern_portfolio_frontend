@@ -1,10 +1,8 @@
 import "./sidebar.css";
 
 const Sidebar = () => {
-
   return (
     <div className="sideBar">
-      
       <div class="logo">
         <h1>Y.</h1>
       </div>
@@ -13,27 +11,40 @@ const Sidebar = () => {
         <div className="nav_menu">
           <ul className="nav_list">
             <li className="nav_item">
-              <i class="fa-solid fa-house"></i>
+              <a href="#homePage" className="noLink">
+                <i class="fa-solid fa-house"></i>
+              </a>
             </li>
 
             <li className="nav_item">
-              <i class="fa-solid fa-user"></i>
+              <a href="#theFinalAboutmePage" className="noLink">
+                <i class="fa-solid fa-user"></i>
+              </a>
             </li>
 
             <li className="nav_item">
-              <i class="fa-solid fa-graduation-cap"></i>
+              <a href="#homePage" className="noLink">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </a>
             </li>
 
             <li className="nav_item">
-              <i class="fa-solid fa-medal"></i>
+              <a href="#homePage" className="noLink">
+                <i class="fa-solid fa-medal"></i>
+              </a>
             </li>
 
             <li className="nav_item">
-              <i class="fa-solid fa-puzzle-piece"></i>
+              <a href="#homePage" className="noLink">
+                {" "}
+                <i class="fa-solid fa-puzzle-piece"></i>
+              </a>
             </li>
 
             <li className="nav_item">
-              <i class="fa-solid fa-message"></i>
+              <a href="#homePage" className="noLink">
+                <i class="fa-solid fa-message"></i>
+              </a>
             </li>
           </ul>
         </div>

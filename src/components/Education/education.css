@@ -1,0 +1,14 @@
+.education {
+  margin: 10px 0 10px var(--sidebar-total-width);
+  max-width: calc(100% - var(--sidebar-total-width));
+  background-image: url("../../assets/asset_redWavy.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 10px 3%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}

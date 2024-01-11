@@ -35,7 +35,7 @@ const Hero = () => {
           <img
             className="smallImage"
             // src="http://drive.google.com/uc?export=view&id=14Ha-TBAn6OZPKZ2OFBV2xleo1-7fXcF9"
-            src="https://source.unsplash.com/random/?nature&mountains&space&forest"
+            src="https://source.unsplash.com/random/?&mountains&space&forest&earth&nature"
           />
         </div>
 

@@ -1,0 +1,28 @@
+pre {
+    backdrop-filter: blur(15px) saturate(100%);
+    -webkit-backdrop-filter: blur(15px) saturate(100%);
+    border-radius: 12px;
+    background-color: rgba(68, 63, 63, 0.6);
+    padding: 2rem 1rem;
+  }
+  
+  pre .variable {
+    color: #9cdcfe;
+  }
+  
+  pre .string {
+    color: #ce9178;
+  }
+  
+  pre .character {
+    color: #d4d4d4;
+  }
+  
+  pre .bracket {
+    color: #ffd700;
+  }
+  
+  pre .number {
+    color: #b5cea8;
+  }
+  

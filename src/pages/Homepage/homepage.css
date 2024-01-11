@@ -1,22 +1,4 @@
-.div {
-  background-color: aqua;
-  height: 100vh;
-  color: black;
-  margin-left: var(--sidebar-total-width);
-  max-width: calc(100% - var(--sidebar-total-width));
-}
-
-/* .content{
-  margin: 10px;
-} */
-
 .homepage{
   margin: 10px;
 }
 
-@media screen and (max-width: 634px) {
-  .homepage{
-    margin: 0px;
-  }
-
-}

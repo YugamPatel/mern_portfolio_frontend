@@ -5,7 +5,10 @@
 .hero {
   margin-left: var(--sidebar-total-width);
   max-width: calc(100% - var(--sidebar-total-width));
-  background-color: rgb(2, 29, 44);
+  background-image: url("../../assets/hero.png");
+  background-color: #021d35;
+  background-position: 60% 100px;
+  /* object-fit: cover; */
   height: 100vh;
   padding: 10px 3%;
   border-radius: 10px;
@@ -20,6 +23,7 @@
   overflow: hidden;
   object-fit: fill;
   object-position: center;
+  opacity: 0.89;
 }
 
 .profile {
@@ -40,17 +44,25 @@
 }
 
 .headerImage:hover {
-  box-shadow: 0 0 0 5px white; /* Creates an outward 'border' effect */
+  box-shadow: 0 0 0 8px #021d35, 0 0 0 13px hsl(0, 0%, 67%),
+    0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  opacity: 1;
 }
 
 .header {
   padding: 20px 0;
+  height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* .provider {
+  padding: 20px 0;
   height: 100%;
   overflow: hidden;
-}
+} */
 
 .profileImage {
   width: 90%;
@@ -138,61 +150,4 @@
   font-family: "Tektur", sans-serif;
   font-size: larger;
   display: inline;
-}
-
-@media screen and (max-width: 850px) {
-  .profile {
-    width: 170px;
-    height: 170px;
-  }
-  .text {
-    bottom: 90px;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 3.2vw;
-    height: 48%;
-  }
-
-  .typewriter {
-    font-size: 20px;
-  }
-  .whoAmI {
-    font-size: 20px;
-  }
-
-  .social-icons {
-    font-size: 23px;
-  }
-}
-
-@media screen and (min-height: 900px) {
-  /* .text {
-    bottom: 16vh;
-  } */
-  .profile {
-    bottom: 11vh;
-  }
-}
-
-@media screen and (min-height: 1000px) {
-  .text {
-    bottom: 90px;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 3.2vh;
-    height: 48%;
-    bottom: 13vh;
-  }
-  .headerImage {
-    height: 30vh;
-  }
-  .profile {
-    bottom: 8vh;
-  }
-}
-@media screen and (max-height: 678px) {
-  .text {
-    bottom: 25px;
-    font-size: 11px;
-  }
 }
