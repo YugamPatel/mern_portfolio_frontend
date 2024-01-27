@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
-import "./ModernAboutme.css";
+import "./modernAboutme.css";
 
 import Info from "./Info";
 import GradiantCircles from "./GradiantCircles";
@@ -14,12 +14,12 @@ const ModernAboutme = () => {
     tl.to(mask, {
       "--m1": "20%",
       delay: 2,
-      duration: 0.5,
+      duration: 0.2,
       ease: "back.out(2)",
     }).to(mask, {
       "--m2": "30%",
       duration: 0.5,
-      delay: 0.5,
+      // delay: 0.5,
       ease: "back.out(2)",
     });
 
@@ -55,13 +55,13 @@ const ModernAboutme = () => {
     console.log("addMagic");
     tl.to(mask, {
       "--m1": "20%",
-      delay: 0.7,
-      duration: 0.5,
+      delay: 0.3,
+      duration: 0.3,
       ease: "back.out(2)",
     }).to(mask, {
       "--m2": "30%",
-      duration: 0.5,
-      delay: 0.5,
+      duration: 0.4,
+      delay: 0.1,
       ease: "back.out(2)",
     });
 
@@ -105,7 +105,7 @@ const ModernAboutme = () => {
           <p>Explore More !</p>
         </div>
 
-        <div id="div-mask-back" aria-hidden="true">
+        <div id="div-mask-back" area-hidden="true">
           <div
             className="area"
             style={{ position: "absolute", backgroundColor: "#111" }}

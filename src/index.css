@@ -3,8 +3,10 @@
   box-sizing: border-box;
   margin: 0;
 }
-html,body {
-  background: linear-gradient(to bottom, #593c93, #8c92ac, #003366, #333333);
+html,
+body {
+  background: linear-gradient(to bottom, #3c8193, #8c92ac, #003366, #333333);
+  /* background-color: black; */
   scroll-behavior: smooth;
 }
 
@@ -54,6 +56,7 @@ li {
   transform-origin: 0%;
   border-radius: 5px;
   transition: 0.3s ease;
+  z-index: 999;
 }
 
 ::-webkit-scrollbar {
@@ -102,6 +105,29 @@ li {
 
   .social-icons {
     font-size: 23px;
+  }
+
+  .education {
+    padding: 10px 6% 10px 9%;
+    background: #021d35;
+  }
+  main.row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    -webkit-tap-highlight-color: rgba(241, 96, 96, 0.615);
+  }
+  .row .col:nth-child(2) {
+    margin-top: 10px;
+  }
+  .col header.title {
+    padding: 0px 0px 20px 30px;
+    margin-top: 10%;
+  }
+
+  .box:hover {
+    box-shadow: none;
+    border: 0.7px solid hsl(0, 0%, 92%);
   }
 }
 

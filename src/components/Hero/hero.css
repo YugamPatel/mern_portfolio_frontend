@@ -33,14 +33,22 @@
   height: var(--profile);
   background-color: transparent;
   z-index: 10;
-  border-radius: 50%;
   position: relative;
   bottom: 16%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 3px solid wheat;
+
+  border-radius: 50%;
+  border-top: 3px solid rgb(213, 219, 23);
   border-bottom: 3.5px solid rgb(213, 219, 23);
+
+  transition: 0.4s ease-out;
+
+}
+
+.profile:hover {
+  box-shadow: 0px 0px 10px 2px rgb(182, 80, 58);
 }
 
 .headerImage:hover {
@@ -57,12 +65,6 @@
   flex-direction: column;
   align-items: center;
 }
-
-/* .provider {
-  padding: 20px 0;
-  height: 100%;
-  overflow: hidden;
-} */
 
 .profileImage {
   width: 90%;

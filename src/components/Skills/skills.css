@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+
+:root {
+  --font-size-skills: 9.5vw;
+}
+.skills {
+  margin-left: var(--sidebar-total-width);
+  max-width: calc(100% - var(--sidebar-total-width));
+  min-height: 90vh;
+  padding: 10px 3%;
+  border-radius: 10px;
+  background: #021d35;
+  /* background-image: url("../../assets/about.png"); */
+  background-size: fill;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.boxTitleSkills {
+  align-self: flex-start;
+}
+
+.subtitleBoxSkills {
+  display: flex;
+  padding: 10px;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.subTitleSkills {
+  text-transform: uppercase;
+  font-size: calc(var(--font-size-skills) / 5.5);
+  color: rgb(105, 103, 103);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.gem {
+  color: rgb(233, 124, 124);
+  font-size: calc(var(--font-size-skills) / 4);
+  display: inline-block;
+  transform: rotate(-30deg);
+}
+
+.upperSkills {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0px;
+  padding-right: 3.3%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.titleSkills {
+  font-size: var(--font-size-skills);
+  align-self: flex-start;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #4580b6;
+  text-decoration: underline;
+  text-decoration-color: #bea40f;
+}
+
+.titleSkills::selection {
+  color: rgb(105, 212, 191);
+}
+
+@media screen and (max-width: 850px) {
+  .upperSkills {
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    padding-right: 0px;
+  }
+  .boxTitleSkills {
+    align-self: center;
+  }
+  .subtitleBoxSkills {
+    display: none;
+  }
+}

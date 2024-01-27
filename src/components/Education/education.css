@@ -1,14 +1,63 @@
 .education {
-  margin: 10px 0 10px var(--sidebar-total-width);
+  margin-left: var(--sidebar-total-width);
   max-width: calc(100% - var(--sidebar-total-width));
-  background-image: url("../../assets/asset_redWavy.png");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+  min-height: 80vh;
   padding: 10px 3%;
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
+  background: linear-gradient(
+    to right,
+    #021d35,
+    #021d35eb,
+    #032645c5,
+    #1a3a5f,
+    #2e577a,
+    #4b7596,
+    #6994b2
+  );
+  overflow: hidden;
 }
+
+/* background-image: url("../../assets/about.png"); */
+/* background-color: #021d35; */
+/* background-size: cover; */
+/* background-position: center; */
+
+.Merriweather {
+  font-family: "Merriweather", serif;
+}
+
+/* .col{
+  margin-top: 30px;
+} */
+
+main.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+.col header.title {
+  color: rgb(121, 205, 250);
+  padding: 0px 0px 20px 30px;
+  margin-top: 10%;
+  margin-bottom: 1.5%;
+}
+
+.col header.title h2 {
+  display: inline;
+  border-top: 2px solid #fccc08;
+  border-bottom: 2px solid #fccc08;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.col .contents {
+  padding: 0px 30px;
+  border-left: 7px solid #e2dfdf;
+  border-radius: 5px;
+}
+
+

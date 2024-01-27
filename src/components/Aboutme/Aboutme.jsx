@@ -1,35 +1,59 @@
 import "./aboutme.css";
+import logo from "../../assets/yugam-logo.png";
+import logo2 from "../../assets/yugam-logo2.png";
 
 const Aboutme = () => {
+  const vlogo = window.innerWidth < 501;
+
   return (
-    <div className="aboutme theFinalAboutmePage" id="about">
+    <section className="about-me aboutme" id="theFinalAboutmePage">
       <div className="container">
-        <h1>Heres more about me</h1>
-        <div className="row">
-          <div className="about-col-1">
-            <img
-              src="http://drive.google.com/uc?export=view&id=1Fp5Y0Bf2QvdZ-sLCOTasIKQCdv7BEoGH"
-              alt="YUGAM"
-            />
+        <div className="about-me-container">
+          <div className="about-me-title">
+            About <br /> Yugam Patel
           </div>
 
-          <div className="about-col-2">
-            <h1 className="sub-title">About Me</h1>
-            <p className="about-me-p">
-              Hi i'm Yugam Patel, a Computer Science student at the University
-              of Manitoba, deeply passionate about coding and technology. My
-              journey began with a simple "Hello World" and has since evolved
-              into a quest to make the digital world better. Skilled in Java and
-              always eager to learn new technologies like Flutter, ReactJS, and
-              AWS, I thrive on problem-solving and innovation. I believe in
-              daily learning and I'm currently open to co-op and job
-              opportunities that match my expertise.
-            </p>
-            <button className="learn">some</button>
+          <div className="about-me-flex-container">
+            <div className="about-me-image">
+              <div className="back-div"></div>
+              <div className="black-image">
+                <img
+                  src="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/main/images/black.jpg"
+                  alt="black"
+                />
+                {/* Update path */}
+              </div>
+              <div className="main-image">
+                <img
+                  src="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/main/images/smit.jpg"
+                  alt="yugam"
+                />
+                {/* Update path */}
+              </div>
+            </div>
+            <div className="about-me-content">
+              <div className="about-me-logo">
+                <img
+                  src={vlogo ? logo2 : logo}
+                  alt="yugam"
+                />
+                {/* Update path */}
+              </div>
+              <div className="about-me-text">
+                {/* Update text */}
+                An ambitious Front-end Developer and designer who takes great
+                pride in the presentation and quality of work <br />
+                <br />
+                Smit is someone who can design and create simple, beautiful and
+                easy to understand things. He is an expert at taking designs
+                into original, exciting and new directions.
+              </div>
+            </div>
           </div>
+        
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

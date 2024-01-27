@@ -1,0 +1,207 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+
+:root {
+  --box-width: 37vw;
+}
+
+#box {
+  width: var(--box-width);
+  height: calc(var(--box-width) / 1.75);
+  border-radius: 0.8em;
+  background-color: #1c1c1c;
+  background-image: linear-gradient(to left top, #1c1c1c 33%, #272727 70%);
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
+  position: relative; 
+  overflow: hidden;
+  display: inline-block;
+}
+#info {
+  font-family: "Oswald", sans-serif;
+  list-style: none;
+  text-transform: uppercase;
+  color: #666;
+  user-select: none;
+  width: 100%; /* Full width of the box */
+  height: 100%; /* Full height of the box */
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#info li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 15px;
+  font-size: calc(var(--box-width) / 37);
+}
+
+.html5 {
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  -webkit-transform: scale(7.5, 7.8) translate(1.06em, 0.68em);
+  -moz-transform: scale(7.5, 7.8) translate(1.06em, 0.68em);
+  -ms-transform: scale(7.5, 7.8) translate(1.06em, 0.68em);
+  -o-transform: scale(7.5, 7.8) translate(1.06em, 0.68em);
+  transform: scale(7.5, 7.8) translate(1.06em, 0.68em);
+}
+
+.css3 {
+  letter-spacing: 0.01em;
+  font-weight: 700;
+  -webkit-transform: scale(6.8, 6.75) rotate(90deg) translate(1.32em, -4.54em);
+  -moz-transform: scale(6.8, 6.75) rotate(90deg) translate(1.32em, -4.54em);
+  -ms-transform: scale(6.8, 6.75) rotate(90deg) translate(1.32em, -4.54em);
+  -o-transform: scale(6.8, 6.75) rotate(90deg) translate(1.32em, -4.54em);
+  transform: scale(6.8, 6.75) rotate(90deg) translate(1.32em, -4.54em);
+}
+
+.javascript {
+  letter-spacing: -0.04em;
+  font-weight: 400;
+  -webkit-transform: scale(1.4) rotate(90deg) translate(3.88em, -12.7em);
+  -moz-transform: scale(1.4) rotate(90deg) translate(3.88em, -12.7em);
+  -ms-transform: scale(1.4) rotate(90deg) translate(3.88em, -12.7em);
+  -o-transform: scale(1.4) rotate(90deg) translate(3.88em, -12.7em);
+  transform: scale(1.4) rotate(90deg) translate(3.88em, -12.7em);
+}
+.jquery {
+  letter-spacing: 0.045em;
+  font-weight: 700;
+  -webkit-transform: scale(3.88, 3.8) translate(5.42em, 3.72em);
+  -moz-transform: scale(3.88, 3.8) translate(5.42em, 3.72em);
+  -ms-transform: scale(3.88, 3.8) translate(5.42em, 3.72em);
+  -o-transform: scale(3.88, 3.8) translate(5.42em, 3.72em);
+  transform: scale(3.88, 3.8) translate(5.42em, 3.72em);
+}
+.ajax {
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  -webkit-transform: scale(2.4, 2.3) rotate(90deg) translate(6em, -5.8em);
+  -moz-transform: scale(2.4, 2.3) rotate(90deg) translate(6em, -5.8em);
+  -ms-transform: scale(2.4, 2.3) rotate(90deg) translate(6em, -5.8em);
+  -o-transform: scale(2.4, 2.3) rotate(90deg) translate(6em, -5.8em);
+  transform: scale(2.4, 2.3) rotate(90deg) translate(6em, -5.8em);
+}
+.lamp {
+  letter-spacing: 0.045em;
+  font-weight: 700;
+  -webkit-transform: scale(2.88, 2.8) translate(0.84em, 5.31em);
+  -moz-transform: scale(2.88, 2.8) translate(0.84em, 5.31em);
+  -ms-transform: scale(2.88, 2.8) translate(0.84em, 5.31em);
+  -o-transform: scale(2.88, 2.8) translate(0.84em, 5.31em);
+  transform: scale(2.88, 2.8) translate(0.84em, 5.31em);
+}
+.seo {
+  font-weight: 300;
+  letter-spacing: -0.07em;
+  -webkit-transform: scale(3.9, 4) translate(5.9em, 0.9em);
+  -moz-transform: scale(3.9, 4) translate(5.9em, 0.9em);
+  -ms-transform: scale(3.9, 4) translate(5.9em, 0.9em);
+  -o-transform: scale(3.9, 4) translate(5.9em, 0.9em);
+  transform: scale(3.9, 4) translate(5.9em, 0.9em);
+}
+.jg {
+  color: #ee5d29;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  -webkit-transform: scale(3) translate(7.75em, 2.4em);
+  -moz-transform: scale(3) translate(7.75em, 2.4em);
+  -ms-transform: scale(3) translate(7.75em, 2.4em);
+  -o-transform: scale(3) translate(7.75em, 2.4em);
+  transform: scale(3) translate(7.75em, 2.4em);
+}
+.sysadmin {
+  color: #ee5d29;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  -webkit-transform: scale(1.5) translate(11.76em, 11.6em);
+  -moz-transform: scale(1.5) translate(11.76em, 11.6em);
+  -ms-transform: scale(1.5) translate(11.76em, 11.6em);
+  -o-transform: scale(1.5) translate(11.76em, 11.6em);
+  transform: scale(1.5) translate(11.76em, 11.6em);
+}
+.objectoriented {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  -webkit-transform: scale(1.85, 1.9) translate(1.7em, 6.5em);
+  -moz-transform: scale(1.85, 1.9) translate(1.7em, 6.5em);
+  -ms-transform: scale(1.85, 1.9) translate(1.7em, 6.5em);
+  -o-transform: scale(1.85, 1.9) translate(1.7em, 6.5em);
+  transform: scale(1.85, 1.9) translate(1.7em, 6.5em);
+}
+.accessibility {
+  letter-spacing: -0.05em;
+  font-weight: 300;
+  -webkit-transform: scale(1.4, 1.33) rotate(90deg) translate(4.1em, -18em);
+  -moz-transform: scale(1.4, 1.33) rotate(90deg) translate(4.1em, -18em);
+  -ms-transform: scale(1.4, 1.33) rotate(90deg) translate(4.1em, -18em);
+  -o-transform: scale(1.4, 1.33) rotate(90deg) translate(4.1em, -18em);
+  transform: scale(1.4, 1.33) rotate(90deg) translate(4.1em, -18em);
+}
+.responsive {
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  word-spacing: 0.3em;
+  -webkit-transform: scale(2) translate(1.9em, 5.05em);
+  -moz-transform: scale(2) translate(1.9em, 5.05em);
+  -ms-transform: scale(2) translate(1.9em, 5.05em);
+  -o-transform: scale(2) translate(1.9em, 5.05em);
+  transform: scale(2) translate(1.9em, 5.05em);
+}
+.usability {
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  -webkit-transform: scale(2.85, 3) translate(7.14em, 3.55em);
+  -moz-transform: scale(2.85, 3) translate(7.14em, 3.55em);
+  -ms-transform: scale(2.85, 3) translate(7.14em, 3.55em);
+  -o-transform: scale(2.85, 3) translate(7.14em, 3.55em);
+  transform: scale(2.85, 3) translate(7.14em, 3.55em);
+}
+.webstandards {
+  font-weight: 300;
+  letter-spacing: 0em;
+  word-spacing: 0.1em;
+  -webkit-transform: scale(2) translate(12.9em, 8.7em);
+  -moz-transform: scale(2) translate(12.9em, 8.7em);
+  -ms-transform: scale(2) translate(12.9em, 8.7em);
+  -o-transform: scale(2) translate(12.9em, 8.7em);
+  transform: scale(2) translate(12.9em, 8.7em);
+}
+.crossbrowser {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  word-spacing: 0.2em;
+  -webkit-transform: scale(2) translate(2.14em, 8.65em);
+  -moz-transform: scale(2) translate(2.14em, 8.65em);
+  -ms-transform: scale(2) translate(2.14em, 8.65em);
+  -o-transform: scale(2) translate(2.14em, 8.65em);
+  transform: scale(2) translate(2.14em, 8.65em);
+}
+.revisionctrl {
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  -webkit-transform: scale(0.9, 2) translate(7.5em, 7.45em);
+  -moz-transform: scale(0.9, 2) translate(7.5em, 7.45em);
+  -ms-transform: scale(0.9, 2) translate(7.5em, 7.45em);
+  -o-transform: scale(0.9, 2) translate(7.5em, 7.45em);
+  transform: scale(0.9, 2) translate(7.5em, 7.45em);
+}
+
+@media screen and (max-width: 850px) {
+    :root{
+        --box-width: 70vw;
+    }
+    #box{
+        height: 40vw;
+    }
+}
+@media screen and (max-width: 634px) {
+    :root{
+        --box-width: 80vw;
+    }
+    #box{
+        height: 45vw;
+    }
+}

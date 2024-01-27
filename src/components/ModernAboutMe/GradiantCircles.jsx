@@ -10,7 +10,6 @@ const GradiantCircles = () => {
     // Generate two random colors for the gradient
     const color1 = randomColor();
     const color2 = randomColor();
-    const color3 = randomColor();
 
     // Generate a random angle for the linear gradient
     const angle = Math.floor(Math.random() * 360);
@@ -18,17 +17,16 @@ const GradiantCircles = () => {
     // Generate random size between 20px and 100px
     const size = `${Math.floor(20 + Math.random() * 70)}px`;
 
-    // Generate random border radius between 0% (square) and 50% (circle)
-    const borderRadius = `${Math.floor(Math.random() * 51)}%`;
+    const borderRadius = `${Math.floor(Math.random() * 30)}%`;
 
-    const animationDelay = `${Math.random() * 5}s`;
+    const animationDelay = `${Math.random() * 2}s`;
 
-    const animationDuration = `${5 + Math.random() * 23}s`;
+    const animationDuration = `${5 + Math.random() * 15}s`;
 
-    const left = `${Math.floor(Math.random() * 101)}%`;
+    const left = `${Math.floor(Math.random() * 110)}%`;
 
     return {
-      gradient: `linear-gradient(${angle}deg, ${color1}, ${color2},${color3})`,
+      gradient: `linear-gradient(${angle}deg, ${color1}, ${color2})`,
       size: size,
       borderRadius: borderRadius,
       left: left,

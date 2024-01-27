@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./hero.css";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
+import user from "../../assets/user.jpeg";
 
 const Hero = () => {
   // TO BE CHECKED BEFORE DEPLOYMENT ---------------
@@ -34,8 +35,7 @@ const Hero = () => {
         <div className="headerImage">
           <img
             className="smallImage"
-            // src="http://drive.google.com/uc?export=view&id=14Ha-TBAn6OZPKZ2OFBV2xleo1-7fXcF9"
-            src="https://source.unsplash.com/random/?&mountains&space&forest&earth&nature"
+            src="https://source.unsplash.com/random/?&mountains&forest&gradient&galaxy&ocean&landscape"
           />
         </div>
 
@@ -43,7 +43,7 @@ const Hero = () => {
           <div className="profileImage">
             <img
               className="smallImage"
-              src="http://drive.google.com/uc?export=view&id=1Fp5Y0Bf2QvdZ-sLCOTasIKQCdv7BEoGH"
+              src={user}
               alt=""
             />
           </div>
@@ -65,7 +65,7 @@ const Hero = () => {
             </h2>
           </div>
 
-          <p className="typewriter">
+          <div className="typewriter">
             <Typewriter
               options={{
                 strings: [
@@ -81,7 +81,7 @@ const Hero = () => {
                 pauseFor: 2000,
               }}
             />
-          </p>
+          </div>
 
           <motion.div
             className="social-icons"

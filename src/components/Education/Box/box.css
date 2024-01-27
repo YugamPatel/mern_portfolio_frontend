@@ -1,0 +1,73 @@
+.box {
+  position: relative;
+  padding: 20px;
+  border: 0.7px solid hsl(0, 0%, 92%);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  margin-bottom: 20px;
+  background-color: #021d35;
+}
+
+.box-test {
+  display: flex;
+  flex-direction: column;
+  gap: 9.5px;
+}
+
+.box:hover {
+  box-shadow: 0px 0.5px 10px 2px #ed5050;
+  border: none;
+}
+
+.box::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  right: calc(100% + 11.5px);
+  top: 0;
+  background-color: #bacd4f;
+  background-image: url("../../../assets/bolt-solid.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 0px 8px 1px rgb(155, 63, 40);
+}
+
+.box p {
+  line-height: 1.5;
+  color: #beb7b7;
+  font-size: 17px;
+}
+
+.box h4 {
+  position: relative;
+  color: rgb(233, 124, 124);
+}
+.box h3 {
+  font-size: 19px;
+  padding: 10px 0px 6px;
+  font-family: helvetica;
+  color: whitesmoke;
+}
+
+.box-para {
+  font-family: "Courgette", cursive;
+}
+.fa-school,
+.fa-briefcase {
+  color: white;
+  margin-right: 10px;
+  color: #2b95dc;
+}
+.icon-line {
+  display: inline;
+}
+
+

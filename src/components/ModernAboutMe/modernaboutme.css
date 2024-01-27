@@ -1,7 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-}
 
 .modernAboutme {
   margin: 10px 0 10px var(--sidebar-total-width);
@@ -71,11 +67,9 @@
 
 .area {
   width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  height: 100%; /* Edit made */
+  position: relative;
+  z-index: -8;
 }
 
 .circles {
