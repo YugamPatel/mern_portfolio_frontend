@@ -1,6 +1,6 @@
 import "./aboutme.css";
 import logo from "../../assets/yugam-logo.png";
-import logo2 from "../../assets/yugam-logo2.png";
+import logo2 from "../../assets/Yugam-logo2.png";
 
 const Aboutme = () => {
   const vlogo = window.innerWidth < 501;
@@ -33,10 +33,7 @@ const Aboutme = () => {
             </div>
             <div className="about-me-content">
               <div className="about-me-logo">
-                <img
-                  src={vlogo ? logo2 : logo}
-                  alt="yugam"
-                />
+                <img src={vlogo ? logo2 : logo} alt="yugam" />
                 {/* Update path */}
               </div>
               <div className="about-me-text">
@@ -50,7 +47,6 @@ const Aboutme = () => {
               </div>
             </div>
           </div>
-        
         </div>
       </div>
     </section>
