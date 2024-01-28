@@ -3,19 +3,8 @@ import "./skills.css";
 import SkillTab from "./SkillList/SkillTab.jsx";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
-
+import MarqueeTab from "./Marquee/MarqueeTab.jsx";
 const Skills = () => {
-  const contVariant = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 1.5,
-      },
-    },
-  };
   const skillContainerVariant = {
     initial: { x: -100 },
     visible: {
@@ -65,7 +54,6 @@ const Skills = () => {
       </div>
 
       <div className="lowerSkills">
-
         <motion.h2
           className="lowerTitleSkills"
           variants={skillContainerVariant}
@@ -77,64 +65,34 @@ const Skills = () => {
           Beyond the Basics
         </motion.h2>
 
-        <div className="marquee one">
-          <Marquee
-            speed={100}
-            pauseOnHover={true}
-            gradient={false}
-            pauseOnClick={true}
-          >
-            <motion.p variants={contVariant} initial="hidden" animate="visible">
-              <span>JavaScript</span>
-              <span>React.js</span>
-              <span>Node.js</span>
-              <span>Python</span>
-              <span>Git</span>
-              <span>Docker</span>
-            </motion.p>
-          </Marquee>
-        </div>
+        <MarqueeTab
+          spans={[
+            "JavaScript",
+            "React.js",
+            "Node.js",
+            "Python",
+            "Git",
+            "Docker",
+          ]}
+        ></MarqueeTab>
 
-        <div className="marquee two">
-          <Marquee
-            speed={100}
-            pauseOnHover={true}
-            gradient={false}
-            pauseOnClick={true}
-            direction="right"
-          >
-            <motion.p variants={contVariant} initial="hidden" animate="visible">
-              <span>AWS</span>
-              <span>Linux</span>
-              <span>SQL</span>
-              <span>GraphQL</span>
-              <span>REST APIs</span>
-              <span>WebSockets</span>
-            </motion.p>
-          </Marquee>
-        </div>
+        <MarqueeTab
+          spans={["AWS", "Linux", "SQL", "GraphQL", "REST APIs", "WebSockets"]}
+          isLeft={false}
+          speed={110}
+        ></MarqueeTab>
 
-        <div className="marquee">
-          <Marquee
-            speed={110}
-            pauseOnHover={true}
-            gradient={false}
-            pauseOnClick={true}
-          >
-            <motion.p
-              variants={contVariant}
-              initial="hidden"
-              animate="visible"
-            >
-              <span>Problem Solving</span>
-              <span>Teamwork</span>
-              <span>Leadership</span>
-              <span>Communication</span>
-              <span>Agile Methodology</span>
-              <span>Critical Thinking</span>
-            </motion.p>
-          </Marquee>
-        </div>
+        <MarqueeTab
+          spans={[
+            "Problem Solving",
+            "Teamwork",
+            "Leadership",
+            "Communication",
+            "Agile Methodology",
+            "Critical Thinking",
+          ]}
+          speed={105}
+        ></MarqueeTab>
       </div>
     </div>
   );
