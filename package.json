@@ -14,6 +14,7 @@
     "gsap": "^3.12.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.3",
     "sheryjs": "^1.0.0-beta.0.1.7",
     "typewriter-effect": "^2.21.0"
   },

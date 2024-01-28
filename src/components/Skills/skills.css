@@ -2,6 +2,8 @@
 
 :root {
   --font-size-skills: 9.5vw;
+  --marquee: 130px !important;
+  --marquee-height: 110px !important;
 }
 .skills {
   margin-left: var(--sidebar-total-width);
@@ -10,7 +12,6 @@
   padding: 10px 3%;
   border-radius: 10px;
   background: #021d35;
-  /* background-image: url("../../assets/about.png"); */
   background-size: fill;
   margin-top: 10px;
   display: flex;
@@ -69,6 +70,62 @@
   color: rgb(105, 212, 191);
 }
 
+/* --------------------------------------- Lower Skills --------------------------------------- */
+
+.lowerTitleSkills {
+  font-size: calc(var(--font-size-skills) / 1.65);
+  color: rgb(105, 103, 103);
+  padding: 25px 0px;
+}
+
+.lowerSkills {
+  width: 100%;
+}
+
+.marquee {
+  width: 100%;
+  overflow-y: hidden;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.marquee p {
+  display: flex; /* Use Flexbox for the <p> that contains <span> elements */
+  justify-content: space-evenly; /* Space <span> elements evenly */
+  gap: 15px; /* You can adjust this value for the gap between <span> elements */
+  color: #87a4b6;
+  transition: all 0.6s ease-in-out;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.marquee span {
+  display: inline-flex;
+  min-height: var(--marquee-height);
+  min-width: calc(var(--marquee) * 1.2);
+  max-width: calc(var(--marquee) * 2.8);
+  margin: 15px 15px;
+  background: rgba(28, 26, 36, 0.65);
+  padding: 0px 15px;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: calc(var(--marquee) / 3);
+  align-items: center;
+  transition: all 0.4s;
+  overflow: hidden;
+  border: 0.6px solid rgb(105, 169, 188);
+  font-family: "oswald", sans-serif;
+}
+
+.marquee p:hover {
+  font-size: calc(var(--marquee) / 2.5);
+}
+.marquee span:hover {
+  box-shadow: 0px 0px 5px 2px tomato;
+}
+
+/* Media Queries */
 @media screen and (max-width: 850px) {
   .upperSkills {
     flex-direction: column;
@@ -82,5 +139,23 @@
   }
   .subtitleBoxSkills {
     display: none;
+  }
+  .skills {
+    min-height: auto;
+  }
+  .lowerTitleSkills {
+    font-size: calc(var(--font-size-skills)/1.2);
+    color: #4580b6;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .marquee span {
+    min-height: calc(var(--marquee-height)/1.5);
+    min-width: calc(var(--marquee));
+    max-width: calc(var(--marquee) * 2);
+    font-size: calc(var(--marquee) / 4.5);
+    padding: 0px 15px;
+    margin: 30px 0px;
   }
 }

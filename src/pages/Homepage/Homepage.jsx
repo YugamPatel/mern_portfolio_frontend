@@ -8,7 +8,6 @@ import ModernAboutme from "../../components/ModernAboutMe/ModernAboutme";
 import Skills from "../../components/Skills/Skills";
 
 const Homepage = () => {
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
