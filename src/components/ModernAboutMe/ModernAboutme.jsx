@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
-import "./modernAboutme.css";
+import "./modernaboutme.css";
 
 import Info from "./Info";
 import GradiantCircles from "./GradiantCircles";
