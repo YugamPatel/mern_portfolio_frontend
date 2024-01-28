@@ -1,6 +1,6 @@
 import React from "react";
 import "./skills.css";
-import SkillTab from "./SkillTab/SkillTab";
+import SkillTab from "./SkillList/SkillTab.jsx";
 import { motion } from "framer-motion";
 
 const Skills = () => {
