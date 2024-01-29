@@ -1,0 +1,29 @@
+#fancyTitle:after {
+  content: attr(data-shadow);
+  position: absolute;
+  top: 0.305em;
+  left: 0.07em;
+  z-index: -1; /* Adjusted z-index */ 
+  text-shadow: none;
+  background-image: linear-gradient(
+    45deg,
+    transparent 45%,
+    rgb(245, 4, 4) 45%,
+    rgb(245, 88, 3) 55%,
+    transparent 0
+  );
+
+  background-size: 0.05em 0.05em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shad-anim 250s linear infinite;
+}
+
+@keyframes shad-anim {
+  0% {
+    background-position: 0 0;
+  }
+  0% {
+    background-position: 100% -100%;
+  }
+}

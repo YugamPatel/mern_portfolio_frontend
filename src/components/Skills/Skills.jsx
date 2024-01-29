@@ -1,5 +1,6 @@
 import React from "react";
 import "./skills.css";
+import "./fancy.css";
 import SkillTab from "./SkillList/SkillTab.jsx";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
@@ -37,7 +38,7 @@ const Skills = () => {
             initial="initial"
             whileInView={"visible"}
           >
-            Skills
+            {window.innerWidth > 600 ? "Skills" : "Specialized Skills"}
           </motion.h1>
 
           <motion.div
@@ -56,6 +57,8 @@ const Skills = () => {
       <div className="lowerSkills">
         <motion.h2
           className="lowerTitleSkills"
+          id="fancyTitle" /*fancy*/
+          data-shadow="Beyond the Basics"
           variants={skillContainerVariant}
           initial="initial"
           whileInView={"visible"}

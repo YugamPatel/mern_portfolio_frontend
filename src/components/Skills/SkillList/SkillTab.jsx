@@ -26,19 +26,19 @@ const SkillTab = () => {
         <li className="html5">html5</li>
         <li className="css3">css3</li>
         <li className="javascript">javascript</li>
-        <li className="jquery">jquery</li>
-        <li className="ajax">ajax</li>
-        <li className="lamp">lamp</li>
-        <li className="seo">seo</li>
-        <li className="jg">j.g.</li>
-        <li className="sysadmin">sysadmin</li>
+        <li className="react">react</li>
+        <li className="gsap">gsap</li>
+        <li className="java">java</li>
+        <li className="sql">sql</li>
+        <li className="cpp">c++</li>
+        <li className="express">express</li>
         <li className="objectoriented">Object-oriented</li>
-        <li className="accessibility">accessibility</li>
+        <li className="android">Android studio</li>
         <li className="responsive">responsive layout</li>
-        <li className="usability">usability</li>
-        <li className="webstandards">webstandards</li>
-        <li className="crossbrowser">cross-browser</li>
-        <li className="revisionctrl">Revision control</li>
+        <li className="flutter">flutter</li>
+        <li className="teamb">Team Building</li>
+        <li className="framer">Framer-motion</li>
+        <li className="creative">Creative thinking</li>
       </ul>
     </motion.div>
   );
