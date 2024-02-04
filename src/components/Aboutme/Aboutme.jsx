@@ -18,14 +18,13 @@ const Aboutme = () => {
               <div className="back-div"></div>
               <div className="black-image">
                 <img
-                  src="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/main/images/black.jpg"
+                  src="https://res.cloudinary.com/dwig4hupj/image/upload/v1707072393/portfolio/about/aboutImage/n6te3wcibgpugpg1ptsl.jpg"
                   alt="black"
                 />
-                {/* Update path */}
               </div>
               <div className="main-image">
                 <img
-                  src="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/main/images/smit.jpg"
+                  src="https://res.cloudinary.com/dwig4hupj/image/upload/v1707072392/portfolio/about/aboutImage/o6j5ehbsxha1bparz8cz.jpg"
                   alt="yugam"
                 />
                 {/* Update path */}

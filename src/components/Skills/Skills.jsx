@@ -38,7 +38,7 @@ const Skills = () => {
             initial="initial"
             whileInView={"visible"}
           >
-            {window.innerWidth > 600 ? "Skills" : "Specialized Skills"}
+            {window.innerWidth > 600 ? "Skills" : "Top Skills"}
           </motion.h1>
 
           <motion.div

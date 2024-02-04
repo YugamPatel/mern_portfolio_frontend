@@ -157,21 +157,39 @@ img {
   box-shadow: rgb(0, 0, 0) 0px 7px 50px 0px;
   transition: all 0.2s ease-out;
 }
+
+/* Banner Image Scaling */
+/* 
+  IMPORTANT: When changing images, adjust the scale in the following sections to ensure 
+  the image fits well within the design and maintains its aesthetic quality.
+*/
+
+.main-image {
+  padding: 15px;
+  /* Ensure proper padding around the main image */
+}
+
 .about-me-flex-container .about-me-image .main-image:hover {
   transform-origin: top center;
-  transform: scale(1.5);
-  border-radius: 25px;
+  transform: scale(1.5); /* Adjust scale on hover */
+  border-radius: 25px; /* Rounded corners for a softer look */
+  padding: 0px; /* Remove padding on hover for full effect */
 }
+
 .about-me-flex-container .about-me-image .main-image img {
   transform-origin: center center;
-  transform: scale(2);
-  -o-object-fit: cover;
-  object-fit: cover;
-  transition: all 0.2s ease-out;
+  transform: scale(
+    1.7
+  ); /* Initial scale - adjust as needed based on the image */
+  -o-object-fit: cover; /* Ensure cover fit for Opera */
+  object-fit: cover; /* Cover fit for modern browsers */
+  transition: all 0.2s ease-out; /* Smooth transition for scaling and other effects */
 }
+
 .about-me-flex-container .about-me-image .main-image img:hover {
-  transform: scale(1);
+  transform: scale(1); /* Return to normal scale on hover */
 }
+
 .about-me-flex-container .about-me-content {
   display: flex;
   flex-direction: column;
@@ -205,41 +223,42 @@ img {
   }
 }
 
-.mail-button {
-  display: flex;
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-  padding: 15px;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-out;
-}
-.mail-button a {
-  display: flex;
-}
-.mail-button img {
-  -o-object-fit: contain;
-  object-fit: contain;
-  transition: all 0.2s ease-out;
-}
+@media screen and (max-width: 380px) {
+  .about-me-flex-container .about-me-content .about-me-text {
+    position: relative;
+    left: 23px;
+  }
+  .about-me-flex-container .about-me-image {
+    left: 5px;
+  }
 
-.mail-button2 {
-  background-color: #001925;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border: 10px solid #001925;
-}
-.mail-button2 img {
-  filter: invert(56%) sepia(42%) saturate(4795%) hue-rotate(360deg)
-    brightness(103%) contrast(105%);
-}
-.mail-button2:hover {
-  background-color: #ff7a01;
-  border: 10px solid #ff7a01;
-}
-.mail-button2:hover img {
-  filter: unset;
-  transform: scale(1.5);
+  .about-me-title {
+    left: 22px;
+  }
+
+  .about-me-flex-container .about-me-image .main-image:hover {
+    transform-origin: top center;
+    transform: scale(1.26); /* Adjust scale on hover */
+    border-radius: 25px; /* Rounded corners for a softer look */
+    padding: 0px; /* Remove padding on hover for full effect */
+  }
+
+  .about-me-flex-container .about-me-image .main-image img {
+    transform-origin: center center;
+    transform: scale(
+      1.65
+    ); /* Initial scale - adjust as needed based on the image */
+    -o-object-fit: cover; /* Ensure cover fit for Opera */
+    object-fit: cover; /* Cover fit for modern browsers */
+    transition: all 0.2s ease-out; /* Smooth transition for scaling and other effects */
+  }
+
+  .about-me-flex-container .about-me-image .main-image img:hover {
+    transform: scale(1); /* Return to normal scale on hover */
+  }
+
+  /* TESTING */
+  .about-me-flex-container .about-me-image .black-image {
+    height: 90%;
+  }
 }

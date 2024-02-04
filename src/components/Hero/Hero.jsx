@@ -44,7 +44,7 @@ const Hero = () => {
             <img
               className="smallImage selfImage"
               // src={user}
-              src="https://res.cloudinary.com/dwig4hupj/image/upload/v1706492222/20230626_184305_dp26fb.jpg"
+              src="https://res.cloudinary.com/dwig4hupj/image/upload/v1707009431/portfolio/home/profile/yfgodod5m1tpqk4hbll7.jpg"
               alt=""
             />
           </div>
