@@ -18,7 +18,7 @@ const Aboutme = () => {
               <div className="back-div"></div>
               <div className="black-image">
                 <img
-                  src="https://res.cloudinary.com/dwig4hupj/image/upload/v1707072393/portfolio/about/aboutImage/n6te3wcibgpugpg1ptsl.jpg"
+                  src="https://res.cloudinary.com/dwig4hupj/image/upload/v1707097539/portfolio/about/vhtose4jdeupelcqnrd1.jpg"
                   alt="black"
                 />
               </div>

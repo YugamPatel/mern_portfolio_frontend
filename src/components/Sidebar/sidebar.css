@@ -10,7 +10,7 @@
   align-items: center;
   width: 60px;
   min-height: calc(100vh - 2 * var(--sidebar-margin-tb));
-  z-index: 10;
+  z-index: 999;
   /* background-color: rgb(233, 124, 124);  */
   background: linear-gradient(
     to bottom,
@@ -23,7 +23,7 @@
   margin-left: var(--sidebar-margin);
 }
 
-.active{
+.active {
   background: linear-gradient(to bottom, #f86b64, #ff9068, rgb(233, 124, 124));
   opacity: 1;
 }
