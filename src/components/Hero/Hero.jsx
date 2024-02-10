@@ -43,7 +43,6 @@ const Hero = () => {
           <div className="profileImage">
             <img
               className="smallImage selfImage"
-              // src={user}
               src="https://res.cloudinary.com/dwig4hupj/image/upload/v1707009431/portfolio/home/profile/yfgodod5m1tpqk4hbll7.jpg"
               alt=""
             />
@@ -70,10 +69,11 @@ const Hero = () => {
             <Typewriter
               options={{
                 strings: [
-                  "Web Developer",
-                  "MERN Stack Developer",
-                  "Guys-who-loves-Tea.js",
-                  "< ButLovesTo-CodeMore />",
+                  "< MERN Stack Developer />",
+                  "=> ( Js Developer )",
+                  "( Flutter Developer )",
+                  "{ Java Developer }",
+                  "{ Team Leader }",
                 ],
                 autoStart: true,
                 loop: true,
