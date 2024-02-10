@@ -37,12 +37,15 @@ const Aboutme = () => {
               </div>
               <div className="about-me-text">
                 {/* Update text */}
-                An ambitious Front-end Developer and designer who takes great
-                pride in the presentation and quality of work <br />
+                Hello, I'm Yugam, a MERN,Full Stack and Flutter Developer. I
+                merge technical expertise with effective communication and
+                problem-solving skills to deliver outstanding projects with
+                impressive presentation <br />
                 <br />
-                Smit is someone who can design and create simple, beautiful and
-                easy to understand things. He is an expert at taking designs
-                into original, exciting and new directions.
+                As a Computer Science student at the University of Manitoba, my
+                passion for technology drives me. Committed to continuous
+                learning, I embrace the dynamic tech industry, eager to
+                contribute and collaborate
               </div>
             </div>
           </div>
