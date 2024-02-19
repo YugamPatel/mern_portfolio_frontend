@@ -131,13 +131,13 @@ li {
   .box:hover {
     box-shadow: none;
     border: 0.7px solid hsl(0, 0%, 92%);
+
   }
 }
 
 @media screen and (max-width: 634px) {
   /* Edit made after test of adding 10px of padding */
   :root {
-    /* Adjust variables for mobile view if needed */
     --sidebar-total-width: 0px;
   }
 

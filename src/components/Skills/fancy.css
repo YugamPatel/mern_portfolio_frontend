@@ -15,6 +15,7 @@
 
   background-size: 0.05em 0.05em;
   -webkit-background-clip: text;
+  background-clip: text; /* Adjusted background-clip */
   -webkit-text-fill-color: transparent;
   animation: shad-anim 250s linear infinite;
 }

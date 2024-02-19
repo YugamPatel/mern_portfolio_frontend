@@ -7,16 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    to right,
-    #021d35,
-    #021d35eb,
-    #032645c5,
-    #1a3a5f,
-    #2e577a,
-    #4b7596,
-    #6994b2
-  );
   overflow: hidden;
 }
 

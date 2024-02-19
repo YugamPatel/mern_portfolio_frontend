@@ -3,8 +3,8 @@ import "./skills.css";
 import "./fancy.css";
 import SkillTab from "./SkillList/SkillTab.jsx";
 import { motion } from "framer-motion";
-import Marquee from "react-fast-marquee";
 import MarqueeTab from "./Marquee/MarqueeTab.jsx";
+
 const Skills = () => {
   const skillContainerVariant = {
     initial: { x: -100 },

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./hero.css";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
-import user from "../../assets/user.jpeg";
+
 
 const Hero = () => {
   // TO BE CHECKED BEFORE DEPLOYMENT ---------------
@@ -16,7 +16,7 @@ const Hero = () => {
       style: 1,
       y: 10,
       delay: 0.2,
-      duration: 2,
+      duration: 1,
       ease: "cubic-bezier(0.23, 1, 0.320, 1)",
       multiplier: 0.1,
     });
