@@ -2,7 +2,7 @@ import React from "react";
 import "./box.css";
 import { motion } from "framer-motion";
 
-const Box = ({ title, para, date, isEducation = false }) => {
+const Box = ({ title, para, date, isEducation = false, notice = false }) => {
   const spring = {
     type: "spring",
     stiffness: 9,
@@ -14,7 +14,7 @@ const Box = ({ title, para, date, isEducation = false }) => {
   };
   return (
     <motion.div
-      className="box box-test"
+      className="box"
       initial="hidden"
       whileInView="visible"
       variants={containerVariants}
@@ -24,6 +24,8 @@ const Box = ({ title, para, date, isEducation = false }) => {
       <div className="icon-line">
         {isEducation ? (
           <i class="fa-solid fa-school"></i>
+        ) : notice ? (
+          <i class="fa-solid fa-code"></i>
         ) : (
           <i class="fa-solid fa-briefcase"></i>
         )}

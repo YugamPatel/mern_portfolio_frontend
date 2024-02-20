@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import "./hero.css";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
-
+import { typewriter } from "../../Data/typeWritter.js";
+import resume from "../../assets/Yugam's Resume.pdf";
 
 const Hero = () => {
   // TO BE CHECKED BEFORE DEPLOYMENT ---------------
@@ -68,13 +69,7 @@ const Hero = () => {
           <div className="typewriter">
             <Typewriter
               options={{
-                strings: [
-                  "< MERN Stack Developer />",
-                  "=> ( Js Developer )",
-                  "( Flutter Developer )",
-                  "{ Java Developer }",
-                  "{ Team Leader }",
-                ],
+                strings: [...typewriter],
                 autoStart: true,
                 loop: true,
                 delay: 70,
@@ -112,7 +107,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05, borderRadius: "5px" }}
             whileTap={{ scale: 0.8 }}
           >
-            Learn More
+            <a href={resume} download className="noLink">Download Resume</a>
           </motion.button>
         </div>
       </div>

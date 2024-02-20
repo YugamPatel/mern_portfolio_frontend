@@ -4,6 +4,7 @@ import "./fancy.css";
 import SkillTab from "./SkillList/SkillTab.jsx";
 import { motion } from "framer-motion";
 import MarqueeTab from "./Marquee/MarqueeTab.jsx";
+import {SkillsData} from "../../Data/skillsData.js";
 
 const Skills = () => {
   const skillContainerVariant = {
@@ -69,31 +70,17 @@ const Skills = () => {
         </motion.h2>
 
         <MarqueeTab
-          spans={[
-            "JavaScript",
-            "React.js",
-            "Node.js",
-            "Python",
-            "Git",
-            "Docker",
-          ]}
+          spans={[...SkillsData.skillsOne]}
         ></MarqueeTab>
 
         <MarqueeTab
-          spans={["AWS", "Linux", "SQL", "GraphQL", "REST APIs", "WebSockets"]}
+          spans={[...SkillsData.skillsTwo]}
           isLeft={false}
           speed={110}
         ></MarqueeTab>
 
         <MarqueeTab
-          spans={[
-            "Problem Solving",
-            "Teamwork",
-            "Leadership",
-            "Communication",
-            "Agile Methodology",
-            "Critical Thinking",
-          ]}
+          spans={[...SkillsData.softSkills]}
           speed={105}
         ></MarqueeTab>
       </div>

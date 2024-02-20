@@ -7,9 +7,6 @@
   transition: 0.4s ease;
   margin-bottom: 20px;
   background-color: #011120;
-}
-
-.box-test {
   display: flex;
   flex-direction: column;
   gap: 9.5px;
@@ -61,13 +58,24 @@
   font-family: "Courgette", cursive;
 }
 .fa-school,
-.fa-briefcase {
+.fa-briefcase,
+.fa-code {
   color: white;
   margin-right: 10px;
   color: #2b95dc;
 }
+
+.fa-school {
+  position: relative;
+  bottom: 2.3px;
+}
+
+.fa-code {
+  color: gold;
+  position: relative;
+  bottom: 2.3px;
+}
+
 .icon-line {
   display: inline;
 }
-
-

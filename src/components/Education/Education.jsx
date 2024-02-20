@@ -2,6 +2,7 @@ import React from "react";
 import "./education.css";
 import Box from "./Box/Box";
 import { motion } from "framer-motion";
+import { eduAndWorkData } from "../../Data/eduAndWorkData.js";
 
 const Education = () => {
   const screenWidth = window.innerWidth;
@@ -14,7 +15,7 @@ const Education = () => {
   const backgroundVariant =
     screenWidth > 800
       ? {
-          initial: { backgroundColor: "#ffffff" },
+          initial: { backgroundColor: "#000" },
           visible: {
             backgroundColor: "#021d35",
           },
@@ -23,7 +24,7 @@ const Education = () => {
 
   const transition = {
     backgroundColor: {
-      duration: 1, // Duration for the background color transition
+      duration: 1,
       ease: "easeInOut",
     },
   };
@@ -52,22 +53,20 @@ const Education = () => {
             viewport={{ once: true }} // Ensures the animation only plays once
             transition={{ duration: 0.6, ease: "easeInOut" }}
           >
-            <Box
-              title="High School Degree"
-              para="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-              date="2018 - 2022"
-              isEducation={true}
-            />
-            <Box
-              title="High School Degree"
-              para="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-              date="2018 - 2022"
-              isEducation={true}
-            />
+            {eduAndWorkData.education.map((edu, index) => (
+              <Box
+                key={index}
+                title={edu.name}
+                para={edu.desc}
+                date={edu.date}
+                isEducation={true}
+              />
+            ))}
           </motion.div>
         </section>
 
         <section className="col">
+
           <header className="title">
             <h2 className="Merriweather">EXPERIENCE</h2>
           </header>
@@ -77,27 +76,22 @@ const Education = () => {
             initial="hidden"
             whileInView="visible"
             variants={containerVariant}
-            viewport={{ once: true }} // Ensures the animation only plays once
+            viewport={{ once: true }} 
             transition={{ duration: 0.6, ease: "easeInOut" }}
           >
-            <Box
-              date="2018 - 2022"
-              para="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-              title="UI/UX Designer"
-            />
 
-            <Box
-              date="2018 - 2022"
-              para="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-              title="UI/UX Designer"
-            />
+            {eduAndWorkData.work.map((work, index) => (
+              <Box
+                key={index}
+                title={work.name}
+                para={(window.innerWidth < 500 && work.mobileDec)? work.mobileDec : work.desc}
+                date={work.date}
+                notice = {work.isNotice}
+              />
+            ))}
 
-            <Box
-              date="2018 - 2022"
-              para="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-              title="UI/UX Designer"
-            />
           </motion.div>
+
         </section>
       </main>
     </motion.div>

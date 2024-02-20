@@ -8,20 +8,14 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-color: #021d35;
 }
 
-/* background-image: url("../../assets/about.png"); */
-/* background-color: #021d35; */
-/* background-size: cover; */
-/* background-position: center; */
 
 .Merriweather {
   font-family: "Merriweather", serif;
 }
 
-/* .col{
-  margin-top: 30px;
-} */
 
 main.row {
   display: grid;
@@ -49,5 +43,4 @@ main.row {
   border-left: 7px solid #e2dfdf;
   border-radius: 5px;
 }
-
 

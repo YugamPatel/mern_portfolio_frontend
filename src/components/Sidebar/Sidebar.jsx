@@ -56,7 +56,7 @@ const Sidebar = () => {
             </li>
 
             <li className="nav_item">
-              <a href="#homePage" className="noLink">
+              <a href="#projects" className="noLink">
                 <i className="fa-solid fa-puzzle-piece"></i>
               </a>
             </li>

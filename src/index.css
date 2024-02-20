@@ -112,7 +112,6 @@ li {
 
   .education {
     padding: 10px 6% 10px 9%;
-    background: #021d35;
   }
   main.row {
     grid-template-columns: 1fr;
@@ -131,7 +130,6 @@ li {
   .box:hover {
     box-shadow: none;
     border: 0.7px solid hsl(0, 0%, 92%);
-
   }
 }
 
@@ -152,6 +150,19 @@ li {
   /* Edit made after test of adding 10px of padding */
   .text {
     bottom: 11%;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .education {
+    padding: 10px 0px 10px 9%;
+  }
+  .col .contents {
+    padding: 0px 15px 0px 30px;
+  }
+  .box{
+    padding: 20px 12px;
   }
 }
 
@@ -184,5 +195,38 @@ li {
   .text {
     bottom: 25px;
     font-size: 11px;
+  }
+}
+
+@media screen and (min-height: 521px) and (max-height: 620px) {
+  .typewriter {
+    display: none;
+  }
+  .whoAmI {
+    display: none;
+  }
+  .text {
+    justify-content: end;
+  }
+  .sideBar {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 521px) {
+  .typewriter {
+    display: none;
+  }
+  .whoAmI {
+    display: none;
+  }
+  .text {
+    justify-content: end;
+  }
+  .social-icons {
+    display: none;
+  }
+  .sideBar {
+    display: none;
   }
 }
