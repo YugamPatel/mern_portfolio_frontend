@@ -91,7 +91,7 @@ const Hero = () => {
             <a href="https://www.facebook.com/yugampatel/" target="_blank">
               <i className="fa-brands fa-facebook"></i>
             </a>
-            <a href="https://www.instagram.com/_.yap07._/" target="_blank">
+            <a href="https://www.instagram.com/its.yugam/" target="_blank">
               <i className="fa-brands fa-instagram"></i>
             </a>
             <a href="https://www.linkedin.com/in/yugampatel/" target="_blank">
@@ -107,7 +107,9 @@ const Hero = () => {
             whileHover={{ scale: 1.05, borderRadius: "5px" }}
             whileTap={{ scale: 0.8 }}
           >
-            <a href={resume} download className="noLink">Download Resume</a>
+            <a href={resume} download className="noLink">
+              Download Resume
+            </a>
           </motion.button>
         </div>
       </div>
