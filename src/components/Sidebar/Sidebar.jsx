@@ -62,7 +62,7 @@ const Sidebar = () => {
             </li>
 
             <li className="nav_item">
-              <a href="#homePage" className="noLink">
+              <a href="#contact" className="noLink">
                 <i className="fa-solid fa-message"></i>
               </a>
             </li>
