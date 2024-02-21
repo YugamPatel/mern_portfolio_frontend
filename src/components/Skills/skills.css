@@ -60,7 +60,6 @@
 
 .titleSkills {
   font-size: var(--font-size-skills);
-  align-self: flex-start;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #4580b6;
   text-decoration: underline;
@@ -124,5 +123,15 @@
 @media screen and (max-width: 430px) {
   .lowerTitleSkills {
     font-size: 40px;
+  }
+
+  .titleSkills {
+    font-size: 55px;
+    /* color: rgb(105, 103, 103); */
+    color: transparent;
+    text-shadow: 3px 2px 0px #457fb6b6;
+    -webkit-text-stroke: 1px #be350f;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
   }
 }

@@ -200,6 +200,17 @@
   }
 }
 
+@media (max-width: 400px) {
+  .project .title {
+    align-self: center;
+    font-size: 50px;
+  }
+  .project-card {
+    width: 100%;
+    height: 370px;
+  }
+}
+
 @media (max-width: 350px) {
   .morph {
     display: none;

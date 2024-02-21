@@ -9,8 +9,8 @@ const Box = ({ title, para, date, isEducation = false, notice = false }) => {
     damping: 1,
   };
   const containerVariants = {
-    hidden: { y: 25, opacity: 0 },
-    visible: { y: 0, opacity: 1 },
+    hidden: { y: 25 },
+    visible: { y: 0 },
   };
   return (
     <motion.div
