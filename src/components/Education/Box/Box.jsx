@@ -9,8 +9,8 @@ const Box = ({ title, para, date, isEducation = false, notice = false }) => {
     damping: 1,
   };
   const containerVariants = {
-    hidden: { y: 25 },
-    visible: { y: 0 },
+    hidden: { y: 25, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
   };
   return (
     <motion.div
@@ -23,11 +23,11 @@ const Box = ({ title, para, date, isEducation = false, notice = false }) => {
       <h4>{date}</h4>
       <div className="icon-line">
         {isEducation ? (
-          <i class="fa-solid fa-school"></i>
+          <i className="fa-solid fa-school"></i>
         ) : notice ? (
-          <i class="fa-solid fa-code"></i>
+          <i className="fa-solid fa-code"></i>
         ) : (
-          <i class="fa-solid fa-briefcase"></i>
+          <i className="fa-solid fa-briefcase"></i>
         )}
         <h3 className="icon-line">{title}</h3>
       </div>

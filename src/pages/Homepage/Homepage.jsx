@@ -7,6 +7,7 @@ import Education from "../../components/Education/Education";
 import ModernAboutme from "../../components/ModernAboutMe/ModernAboutme";
 import Skills from "../../components/Skills/Skills";
 import Projects from "../../components/Projects/Projects";
+import Contact from "../../components/ContactMe/Contact";
 
 const Homepage = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -33,6 +34,7 @@ const Homepage = () => {
       <Education></Education>
       <Skills></Skills>
       <Projects></Projects>
+      <Contact/>
     </div>
   );
 };

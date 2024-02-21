@@ -8,8 +8,8 @@ const Education = () => {
   const screenWidth = window.innerWidth;
 
   const containerVariant = {
-    hidden: { scale: 0 },
-    visible: { scale: 1 },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   };
 
   const backgroundVariant =
@@ -51,7 +51,7 @@ const Education = () => {
             whileInView="visible"
             variants={containerVariant}
             viewport={{ once: true }} // Ensures the animation only plays once
-            transition={{ duration: 0.6, ease: "easeInOut" }}
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
           >
             {eduAndWorkData.education.map((edu, index) => (
               <Box
@@ -66,7 +66,6 @@ const Education = () => {
         </section>
 
         <section className="col">
-
           <header className="title">
             <h2 className="Merriweather">EXPERIENCE</h2>
           </header>
@@ -76,22 +75,23 @@ const Education = () => {
             initial="hidden"
             whileInView="visible"
             variants={containerVariant}
-            viewport={{ once: true }} 
-            transition={{ duration: 0.6, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
           >
-
             {eduAndWorkData.work.map((work, index) => (
               <Box
                 key={index}
                 title={work.name}
-                para={(window.innerWidth < 500 && work.mobileDec)? work.mobileDec : work.desc}
+                para={
+                  window.innerWidth < 500 && work.mobileDec
+                    ? work.mobileDec
+                    : work.desc
+                }
                 date={work.date}
-                notice = {work.isNotice}
+                notice={work.isNotice}
               />
             ))}
-
           </motion.div>
-
         </section>
       </main>
     </motion.div>

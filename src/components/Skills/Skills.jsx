@@ -4,7 +4,7 @@ import "./fancy.css";
 import SkillTab from "./SkillList/SkillTab.jsx";
 import { motion } from "framer-motion";
 import MarqueeTab from "./Marquee/MarqueeTab.jsx";
-import {SkillsData} from "../../Data/skillsData.js";
+import { SkillsData } from "../../Data/skillsData.js";
 
 const Skills = () => {
   const skillContainerVariant = {
@@ -48,7 +48,7 @@ const Skills = () => {
             initial="initial"
             whileInView={"visible"}
           >
-            <i class="gem fa-solid fa-gem"></i>
+            <i className="gem fa-solid fa-gem"></i>
             <h3 className="subTitleSkills">here are my top skills</h3>
           </motion.div>
         </div>
@@ -69,9 +69,7 @@ const Skills = () => {
           Beyond the Basics
         </motion.h2>
 
-        <MarqueeTab
-          spans={[...SkillsData.skillsOne]}
-        ></MarqueeTab>
+        <MarqueeTab spans={[...SkillsData.skillsOne]}></MarqueeTab>
 
         <MarqueeTab
           spans={[...SkillsData.skillsTwo]}
@@ -79,10 +77,7 @@ const Skills = () => {
           speed={110}
         ></MarqueeTab>
 
-        <MarqueeTab
-          spans={[...SkillsData.softSkills]}
-          speed={105}
-        ></MarqueeTab>
+        <MarqueeTab spans={[...SkillsData.softSkills]} speed={105}></MarqueeTab>
       </div>
     </div>
   );

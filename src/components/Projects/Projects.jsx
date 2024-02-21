@@ -17,7 +17,7 @@ const Projects = () => {
     <section className="project" id="projects">
       <h1 className="title">Projects</h1>
       <motion.div
-        class="projects-container gridDesign"
+        className="projects-container gridDesign"
         variants={containerVariants}
         initial="hidden"
         animate="show"
