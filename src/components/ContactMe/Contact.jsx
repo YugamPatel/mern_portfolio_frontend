@@ -87,6 +87,7 @@ const Contact = () => {
             href={contactData.button.url}
             download
             className="resume-button"
+            style={{ marginBottom: "40px" }}
             target="_blank"
             rel="noopener noreferrer"
             whileTap={{ scale: 0.8 }}
