@@ -5,12 +5,6 @@ import { motion } from "framer-motion";
 import { heroData } from "../../Data/heroData.js";
 
 const Hero = () => {
-  // TO BE CHECKED BEFORE DEPLOYMENT ---------------
-  // -----------------------------------------------
-  // -----------------------------------------------
-  // -----------------------------------------------
-  // -----------------------------------------------
-
   const textAnimate = () => {
     window.Shery.textAnimate(".whoAmI", heroData.heroSubTitle.shery);
   };
@@ -52,9 +46,7 @@ const Hero = () => {
           <div className="nameH1">
             <h1 className="hi">
               {heroData.heroTitle.intro}
-              <span className="name">
-                {heroData.heroTitle.name}
-              </span>
+              <span className="name">{heroData.heroTitle.name}</span>
             </h1>
             <h2
               className="whoAmI"

@@ -52,10 +52,12 @@ const Contact = () => {
         <div className="contact-left">
           <h1 className="contact-sub-title">Lets get in touch.</h1>
           <p>
-            <i className="fa-solid fa-paper-plane"></i>yugampatel@gmail.com
+            <i className="fa-solid fa-paper-plane"></i>
+            <span className="contact-me-info">yugampatel@gmail.com</span>
           </p>
           <p>
-            <i className="fa-solid fa-phone"></i>+1 204-970-1007
+            <i className="fa-solid fa-phone"></i>
+            <span className="contact-me-info">+1 204-970-1007</span>
           </p>
 
           <div className="contact-social-icons">

@@ -89,10 +89,11 @@ li {
   .profile {
     width: 170px;
     height: 170px;
+    bottom: 86px;
   }
+  
   .text {
-    /* bottom: 90px; */
-    bottom: 5%; /* Edit made after test of adding 10px of padding */
+    bottom: 5.5%;
     justify-content: space-evenly;
     align-items: center;
     font-size: 3.2vw;
@@ -134,12 +135,9 @@ li {
 }
 
 @media screen and (max-width: 634px) {
-  /* Edit made after test of adding 10px of padding */
   :root {
     --sidebar-total-width: 0px;
   }
-
-  /* Edit made after test of adding 10px of padding */
   .homepage {
     margin: 0px;
   }
@@ -147,12 +145,7 @@ li {
     opacity: 1;
     box-shadow: none;
   }
-  /* Edit made after test of adding 10px of padding */
-  .text {
-    bottom: 11%;
-  }
 }
-
 
 @media screen and (max-width: 400px) {
   .education {
@@ -161,34 +154,20 @@ li {
   .col .contents {
     padding: 0px 15px 0px 30px;
   }
-  .box{
+  .box {
     padding: 20px 12px;
-  }
-}
-
-@media screen and (min-height: 900px) {
-  /* .text {
-    bottom: 16vh;
-  } */
-  .profile {
-    bottom: 11vh;
   }
 }
 
 @media screen and (min-height: 1000px) {
   .text {
-    /* bottom: 90px; */
     justify-content: space-evenly;
     align-items: center;
     font-size: 3.2vh;
     height: 48%;
-    bottom: 13vh;
   }
   .headerImage {
     height: 30vh;
-  }
-  .profile {
-    bottom: 8vh;
   }
 }
 @media screen and (max-height: 678px) {
@@ -230,4 +209,3 @@ li {
     display: none;
   }
 }
-
