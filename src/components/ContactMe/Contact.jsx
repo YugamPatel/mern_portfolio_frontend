@@ -29,8 +29,8 @@ const Contact = () => {
       }, 3000);
     }
 
-    const filteredMessage = filter(message);
-    formData.set("Message", filteredMessage);
+    // const filteredMessage = filter(message);
+    // formData.set("Message", filteredMessage);
 
     const scriptURL = contactData.scriptURL;
 
