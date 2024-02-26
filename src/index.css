@@ -91,7 +91,7 @@ li {
     height: 170px;
     bottom: 86px;
   }
-  
+
   .text {
     bottom: 5.5%;
     justify-content: space-evenly;
@@ -145,6 +145,10 @@ li {
     opacity: 1;
     box-shadow: none;
   }
+  .sideBar{
+    min-height: calc(100dvh - 2 * var(--sidebar-margin-tb));
+    transition: height 3s ease;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -156,6 +160,9 @@ li {
   }
   .box {
     padding: 20px 12px;
+  }
+  .headerImage {
+    min-height: 195px;
   }
 }
 
