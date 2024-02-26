@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import "./modernaboutme.css";
-
 import Info from "./Info";
 import GradiantCircles from "./GradiantCircles";
 
+import { modernAboutData } from "../../Data/modernAboutData";
+
 const ModernAboutme = () => {
   const makeMagic = () => {
-    console.log("makeMagic");
     const mask = document.querySelector("#div-mask-back");
     const main = document.querySelector(".modernAboutme");
     const tl = gsap.timeline();
@@ -19,7 +19,6 @@ const ModernAboutme = () => {
     }).to(mask, {
       "--m2": "30%",
       duration: 0.5,
-      // delay: 0.5,
       ease: "back.out(2)",
     });
 
@@ -45,14 +44,11 @@ const ModernAboutme = () => {
       duration: 0.5,
       ease: "power1.out",
     });
-    console.log("leaveMagic");
   };
 
   const addMagic = (e) => {
     const mask = document.querySelector("#div-mask-back");
-    const main = document.querySelector(".modernAboutme");
     const tl = gsap.timeline();
-    console.log("addMagic");
     tl.to(mask, {
       "--m1": "20%",
       delay: 0.3,
@@ -101,8 +97,8 @@ const ModernAboutme = () => {
         </div>
 
         <div id="div-mask-front">
-          <h1>I'm Yugam Patel</h1>
-          <p>Explore More !</p>
+          <h1>{modernAboutData.title}</h1>
+          <p>{modernAboutData.subTitle}</p>
         </div>
 
         <div id="div-mask-back" area-hidden="true">
@@ -114,7 +110,7 @@ const ModernAboutme = () => {
               <GradiantCircles />
             </ul>
           </div>
-          <Info />
+          <Info infoData={modernAboutData.info} />
         </div>
       </div>
     </div>

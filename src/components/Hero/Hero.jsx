@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import "./hero.css";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
-import { typewriter } from "../../Data/typeWritter.js";
-import resume from "../../assets/Yugam's Resume.pdf";
+import { heroData } from "../../Data/heroData.js";
 
 const Hero = () => {
   // TO BE CHECKED BEFORE DEPLOYMENT ---------------
@@ -13,14 +12,7 @@ const Hero = () => {
   // -----------------------------------------------
 
   const textAnimate = () => {
-    window.Shery.textAnimate(".whoAmI" /* Element to target.*/, {
-      style: 1,
-      y: 10,
-      delay: 0.2,
-      duration: 1,
-      ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-      multiplier: 0.1,
-    });
+    window.Shery.textAnimate(".whoAmI", heroData.heroSubTitle.shery);
   };
 
   useEffect(() => {
@@ -30,21 +22,27 @@ const Hero = () => {
     });
     textAnimate();
   }, []);
+
   return (
     <div className="hero">
       <div className="header">
         <div className="headerImage">
           <img
             className="smallImage"
-            src="https://source.unsplash.com/random/?&mountains&forest&gradient&galaxy&ocean&landscape"
+            src={
+              heroData.heroImage.isRandom || !heroData.heroImage.img
+                ? heroData.heroImage.randomImg
+                : heroData.heroImage.img
+            }
           />
         </div>
 
         <div className="profile">
           <div className="profileImage">
             <img
-              className="smallImage selfImage"
-              src="https://res.cloudinary.com/dwig4hupj/image/upload/v1707009431/portfolio/home/profile/yfgodod5m1tpqk4hbll7.jpg"
+              className="smallImage"
+              style={heroData.profileImage.style}
+              src={heroData.profileImage.img}
               alt=""
             />
           </div>
@@ -53,7 +51,10 @@ const Hero = () => {
         <div className="text">
           <div className="nameH1">
             <h1 className="hi">
-              Hi, I'm <span className="name">Yugam.</span>
+              {heroData.heroTitle.intro}
+              <span className="name">
+                {heroData.heroTitle.name}
+              </span>
             </h1>
             <h2
               className="whoAmI"
@@ -62,14 +63,14 @@ const Hero = () => {
                 textAnimate();
               }}
             >
-              And i am a,
+              {heroData.heroSubTitle.subTitle}
             </h2>
           </div>
 
           <div className="typewriter">
             <Typewriter
               options={{
-                strings: [...typewriter],
+                strings: [...heroData.typewriter],
                 autoStart: true,
                 loop: true,
                 delay: 70,
@@ -88,18 +89,17 @@ const Hero = () => {
               delay: 0.5,
             }}
           >
-            <a href="https://www.facebook.com/yugampatel/" target="_blank">
-              <i className="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/its.yugam/" target="_blank">
-              <i className="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/yugampatel/" target="_blank">
-              <i className="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/YugamPatel/ " target="_blank">
-              <i className="fa-brands fa-github"></i>
-            </a>
+            {heroData.socialLinks.map((social) => (
+              <a
+                className="social"
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={social.name}
+              >
+                <i className={social.iconClass}></i>
+              </a>
+            ))}
           </motion.div>
 
           <motion.button
@@ -107,8 +107,13 @@ const Hero = () => {
             whileHover={{ scale: 1.05, borderRadius: "5px" }}
             whileTap={{ scale: 0.8 }}
           >
-            <a href={resume} download className="noLink">
-              Download Resume
+            <a
+              href={heroData.button.url}
+              download
+              target="_blank"
+              className="noLink"
+            >
+              {heroData.button.name}
             </a>
           </motion.button>
         </div>
