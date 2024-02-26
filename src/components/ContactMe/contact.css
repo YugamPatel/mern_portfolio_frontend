@@ -17,29 +17,56 @@
   bottom: 3px;
 }
 
-.contact-button {
-  display: block;
-  margin: 20px auto;
-  width: fit-content;
-  border: 2px solid rgb(9, 164, 162);
-  padding: 14px 30px;
-  border-radius: 6px;
+.resume-button {
+  display: inline-block;
+  background-color: #ff0051c3;
+  padding: 14px 20px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 10px;
   text-decoration: none;
-  color: white;
-  transition: 0.5s;
+  color: snow;
+  transition: 0.5s ease-in-out;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #ff0051c3;
+  padding: 9px 40px;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  color: rgb(224, 223, 223);
+  transition: 0.5s ease-in-out;
+  border: none;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+}
+
+.resume-button:hover {
+  background-color: transparent;
+  border: 1.5px solid #ff6a00;
+  color: #00d5ff;
+  padding: 14px 50px;
 }
 
 .contact-sub-title {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  transition: 0.3s;
+  transition: 0.5s ease-in-out;
   font-size: 55px;
   font-weight: 600;
   color: #fff;
+  text-shadow: none;
 }
 
 #contact .contact-sub-title:hover {
-  color: #04a7e7;
-  translate: 4px -1px;
+  color: transparent;
+  text-shadow: 3px 3px 0px rgba(255, 1, 1, 0.796);
+  -webkit-text-stroke: 1.3px #04a7e7;
 }
 
 .contact-left {
@@ -86,17 +113,9 @@
   color: #ff004f;
   transform: translate(0, -5px);
 }
+
 .contact-social-icons a:hover i {
   color: #0e9fd8;
-}
-
-.contact-button.contact-button2 {
-  display: inline-block;
-  background-color: #ff004f;
-  padding: 14px 60px;
-  font-size: 18px;
-  margin-top: 15px;
-  cursor: pointer;
 }
 
 .contact-right form {
@@ -114,10 +133,6 @@ form textarea {
   color: whitesmoke;
   font-size: 18px;
   border-radius: 6px;
-}
-
-.contact-button:hover {
-  background: #900632;
 }
 
 #message {

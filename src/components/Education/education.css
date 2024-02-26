@@ -30,7 +30,7 @@ main.row {
   margin-bottom: 1.5%;
 }
 
-.col header.title h2 {
+.col header.title h1 {
   display: inline;
   border-top: 2px solid #fccc08;
   border-bottom: 2px solid #fccc08;

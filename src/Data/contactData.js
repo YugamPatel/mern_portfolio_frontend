@@ -1,35 +1,48 @@
 export const contactData = {
-    contactInfo: {
-      email: "yugampatel@gmail.com",
-      phone: "+1 204-970-1007",
+  heading: "Lets get in touch",
+  contactInfo: {
+    email: "yugampatel@gmail.com",
+    phone: "+1 204-970-1007",
+  },
+  scriptURL:
+    "https://script.google.com/macros/s/AKfycbxslZ-mL_3gxmxT-Z2sG2eCYaVNNqDBN-2GLRV6PUY_qd9GDHw9-p4sBiT6Tw9VP1iv/exec",
+  socialLinks: [
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com/yugampatel/",
+      iconClass: "fa-brands fa-facebook",
     },
-    socialLinks: [
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/yugampatel/",
-        iconClass: "fa-brands fa-facebook",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/its.yugam/",
-        iconClass: "fa-brands fa-instagram",
-      },
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/yugampatel/",
-        iconClass: "fa-brands fa-linkedin",
-      },
-      {
-        name: "GitHub",
-        url: "https://github.com/YugamPatel/",
-        iconClass: "fa-brands fa-github",
-      },
-    ],
-    resumeURL: resume, 
-    formActionURL: "https://script.google.com/macros/s/AKfycbxslZ-mL_3gxmxT-Z2sG2eCYaVNNqDBN-2GLRV6PUY_qd9GDHw9-p4sBiT6Tw9VP1iv/exec",
-    curseWordsLangs: ["en", "hi", "fr"], 
-    successMessage: "Message sent successfully.",
-    failureMessage: "Failed to send message. Try again later.",
-    inappropriateMessage: "Message not sent. Inappropriate language used.",
-  };
-  
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/its.yugam/",
+      iconClass: "fa-brands fa-instagram",
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/yugampatel/",
+      iconClass: "fa-brands fa-linkedin",
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/YugamPatel/",
+      iconClass: "fa-brands fa-github",
+    },
+  ],
+  button: {
+    text: "Download Resume",
+    url: "https://drive.google.com/file/d/1flQaAGJlsyJHql6nLBmV5V_m0AUFNX8O/view?usp=sharing",
+  },
+  sendButton: {
+    text: "Say Hi! 👋",
+    onClick: "Sending 🚀...",
+    failureMessage: "Failed.",
+    successMessage: "Delivered! ✨⚡️",
+  },
+  curseWordsLangs: ["en", "hi", "fr"],
+  successMessage:
+    "Marvelous! Your words have been inscribed in the great book of spells. 📖⚡️",
+  failureMessage:
+    "A Wizard's Barrier Blocked Your Message. Recast with Intent! 🧙‍♂️🛡️",
+  inappropriateMessage:
+    "Oops! That message summoned dark magic. Lighten it up, please! 🌚➡️🌞",
+};

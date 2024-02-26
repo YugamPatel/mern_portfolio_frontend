@@ -1,48 +1,54 @@
-import React from "react";
-import "./contact.css";
+import React, { useState } from "react";
 import { filter, detect } from "curse-filter";
-import resume from "../../assets/Yugam's Resume.pdf";
+import { motion } from "framer-motion";
+import { contactData } from "../../Data/contactData";
+import "./contact.css";
 
 const Contact = () => {
+  const [buttonText, setButtonText] = useState(contactData.sendButton.text);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setButtonText(contactData.sendButton.onClick);
+
     const form = event.target;
     const formData = new FormData(form);
 
     const message = formData.get("Message");
-    const isInappropriate = detect(message, ["en", "hi", "fr"]);
+    const isInappropriate = detect(message, contactData.curseWordsLangs);
 
     const messageID = "contact-message";
     const messageElement = document.getElementById(messageID);
 
     if (isInappropriate) {
-      messageElement.innerHTML =
-        "Message not sent. Inappropriate language used.";
+      messageElement.innerHTML = contactData.inappropriateMessage;
+      setButtonText(contactData.sendButton.failureMessage);
       setTimeout(() => {
         messageElement.innerHTML = "";
-      }, 5000);
+        setButtonText(contactData.sendButton.text);
+      }, 3000);
     }
 
     const filteredMessage = filter(message);
     formData.set("Message", filteredMessage);
 
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbxslZ-mL_3gxmxT-Z2sG2eCYaVNNqDBN-2GLRV6PUY_qd9GDHw9-p4sBiT6Tw9VP1iv/exec";
+    const scriptURL = contactData.scriptURL;
 
     fetch(scriptURL, { method: "POST", body: formData })
       .then((response) => {
         if (!isInappropriate) {
-          messageElement.innerHTML = "Message sent successfully.";
+          messageElement.innerHTML = contactData.successMessage;
+          setButtonText(contactData.sendButton.successMessage);
         }
-        console.log(response);
         setTimeout(() => {
           messageElement.innerHTML = "";
-        }, 2000);
+          setButtonText(contactData.sendButton.text);
+        }, 4000);
         form.reset();
       })
       .catch((error) => {
         console.error("Error!", error.message);
-        messageElement.innerHTML = "Failed to send message. Try again later.";
+        messageElement.innerHTML = contactData.failureMessage;
       });
   };
 
@@ -50,50 +56,43 @@ const Contact = () => {
     <div id="contact" className="contact-container">
       <div className="contact-row">
         <div className="contact-left">
-          <h1 className="contact-sub-title">Lets get in touch.</h1>
+          <h1 className="contact-sub-title">{contactData.heading}</h1>
           <p>
             <i className="fa-solid fa-paper-plane"></i>
-            <span className="contact-me-info">yugampatel@gmail.com</span>
+            <span className="contact-me-info">
+              {contactData.contactInfo.email}
+            </span>
           </p>
           <p>
             <i className="fa-solid fa-phone"></i>
-            <span className="contact-me-info">+1 204-970-1007</span>
+            <span className="contact-me-info">
+              {contactData.contactInfo.phone}
+            </span>
           </p>
 
           <div className="contact-social-icons">
-            <a
-              href="https://www.facebook.com/yugampatel/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fa-brands fa-facebook"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/its.yugam/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fa-brands fa-instagram"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/yugampatel/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fa-brands fa-linkedin"></i>
-            </a>
-            <a
-              href="https://github.com/YugamPatel/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
+            {contactData.socialLinks.map((social) => (
+              <a
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={social.name}
+              >
+                <i className={social.iconClass}></i>
+              </a>
+            ))}
           </div>
 
-          <a href={resume} download className="contact-button contact-button2">
-            Download Resume
-          </a>
+          <motion.a
+            href={contactData.button.url}
+            download
+            className="resume-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileTap={{ scale: 0.8 }}
+          >
+            {contactData.button.text}
+          </motion.a>
         </div>
 
         <div className="contact-right">
@@ -106,9 +105,14 @@ const Contact = () => {
               required
             />
             <textarea name="Message" rows="6" placeholder="Message"></textarea>
-            <button type="submit" className="contact-button contact-button2">
-              Submit
-            </button>
+            <motion.button
+              type="submit"
+              className="contact-button"
+              whileHover={{ scale: 1.07 }}
+              whileTap={{ scale: 0.8 }}
+            >
+              {buttonText}
+            </motion.button>
           </form>
           <span id="contact-message"></span>
         </div>

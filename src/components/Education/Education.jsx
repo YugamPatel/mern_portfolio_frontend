@@ -42,7 +42,7 @@ const Education = () => {
       <main className="row">
         <section className="col">
           <header className="title">
-            <h2 className="Merriweather">EDUCATION</h2>
+            <h1 className="Merriweather">EDUCATION</h1>
           </header>
 
           <motion.div
@@ -67,7 +67,7 @@ const Education = () => {
 
         <section className="col">
           <header className="title">
-            <h2 className="Merriweather">EXPERIENCE</h2>
+            <h1 className="Merriweather">EXPERIENCE</h1>
           </header>
 
           <motion.div
