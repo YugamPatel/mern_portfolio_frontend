@@ -1,10 +1,10 @@
 export const heroData = {
-
   heroImage: {
-    isRandom: true,
+    isRandom: false,
     randomImg:
       "https://source.unsplash.com/random/?&mountains&forest&gradient&galaxy&ocean&landscape",
-    img: "https://res.cloudinary.com/dwig4hupj/image/upload/v1707009431/portfolio/home/profile/yfgodod5m1tpqk4hbll7.jpg",
+    img: "https://images.unsplash.com/photo-1716668596098-40ff5f73fb9e?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    // img: "https://res.cloudinary.com/dwig4hupj/image/upload/v1707009431/portfolio/home/profile/yfgodod5m1tpqk4hbll7.jpg",
   },
 
   profileImage: {
@@ -65,7 +65,6 @@ export const heroData = {
 
   button: {
     name: "Download Resume",
-    url: "https://drive.google.com/file/d/1flQaAGJlsyJHql6nLBmV5V_m0AUFNX8O/view?usp=sharing",
+    url: "https://drive.google.com/file/d/1KKZr2A57vq246mbtlaWcooCoVDqyiRtK/view?usp=sharing",
   },
-
 };

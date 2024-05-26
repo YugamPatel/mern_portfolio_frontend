@@ -38,10 +38,10 @@
   transition: 0.4s ease-out;
 }
 
-.profile:hover {
+/* .profile:hover { 
   box-shadow: 0px 0px 10px 2px rgb(182, 80, 58);
   transform: scale(1.008);
-}
+} */ /* 26 may 2024 commit */
 
 .headerImage:hover {
   box-shadow: 0 0 0 8px #021d35, 0 0 0 13px hsl(0, 0%, 67%),

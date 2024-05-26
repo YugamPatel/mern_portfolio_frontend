@@ -4,7 +4,7 @@ pre {
   border-radius: 12px;
   background-color: rgba(68, 63, 63, 0.6);
   padding: 2rem 1rem;
-  max-width: 80%;
+  max-width: 74%; /* 26 may 2024 commit */
   text-size-adjust: auto;
   font-family: "Source Code Pro", monospace;
   line-height: 30px;
