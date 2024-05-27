@@ -3,7 +3,7 @@ export const projectData = [
     imgSrc:
       "https://github.com/YugamPatel/WeatherApp/blob/main/WeatherApp.png?raw=true",
     projectUrl: "https://github.com/YugamPatel/WeatherApp",
-    liveUrl: "https://yugamspersonalprojects.on.drv.tw/www.weatherapp.com/",
+    liveUrl: "https://cloudcast10.netlify.app",
     title: "Weather App",
     stack: "HTML, CSS, JavaScript",
   },
@@ -12,7 +12,7 @@ export const projectData = [
     imgSrc:
       "https://github.com/YugamPatel/Amazon-Clone/raw/main/amazon-clone.png",
     projectUrl: "https://github.com/YugamPatel/Amazon-Clone",
-    liveUrl: "https://yugamspersonalprojects.on.drv.tw/www.amazon-clone.com/",
+    liveUrl: "https://clone-amazon10.netlify.app",
     title: "Amazon Clone",
     stack: "HTML, CSS",
   },
@@ -32,7 +32,7 @@ export const projectData = [
     title: "Flutter TODO App",
     stack: "Flutter, Dart, Swagger API",
   },
-  
+
   {
     imgSrc: "https://github.com/YugamPatel/FlutterMovieApp/raw/main/page1.png",
     projectUrl: "https://github.com/YugamPatel/FlutterMovieApp",
