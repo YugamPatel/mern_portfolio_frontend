@@ -44,10 +44,10 @@
   transition: transform 0.35s ease-out;
 }
 
-.nav_item:hover {
+/* .nav_item:hover { 
   color: rgba(42, 90, 187, 0.998);
   transform: scale(1.4);
-}
+} */ /* 26 may 2024 commit */
 
 .logo {
   background-color: rgba(16, 136, 187, 0.737);

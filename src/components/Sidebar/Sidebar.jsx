@@ -1,5 +1,6 @@
 import "./sidebar.css";
 import useSwipe from "./swipe.js";
+import { motion } from "framer-motion";
 
 const Sidebar = () => {
   const {
@@ -31,41 +32,65 @@ const Sidebar = () => {
       <nav className="nav">
         <div className="nav_menu">
           <ul className="nav_list">
-            <li className="nav_item">
+            <motion.li
+              className="nav_item"
+              whileHover={{ scale: 1.2, borderRadius: "5px" }}
+              whileTap={{ scale: 0.8 }}
+            >
               <a href="#homePage" className="noLink">
                 <i className="fa-solid fa-house"></i>
               </a>
-            </li>
+            </motion.li>
 
-            <li className="nav_item">
+            <motion.li
+              className="nav_item"
+              whileHover={{ scale: 1.2, borderRadius: "5px" }}
+              whileTap={{ scale: 0.8 }}
+            >
               <a href="#theFinalAboutmePage" className="noLink">
                 <i className="fa-solid fa-user"></i>
               </a>
-            </li>
+            </motion.li>
 
-            <li className="nav_item">
+            <motion.li
+              className="nav_item"
+              whileHover={{ scale: 1.2, borderRadius: "5px" }}
+              whileTap={{ scale: 0.8 }}
+            >
               <a href="#EducationPage" className="noLink">
                 <i className="fa-solid fa-graduation-cap"></i>
               </a>
-            </li>
+            </motion.li>
 
-            <li className="nav_item">
+            <motion.li
+              className="nav_item"
+              whileHover={{ scale: 1.2, borderRadius: "5px" }}
+              whileTap={{ scale: 0.8 }}
+            >
               <a href="#skillsPage" className="noLink">
                 <i className="fa-solid fa-gem"></i>
               </a>
-            </li>
+            </motion.li>
 
-            <li className="nav_item">
+            <motion.li
+              className="nav_item"
+              whileHover={{ scale: 1.2, borderRadius: "5px" }}
+              whileTap={{ scale: 0.8 }}
+            >
               <a href="#projects" className="noLink">
                 <i className="fa-solid fa-puzzle-piece"></i>
               </a>
-            </li>
+            </motion.li>
 
-            <li className="nav_item">
+            <motion.li
+              className="nav_item"
+              whileHover={{ scale: 1.2, borderRadius: "5px" }}
+              whileTap={{ scale: 0.8 }}
+            >
               <a href="#contact" className="noLink">
                 <i className="fa-solid fa-message"></i>
               </a>
-            </li>
+            </motion.li>
           </ul>
         </div>
       </nav>

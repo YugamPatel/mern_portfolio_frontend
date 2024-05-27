@@ -3,7 +3,7 @@ export const modernAboutData = {
   subTitle: "Explore More !",
   info: [
     {
-      var: "name",
+      var: "Name",
       char: "=",
       str: "Yugam Patel",
     },
