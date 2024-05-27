@@ -30,7 +30,7 @@ export const contactData = {
   ],
   button: {
     text: "Download Resume",
-    url: "https://drive.google.com/file/d/1flQaAGJlsyJHql6nLBmV5V_m0AUFNX8O/view?usp=sharing",
+    url: "https://drive.google.com/file/d/1KKZr2A57vq246mbtlaWcooCoVDqyiRtK/view?usp=sharing",
   },
   sendButton: {
     text: "Say Hi! 👋",
