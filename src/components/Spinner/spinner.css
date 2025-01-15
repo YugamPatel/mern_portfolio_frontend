@@ -1,47 +1,74 @@
-body{
-	background: rgba(214, 62, 35, 0.86);
-	margin: 0;
-	padding: 0;
+body {
+  background: rgba(214, 62, 35, 0.86);
+  margin: 0;
+  padding: 0;
 }
 
-.cup{
-	height: 140px;
-	width: 180px;
-	border: 6px solid #efb54a;
-	border-radius: 3px 3px 65px 65px;
-	position: absolute;
-	top: 40%;
-	left: 40%;
-	background: url(https://i.postimg.cc/8z5t32TG/coffee.png);
-	box-shadow: 0 0 0 5px #fff;
-	animation: fill 3s linear infinite;
-	background-repeat: repeat-x;
+.spinner {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(68, 67, 67);
+  /* background: linear-gradient(to bottom, #316a78, #70758a, #003366, #232323); */
 }
 
-@keyframes fill{
-	0%{
-		background-position: 0px 140px;
-	}
-	20%{
-		background-position: -450px 100px;
-	}
-	40%{
-		background-position: -900px 50px;
-	}
-	80%{
-		background-position: -1350px -40px;
-	}
-	100%{
-		background-position: 0px 140px;
-	}
+.cup {
+  height: 140px;
+  width: 180px;
+  border: 6px solid #2f7901;
+  border-radius: 3px 3px 65px 65px;
+  background: url(https://i.postimg.cc/8z5t32TG/coffee.png);
+  box-shadow: 0 0 0 5px #fff;
+  animation: fill 5s linear infinite;
+  background-repeat: repeat-x;
+  position: relative;
+  top: calc(50% - 64px);
+  left: calc(50% - 84px - 10px);
 }
 
-.handle{
-	position: relative;
-	height: 70px;
-	width: 40px;
-	border: 6px solid #fff;
-	left: 186px;
-	top: 10px;
-	border-radius: 10px 35px 70px 5px;
+.center-line-x {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: red;
+	z-index: 1000;
+  }
+  
+  .center-line-y {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	width: 1px;
+	height: 100%;
+	background: red;
+	z-index: 1000;
+  }
+
+@keyframes fill {
+  0% {
+    background-position: 0px 140px;
+  }
+  20% {
+    background-position: -450px 100px;
+  }
+  40% {
+    background-position: -900px 50px;
+  }
+  80% {
+    background-position: -1350px -40px;
+  }
+  100% {
+    background-position: 0px 140px;
+  }
+}
+
+.handle {
+  position: relative;
+  height: 70px;
+  width: 40px;
+  border: 6px solid #fff;
+  left: 186px;
+  top: 10px;
+  border-radius: 10px 35px 70px 5px;
 }
