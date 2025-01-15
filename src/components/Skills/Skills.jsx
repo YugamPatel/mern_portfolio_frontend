@@ -38,6 +38,7 @@ const Skills = () => {
             variants={skillContainerVariant}
             initial="initial"
             whileInView={"visible"}
+            viewport={{ once: true }}
           >
             {window.innerWidth > 600 ? "Skills" : "Top Skills"}
           </motion.h1>

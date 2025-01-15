@@ -3,16 +3,35 @@ export const heroData = {
     isRandom: false,
     randomImg:
       "https://source.unsplash.com/random/?&mountains&forest&gradient&galaxy&ocean&landscape",
-    img: "https://images.unsplash.com/photo-1716668596098-40ff5f73fb9e?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    // img: "https://res.cloudinary.com/dwig4hupj/image/upload/v1707009431/portfolio/home/profile/yfgodod5m1tpqk4hbll7.jpg",
+    // img: "https://images.unsplash.com/photo-1517928260182-5688aead3066?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    // img: "https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&w=2900&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.unsplash.com/photo-1496450681664-3df85efbd29f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 
   profileImage: {
-    img: "https://res.cloudinary.com/dwig4hupj/image/upload/v1707009431/portfolio/home/profile/yfgodod5m1tpqk4hbll7.jpg",
+    //[
+    // img: "https://res.cloudinary.com/dwig4hupj/image/upload/v1707009431/portfolio/home/profile/yfgodod5m1tpqk4hbll7.jpg",
+    // style: {
+    //   transform: "scale(2.4)",
+    //   objectPosition: "center 10px",
+    // },
+    // ],
+
+    // [
+    // img: "https://res.cloudinary.com/dwig4hupj/image/upload/v1736968311/img_kfxabo.jpg",
+    // style: {
+    //   transform: "scale(2)",
+    //   objectPosition: "10px -90px",
+    // },
+    // ],
+
+    //[
+    img: "https://res.cloudinary.com/dwig4hupj/image/upload/v1736968666/img2_wfcmtu.jpg",
     style: {
-      transform: "scale(2.4)",
-      objectPosition: "center 10px",
+      transform: "scale(2.8)",
+      objectPosition: "0px 10px",
     },
+    // ]
   },
 
   heroTitle: {
@@ -58,9 +77,10 @@ export const heroData = {
   typewriter: [
     "< MERN Stack Developer />",
     "=> ( Js Developer )",
+    "AWS Certified Developer",
     "( Flutter Developer )",
     "{ Java Developer }",
-    "{ Team Leader }",
+    "{ Co-op Student }",
   ],
 
   button: {
