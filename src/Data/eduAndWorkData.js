@@ -20,7 +20,7 @@ export const eduAndWorkData = {
     {
       name: "Looking for opportunities.",
       date: "Present",
-      desc: "As a student in the University of Manitoba's co-op program, I am actively seeking internship opportunities in software development, with a particular interest in learning and working with .NET technologies. I am eager to apply my programming skills in a practical setting, gain hands-on experience in .NET development, and collaborate with experienced professionals on impactful projects. My goal is to gain expertise in .NET, contributing innovative solutions, and grow as a software developer while making meaningful impacts in a dynamic team.",
+      desc: "As a student in the University of Manitoba's co-op program, I am actively seeking Co-op opportunities in software development, with a particular interest in learning and working with .NET technologies. I am eager to apply my programming skills in a practical setting, gain hands-on experience in .NET development, and collaborate with experienced professionals on exciting projects. My goal is to gain expertise in .NET, contributing innovative solutions, and grow as a software developer while making meaningful impacts in a dynamic team.",
       mobileDec:
         "I am eagerly seeking software development internships, particularly in .NET development. Committed to applying my programming skills in real-world settings, I aim to learn from experts and contribute to meaningful projects. My goal is to excel in .NET development and make valuable contributions to a team while growing professionally.",
       isNotice: true,
@@ -28,7 +28,7 @@ export const eduAndWorkData = {
     {
       name: "Home Depot",
       date: "Apr 2024 - Present",
-      desc: "As a Special Services Associate at Home Depot, I was promoted from Seasonal Sales Associate in recognition of my exceptional customer service skills. I assist pro customers with tax redemption, billing paperwork, and specialized purchasing needs, while also facilitating project loan and Home Depot credit card applications.By consistently resolving customer queries and providing excellent assistance, I have contributed to a 30% increase in positive Voice of Customer (VOC) surveys.",
+      desc: "Got promoted from Seasonal Sales Associate to Special Services Associate at Home Depot for outstanding customer service. I assist pro customers with tax redemption, billing paperwork, and specialized purchasing needs, while also facilitating project loan and Home Depot credit card applications.By consistently resolving customer queries and providing excellent assistance, I have contributed to a 30% increase in positive Voice of Customer (VOC) surveys.",
     },
 
     {

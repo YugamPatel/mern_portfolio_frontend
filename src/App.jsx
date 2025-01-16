@@ -7,10 +7,10 @@ function App() {
   const { scrollYProgress } = useScroll();
   return (
     <>
-      <motion.div
+      {/* <motion.div
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
-      ></motion.div>
+      ></motion.div> */}
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="*" element={<Page404 />} />
