@@ -32,6 +32,7 @@ const Projects = () => {
             title={project.title}
             cover={project.cover}
             stack={project.stack}
+            video={project.video}
           />
         ))}
       </motion.div>

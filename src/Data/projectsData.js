@@ -27,10 +27,11 @@ export const projectData = [
 
   {
     imgSrc:
-      "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://video-hover-1.superhi.com/7-ui.mp4",
     projectUrl: "https://github.com/YugamPatel/FlutterToDo",
     title: "Flutter TODO App",
     stack: "Flutter, Dart, Swagger API",
+    video: true,
   },
 
   {

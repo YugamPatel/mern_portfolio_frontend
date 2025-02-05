@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import git from "../../../assets/git.svg";
 import live from "../../../assets/live.svg";
 import { motion } from "framer-motion";
@@ -11,7 +11,10 @@ const ProjectCard = ({
   technologies,
   cover = true,
   stack = "null",
+  video = false,
 }) => {
+  const videoRef = useRef(null);
+
   const projectVariant = {
     initial: {
       scale: 0.4,
@@ -34,9 +37,35 @@ const ProjectCard = ({
       initial="initial"
       whileInView="visible"
       viewport={{ once: true }}
+      onMouseEnter={() => videoRef.current && videoRef.current.pause()}
+      onMouseLeave={() => videoRef.current && videoRef.current.play()}
     >
       <div className="cardImg">
-        <img src={imgSrc} alt={title} className={cover ? "" : "containImg"} />
+        {video ? (
+          <video
+            ref={videoRef}
+            src={imgSrc} // Use imgSrc as the video source (or change prop name as needed)
+            className={cover ? "coverImg" : "containImg"}
+            muted
+            loop
+            playsInline
+            onClick={() => {
+              if (videoRef.current) {
+                if (videoRef.current.paused) {
+                  videoRef.current.play();
+                } else {
+                  videoRef.current.pause();
+                }
+              }
+            }}
+          />
+        ) : (
+          <img
+            src={imgSrc}
+            alt={title}
+            className={cover ? "coverImg" : "containImg"}
+          />
+        )}
 
         <div className="layer">
           <a href={projectUrl} target="_blank" className="gitLogoProject">
