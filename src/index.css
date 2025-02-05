@@ -71,6 +71,12 @@ li {
   -webkit-border-radius: 2ex;
 }
 
+@media (min-width: 1900px) {
+  .text {
+    box-shadow: none;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .hero {
     background-color: rgb(2, 29, 44);
@@ -133,7 +139,7 @@ li {
   :root {
     --sidebar-total-width: 0px;
   }
-  .header{
+  .header {
     position: relative;
     left: 5px;
   }
