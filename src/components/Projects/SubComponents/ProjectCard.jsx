@@ -8,7 +8,6 @@ const ProjectCard = ({
   projectUrl,
   liveUrl,
   title,
-  technologies,
   cover = true,
   stack = "null",
   video = false,
@@ -76,7 +75,7 @@ const ProjectCard = ({
               <img src={live} alt="Live Logo" />
             </a>
           )}
-          <h3 className="projectTitle">{title}</h3>
+          {/* <h3 className="projectTitle">{title}</h3> */}
         </div>
       </div>
 
