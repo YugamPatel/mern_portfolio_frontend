@@ -194,6 +194,7 @@
     grid-template-rows: auto;
     row-gap: 50px;
     justify-items: center;
+    padding: 20px 10px 20px 20px;
   }
 
   .project .title {
