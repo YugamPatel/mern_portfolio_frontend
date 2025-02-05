@@ -7,7 +7,7 @@
 #box {
   width: var(--box-width);
   height: calc(var(--box-width) / 1.75);
-  border-radius: 0.8em;
+  border-radius: 10px;
   background-color: #1c1c1c;
   background-image: linear-gradient(to left top, #1c1c1c 33%, #272727 70%);
   box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
