@@ -19,6 +19,7 @@
   justify-content: space-between;
   overflow: hidden;
   z-index: -10; /*fancy*/
+  user-select: none;
 }
 
 .boxTitleSkills {
@@ -64,10 +65,6 @@
   color: #4580b6;
   text-decoration: underline;
   text-decoration-color: #bea40f;
-}
-
-.titleSkills::selection {
-  color: rgb(105, 212, 191);
 }
 
 /* --------------------------------------- Lower Skills --------------------------------------- */

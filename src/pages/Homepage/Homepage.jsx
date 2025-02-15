@@ -8,12 +8,14 @@ import ModernAboutme from "../../components/ModernAboutMe/ModernAboutme";
 import Skills from "../../components/Skills/Skills";
 import Projects from "../../components/Projects/Projects";
 import Contact from "../../components/ContactMe/Contact";
+import { heroData as localHeroData } from "../../Data/heroData.js";
 
-const Homepage = ({ user }) => {
+const Homepage = ({ user = null }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    console.log(user.hero);
+    console.log("User Data:", user); 
+    console.log("Hero Data:", user?.hero ?? localHeroData);
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -21,12 +23,14 @@ const Homepage = ({ user }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [user]);
+
+  const heroData = user?.hero ?? localHeroData;
 
   return (
     <div className="homepage" id="homePage">
       <Sidebar></Sidebar>
-      <Hero heroData={user.hero}></Hero>
+      <Hero heroData={heroData}></Hero>
       {windowWidth > 1200 ? (
         <ModernAboutme></ModernAboutme>
       ) : (

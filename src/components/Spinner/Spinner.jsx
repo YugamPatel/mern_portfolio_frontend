@@ -3,12 +3,15 @@ import "./spinner.css";
 
 const Spinner = () => {
   return (
-    <div className="spinner">
-      <div className="cup">
-        <div className="handle"></div>
+    <div id="spinner-container">
+      <div className="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      <div class="center-line-x"></div>
-      <div class="center-line-y"></div>
     </div>
   );
 };

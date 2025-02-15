@@ -9,6 +9,7 @@
   align-items: center;
   overflow: hidden;
   background-color: #021d35;
+  user-select: none;
 }
 
 
