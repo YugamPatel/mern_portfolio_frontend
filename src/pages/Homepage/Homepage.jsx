@@ -9,10 +9,11 @@ import Skills from "../../components/Skills/Skills";
 import Projects from "../../components/Projects/Projects";
 import Contact from "../../components/ContactMe/Contact";
 
-const Homepage = () => {
+const Homepage = ({ user }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+    console.log(user.hero);
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -25,7 +26,7 @@ const Homepage = () => {
   return (
     <div className="homepage" id="homePage">
       <Sidebar></Sidebar>
-      <Hero></Hero>
+      <Hero heroData={user.hero}></Hero>
       {windowWidth > 1200 ? (
         <ModernAboutme></ModernAboutme>
       ) : (
@@ -34,7 +35,7 @@ const Homepage = () => {
       <Education></Education>
       <Skills></Skills>
       <Projects></Projects>
-      <Contact/>
+      <Contact />
     </div>
   );
 };

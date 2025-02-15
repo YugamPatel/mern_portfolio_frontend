@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import "./hero.css";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
-import { heroData } from "../../Data/heroData.js";
+// import { heroData } from "../../Data/heroData.js";
 
-const Hero = () => {
+const Hero = ({heroData}) => {
   const textAnimate = () => {
     window.Shery.textAnimate(".whoAmI", heroData.heroSubTitle.shery);
   };
