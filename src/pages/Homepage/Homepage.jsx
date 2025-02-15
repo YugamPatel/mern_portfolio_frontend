@@ -9,13 +9,25 @@ import Skills from "../../components/Skills/Skills";
 import Projects from "../../components/Projects/Projects";
 import Contact from "../../components/ContactMe/Contact";
 import { heroData as localHeroData } from "../../Data/heroData.js";
+import { aboutData as localAboutData } from "../../Data/aboutData.js";
 
 const Homepage = ({ user = null }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [aboutData, setAboutData] = useState(localAboutData);
+  const [heroData, setHeroData] = useState(localHeroData);
 
   useEffect(() => {
-    console.log("User Data:", user); 
-    console.log("Hero Data:", user?.hero ?? localHeroData);
+    if (user?.about) {
+      console.log("Updating aboutData from API:", user.about);
+      setAboutData(user.about);
+    }
+    if (user?.hero) {
+      console.log("Updating heroData from API:", user.hero);
+      setHeroData(user.hero);
+    }
+  }, []);
+
+  useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -23,9 +35,7 @@ const Homepage = ({ user = null }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [user]);
-
-  const heroData = user?.hero ?? localHeroData;
+  }, []);
 
   return (
     <div className="homepage" id="homePage">
@@ -34,7 +44,7 @@ const Homepage = ({ user = null }) => {
       {windowWidth > 1200 ? (
         <ModernAboutme></ModernAboutme>
       ) : (
-        <Aboutme></Aboutme>
+        <Aboutme aboutData={aboutData}></Aboutme>
       )}
       <Education></Education>
       <Skills></Skills>

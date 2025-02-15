@@ -2,15 +2,13 @@ import React, { useEffect } from "react";
 import "./hero.css";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
-import  {heroData as localHeroData}  from "../../Data/heroData.js";
 
-const Hero = ({ heroData = localHeroData}) => {
+const Hero = ({ heroData }) => {
   const textAnimate = () => {
     window.Shery.textAnimate(".whoAmI", heroData.heroSubTitle.shery);
   };
 
   useEffect(() => {
-    console.log("Hero Data", heroData);
     window.Shery.makeMagnet(".logo", {
       ease: "cubic-bezier(0.23, 1, 0.320, 1)",
       duration: 0.4,

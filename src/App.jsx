@@ -7,7 +7,6 @@ import Page404 from "./pages/404/Page404.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import { getUserData } from "./redux/actions/userAction.js";
 
-
 function App() {
   const dispatch = useDispatch();
   const { userData } = useSelector((state) => state.user);
@@ -15,7 +14,6 @@ function App() {
 
   // Fetch user data on app start
   useEffect(() => {
-    console.log(userData);
     const loadData = async () => {
       await dispatch(getUserData());
       setTimeout(() => setLoading(false), 2500);
@@ -26,7 +24,7 @@ function App() {
   return (
     <>
       {loading ? (
-        <Spinner /> // Show spinner while loading
+        <Spinner /> 
       ) : (
         <motion.dev
           initial={{ opacity: 0.6 }}

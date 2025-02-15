@@ -1,10 +1,14 @@
 import "./aboutme.css";
 import logo from "../../assets/yugam-logo.png";
 import logo2 from "../../assets/Yugam-logo2.png";
-import { aboutData } from "../../Data/aboutData.js";
+import { useEffect } from "react";
 
-const Aboutme = () => {
+const Aboutme = ({ aboutData }) => {
   const vlogo = window.innerWidth < 501;
+
+  useEffect(() => {
+    console.log("Updated aboutData:", aboutData);
+  }, [aboutData]);
 
   return (
     <section className="about-me aboutme" id="theFinalAboutmePage">
@@ -18,16 +22,16 @@ const Aboutme = () => {
             <div className="about-me-image">
               <div className="back-div"></div>
               <div className="black-image">
-                <img src={aboutData.backPhoto.url} alt="black" />
+                <img src={aboutData.backPhoto} alt="black" />
               </div>
               <div className="main-image">
-                <img src={aboutData.frontPhoto.url} alt="yugam" />
+                <img src={aboutData.frontPhoto} alt="yugam" />
               </div>
             </div>
             <div className="about-me-content">
               <div className="about-me-logo">
                 <img
-                  src={vlogo ? aboutData.mobileLogo.url : aboutData.logo.url}
+                  src={vlogo ? aboutData.mobileLogo : aboutData.logo}
                   alt="yugam"
                 />
               </div>
