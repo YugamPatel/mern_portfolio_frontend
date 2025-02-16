@@ -4,9 +4,9 @@ import "./fancy.css";
 import SkillTab from "./SkillList/SkillTab.jsx";
 import { motion } from "framer-motion";
 import MarqueeTab from "./Marquee/MarqueeTab.jsx";
-import { SkillsData } from "../../Data/skillsData.js";
 
-const Skills = () => {
+
+const Skills = ({skillsData}) => {
   const skillContainerVariant = {
     initial: { x: -100 },
     visible: {
@@ -70,15 +70,15 @@ const Skills = () => {
           Beyond the Basics
         </motion.h2>
 
-        <MarqueeTab spans={[...SkillsData.skillsOne]}></MarqueeTab>
+        <MarqueeTab spans={[...skillsData.skillsOne]}></MarqueeTab>
 
         <MarqueeTab
-          spans={[...SkillsData.skillsTwo]}
+          spans={[...skillsData.skillsTwo]}
           isLeft={false}
           speed={110}
         ></MarqueeTab>
 
-        <MarqueeTab spans={[...SkillsData.softSkills]} speed={105}></MarqueeTab>
+        <MarqueeTab spans={[...skillsData.softSkills]} speed={105}></MarqueeTab>
       </div>
     </div>
   );

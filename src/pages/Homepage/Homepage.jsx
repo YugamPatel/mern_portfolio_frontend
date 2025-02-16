@@ -11,12 +11,14 @@ import Contact from "../../components/ContactMe/Contact";
 import { heroData as localHeroData } from "../../Data/heroData.js";
 import { aboutData as localAboutData } from "../../Data/aboutData.js";
 import { eduAndWorkData as localEduAndWorkData } from "../../Data/eduAndWorkData.js";
+import { skillsData as localSkillsData} from "../../Data/skillsData.js";
 
 const Homepage = ({ user = null }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [aboutData, setAboutData] = useState(localAboutData);
   const [heroData, setHeroData] = useState(localHeroData);
   const [eduAndWorkData, setEduAndWorkData] = useState(localEduAndWorkData);
+  const [skillsData, setSkillsData] = useState(localSkillsData);
 
   useEffect(() => {
     if (user?.about) {
@@ -32,6 +34,15 @@ const Homepage = ({ user = null }) => {
         education: user?.education ?? localEduAndWorkData.education,
         work: user?.work ?? localEduAndWorkData.work,
       });
+    }
+    if (user?.skillsOne || user?.skillsTwo || user?.softSkills) {
+      setSkillsData(
+        {
+          skillsOne: user.skillsOne ?? localSkillsData.skillsOne,
+          skillsTwo: user.skillsTwo ?? localSkillsData.skillsTwo,
+          softSkills: user.softSkills ?? localSkillsData.softSkills,
+        }
+      );
     }
   }, []);
 
@@ -55,7 +66,7 @@ const Homepage = ({ user = null }) => {
         <Aboutme aboutData={aboutData}></Aboutme>
       )}
       <Education eduAndWorkData={eduAndWorkData}></Education>
-      <Skills></Skills>
+      <Skills skillsData={skillsData}></Skills>
       <Projects></Projects>
       <Contact />
     </div>
