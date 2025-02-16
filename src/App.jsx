@@ -19,12 +19,13 @@ function App() {
       setTimeout(() => setLoading(false), 2500);
     };
     loadData();
+    console.log("User data loaded:", userData);
   }, [dispatch]);
 
   return (
     <>
       {loading ? (
-        <Spinner /> 
+        <Spinner />
       ) : (
         <motion.dev
           initial={{ opacity: 0.6 }}
@@ -32,7 +33,7 @@ function App() {
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
           <Routes>
-            <Route path="/" element={<Homepage user = {userData} />} />
+            <Route path="/" element={<Homepage user={userData} />} />
             <Route path="*" element={<Page404 />} />
           </Routes>
         </motion.dev>

@@ -7,10 +7,6 @@ export const getUserData = () => async (dispatch) => {
     const response = await client.get("/api/get-user");
 
     if (!response.data || !response.data.success) {
-      dispatch({
-        type: "GET_USER_FAILURE",
-        payload: error.response?.data?.message || "Failed to fetch user data",
-      });
       throw new Error(response.data.message || "Invalid API response");
     }
 

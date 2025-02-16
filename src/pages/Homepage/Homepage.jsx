@@ -10,20 +10,28 @@ import Projects from "../../components/Projects/Projects";
 import Contact from "../../components/ContactMe/Contact";
 import { heroData as localHeroData } from "../../Data/heroData.js";
 import { aboutData as localAboutData } from "../../Data/aboutData.js";
+import { eduAndWorkData as localEduAndWorkData } from "../../Data/eduAndWorkData.js";
 
 const Homepage = ({ user = null }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [aboutData, setAboutData] = useState(localAboutData);
   const [heroData, setHeroData] = useState(localHeroData);
+  const [eduAndWorkData, setEduAndWorkData] = useState(localEduAndWorkData);
 
   useEffect(() => {
     if (user?.about) {
-      console.log("Updating aboutData from API:", user.about);
+      // console.log("Updating aboutData from API:", user.about);
       setAboutData(user.about);
     }
     if (user?.hero) {
-      console.log("Updating heroData from API:", user.hero);
+      // console.log("Updating heroData from API:", user.hero);
       setHeroData(user.hero);
+    }
+    if (user?.education || user?.work) {
+      setEduAndWorkData({
+        education: user?.education ?? localEduAndWorkData.education,
+        work: user?.work ?? localEduAndWorkData.work,
+      });
     }
   }, []);
 
@@ -46,7 +54,7 @@ const Homepage = ({ user = null }) => {
       ) : (
         <Aboutme aboutData={aboutData}></Aboutme>
       )}
-      <Education></Education>
+      <Education eduAndWorkData={eduAndWorkData}></Education>
       <Skills></Skills>
       <Projects></Projects>
       <Contact />

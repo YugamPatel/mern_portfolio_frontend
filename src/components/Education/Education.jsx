@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./education.css";
 import Box from "./Box/Box";
 import { motion } from "framer-motion";
-import { eduAndWorkData } from "../../Data/eduAndWorkData.js";
+// import { eduAndWorkData } from "../../Data/eduAndWorkData.js";
 
-const Education = () => {
+const Education = ({ eduAndWorkData }) => {
   const screenWidth = window.innerWidth;
 
   const containerVariant = {
@@ -53,7 +53,7 @@ const Education = () => {
             viewport={{ once: true }} // Ensures the animation only plays once
             transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
           >
-            {eduAndWorkData.education.map((edu, index) => (
+            {eduAndWorkData?.education?.map((edu, index) => (
               <Box
                 key={index}
                 title={edu.name}
@@ -78,7 +78,7 @@ const Education = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
           >
-            {eduAndWorkData.work.map((work, index) => (
+            {eduAndWorkData?.work?.map((work, index) => (
               <Box
                 key={index}
                 title={work.name}

@@ -7,7 +7,7 @@ const Aboutme = ({ aboutData }) => {
   const vlogo = window.innerWidth < 501;
 
   useEffect(() => {
-    console.log("Updated aboutData:", aboutData);
+    // console.log("Updated aboutData:", aboutData);
   }, [aboutData]);
 
   return (
