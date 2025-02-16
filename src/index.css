@@ -71,11 +71,36 @@ li {
   -webkit-border-radius: 2ex;
 }
 
-@media (min-width: 1900px) {
+@media screen and (min-width: 1850px) {
   .text {
-    box-shadow: none;
+    font-size: 20px;
+    padding-left: 30px;
+  }
+
+  .typewriter {
+    font-size: 22px;
+  }
+  .whoAmI {
+    font-size: 20px;
+  }
+
+  .social-icons {
+    font-size: 20px;
   }
 }
+
+@media screen and (min-height: 1080px) {
+  .text {
+    top: 59% ;
+    /* bottom: 10%; */
+    height: 38%;
+    padding-left: 30px;
+  }
+  .headerImage {
+    height: 33vh;
+  }
+}
+
 
 @media screen and (max-width: 850px) {
   .hero {
@@ -93,7 +118,7 @@ li {
   }
 
   .text {
-    bottom: 5.5%;
+    top: 48%;
     justify-content: space-evenly;
     align-items: center;
     font-size: 3.2vw;
@@ -177,17 +202,7 @@ li {
   }
 }
 
-@media screen and (min-height: 1000px) {
-  .text {
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 3.2vh;
-    height: 48%;
-  }
-  .headerImage {
-    height: 30vh;
-  }
-}
+
 @media screen and (max-height: 678px) {
   .text {
     bottom: 25px;
