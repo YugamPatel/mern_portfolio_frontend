@@ -9,7 +9,7 @@
   max-width: calc(100% - var(--sidebar-total-width));
   min-height: 90vh;
   padding: 10px 3%;
-  border-radius: 10px;
+  border-radius: var(--primary-border-radius);
   background: #021d35;
   background-size: fill;
   margin-top: 10px;

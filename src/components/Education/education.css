@@ -3,7 +3,7 @@
   max-width: calc(100% - var(--sidebar-total-width));
   min-height: 80vh;
   padding: 10px 3%;
-  border-radius: 10px;
+  border-radius: var(--primary-border-radius);
   display: flex;
   justify-content: center;
   align-items: center;

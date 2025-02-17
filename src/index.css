@@ -32,11 +32,10 @@ body {
     var(--sidebar-width) + var(--sidebar-padding) / 2 + var(--sidebar-border) +
       var(--sidebar-margin)
   );
-
   --page-margin: 10px;
-
   --mouse_w: 20px;
   --mouse_h: 20px;
+  --primary-border-radius: 8px;
 }
 
 .noLink {

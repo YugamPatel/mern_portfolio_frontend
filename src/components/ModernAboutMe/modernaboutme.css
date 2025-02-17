@@ -3,7 +3,7 @@
   margin: 10px 0 10px var(--sidebar-total-width);
   max-width: calc(100% - var(--sidebar-total-width));
   height: 100vh;
-  border-radius: 10px;
+  border-radius: var(--primary-border-radius);
   display: flex;
   justify-content: center;
   flex-direction: column;

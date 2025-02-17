@@ -5,14 +5,14 @@
   background-position: 60% 100px;
   height: 100svh;
   padding: 10px 3%;
-  border-radius: 10px;
+  border-radius: var(--primary-border-radius);
   user-select: none;
 }
 
 .headerImage {
   min-height: 210px;
   width: 95%;
-  border-radius: 10px;
+  border-radius: var(--primary-border-radius);
   height: 20vw; /* Impressive */
   transition: box-shadow 0.3s ease;
   overflow: hidden;

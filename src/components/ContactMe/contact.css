@@ -4,7 +4,7 @@
   margin: 10px 0 10px var(--sidebar-total-width);
   color: snow;
   width: 100%;
-  border-radius: 10px;
+  border-radius: var(--primary-border-radius);
   overflow-y: hidden;
   overflow-x: scroll;
 }

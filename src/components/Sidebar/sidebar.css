@@ -18,7 +18,7 @@
     rgb(233, 124, 124)
   );
   box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  border-radius: var(--primary-border-radius);
   margin-left: var(--sidebar-margin);
 }
 
