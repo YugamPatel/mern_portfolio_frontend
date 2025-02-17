@@ -9,25 +9,30 @@ import Skills from "../../components/Skills/Skills";
 import Projects from "../../components/Projects/Projects";
 import Contact from "../../components/ContactMe/Contact";
 import { heroData as localHeroData } from "../../Data/heroData.js";
+import { modernAboutData as localModernAboutData } from "../../Data/modernAboutData.js";
 import { aboutData as localAboutData } from "../../Data/aboutData.js";
 import { eduAndWorkData as localEduAndWorkData } from "../../Data/eduAndWorkData.js";
-import { skillsData as localSkillsData} from "../../Data/skillsData.js";
+import { skillsData as localSkillsData } from "../../Data/skillsData.js";
 
 const Homepage = ({ user = null }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [modernAboutData, setModernAboutData] = useState(localModernAboutData);
   const [aboutData, setAboutData] = useState(localAboutData);
   const [heroData, setHeroData] = useState(localHeroData);
   const [eduAndWorkData, setEduAndWorkData] = useState(localEduAndWorkData);
   const [skillsData, setSkillsData] = useState(localSkillsData);
 
   useEffect(() => {
+    if (user?.hero) {
+      // console.log("Updating heroData from API:", user.hero);
+      setHeroData(user.hero);
+    }
     if (user?.about) {
       // console.log("Updating aboutData from API:", user.about);
       setAboutData(user.about);
     }
-    if (user?.hero) {
-      // console.log("Updating heroData from API:", user.hero);
-      setHeroData(user.hero);
+    if (user?.modernAbout) {
+      setModernAboutData(user.modernAbout);
     }
     if (user?.education || user?.work) {
       setEduAndWorkData({
@@ -36,13 +41,11 @@ const Homepage = ({ user = null }) => {
       });
     }
     if (user?.skillsOne || user?.skillsTwo || user?.softSkills) {
-      setSkillsData(
-        {
-          skillsOne: user.skillsOne ?? localSkillsData.skillsOne,
-          skillsTwo: user.skillsTwo ?? localSkillsData.skillsTwo,
-          softSkills: user.softSkills ?? localSkillsData.softSkills,
-        }
-      );
+      setSkillsData({
+        skillsOne: user.skillsOne ?? localSkillsData.skillsOne,
+        skillsTwo: user.skillsTwo ?? localSkillsData.skillsTwo,
+        softSkills: user.softSkills ?? localSkillsData.softSkills,
+      });
     }
   }, []);
 
@@ -61,7 +64,7 @@ const Homepage = ({ user = null }) => {
       <Sidebar></Sidebar>
       <Hero heroData={heroData}></Hero>
       {windowWidth > 1200 ? (
-        <ModernAboutme></ModernAboutme>
+        <ModernAboutme modernAboutData={modernAboutData}></ModernAboutme>
       ) : (
         <Aboutme aboutData={aboutData}></Aboutme>
       )}

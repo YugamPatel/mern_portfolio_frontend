@@ -4,9 +4,7 @@ import "./modernaboutme.css";
 import Info from "./Info";
 import GradiantCircles from "./GradiantCircles";
 
-import { modernAboutData } from "../../Data/modernAboutData";
-
-const ModernAboutme = () => {
+const ModernAboutme = ({ modernAboutData }) => {
   const makeMagic = () => {
     const mask = document.querySelector("#div-mask-back");
     const main = document.querySelector(".modernAboutme");
