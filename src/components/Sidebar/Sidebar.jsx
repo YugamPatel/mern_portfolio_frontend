@@ -95,7 +95,7 @@ const Sidebar = () => {
         </div>
       </nav>
       <div className="nav_footer">
-        <span className="copywrite">&copy; 2024-2025</span>
+        <span className="copywrite">&copy; 2025-2026</span>
       </div>
     </div>
   );
