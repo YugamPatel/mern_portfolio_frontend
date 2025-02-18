@@ -15,11 +15,16 @@ function App() {
   // Fetch user data on app start
   useEffect(() => {
     const loadData = async () => {
-      await dispatch(getUserData());
-      setTimeout(() => setLoading(false), 2500);
+      const timeout = new Promise((resolve) => setTimeout(resolve, 5000));
+      try {
+        await Promise.race([dispatch(getUserData()), timeout]);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      } finally {
+        setLoading(false);
+      }
     };
     loadData();
-    // console.log("User data loaded:", userData);
   }, [dispatch]);
 
   return (
