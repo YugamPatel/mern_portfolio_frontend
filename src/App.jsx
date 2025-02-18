@@ -19,7 +19,7 @@ function App() {
       setTimeout(() => setLoading(false), 2500);
     };
     loadData();
-    console.log("User data loaded:", userData);
+    // console.log("User data loaded:", userData);
   }, [dispatch]);
 
   return (

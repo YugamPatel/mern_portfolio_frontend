@@ -1,7 +1,5 @@
 import axios from "axios";
-const env = await import.meta.env;
-
-// console.log("VITE_BACKEND_LINK:", import.meta.env.VITE_BACKEND_LINK);
+const env = import.meta.env;
 
 const client = axios.create({
   withCredentials: true, // Allows sending cookies with requests (if required)
