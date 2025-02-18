@@ -2,7 +2,7 @@ import Homepage from "./pages/Homepage/Homepage";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Routes, Route } from "react-router-dom";
-import Spinner from "./components/Spinner/spinner.jsx";
+import Spinner from "./components/Spinner/Spinner.jsx";
 import Page404 from "./pages/404/Page404.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import { getUserData } from "./redux/actions/userAction.js";
