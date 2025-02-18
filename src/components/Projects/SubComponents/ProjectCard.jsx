@@ -81,7 +81,11 @@ const ProjectCard = ({
 
       <div className="morph">
         <h1>{title}</h1>
-        <p>{stack}</p>
+        <p>
+          {stack.map((tech, index) => (
+            <span key={index}>{tech + " / "}</span>
+          ))}
+        </p>
       </div>
     </motion.div>
   );
