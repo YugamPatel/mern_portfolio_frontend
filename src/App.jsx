@@ -2,10 +2,14 @@ import Homepage from "./pages/Homepage/Homepage";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Routes, Route } from "react-router-dom";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import Spinner from "./components/Spinner/Spinner.jsx";
 import Page404 from "./pages/404/Page404.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import { getUserData } from "./redux/actions/userAction.js";
+import { verifyUser } from "./redux/actions/authActions.js";
+import Login from "./pages/Login/Login.jsx";
+import Dashboard from "./admin/Dashboard/Dashboard.jsx";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,8 +24,9 @@ function App() {
         await Promise.race([dispatch(getUserData()), timeout]);
       } catch (error) {
         console.error("Error fetching user data:", error);
+        setTimeout(() => setLoading(false), 2500);
       } finally {
-        setLoading(false);
+        setTimeout(() => setLoading(false), 2500);
       }
     };
     loadData();
@@ -39,6 +44,13 @@ function App() {
         >
           <Routes>
             <Route path="/" element={<Homepage user={userData} />} />
+            <Route path="/login" element={<Login />} />
+
+            {/* Protected Routes */}
+            <Route element={<ProtectedRoute />}>
+              <Route path="/dashboard" element={<Dashboard />} />
+            </Route>
+
             <Route path="*" element={<Page404 />} />
           </Routes>
         </motion.dev>

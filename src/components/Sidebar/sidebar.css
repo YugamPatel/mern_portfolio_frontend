@@ -34,10 +34,11 @@
   align-items: center;
 }
 
-.copywrite {
+.copyright {
   transform: rotate(-180deg);
   writing-mode: vertical-lr;
   transition: 0.35s ease-out;
+  user-select: none;
 }
 
 .nav_item {

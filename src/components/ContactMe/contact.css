@@ -124,7 +124,7 @@
   width: 100%;
 }
 
-form input,
+#contact form input,
 form textarea {
   width: 100%;
   border: none;

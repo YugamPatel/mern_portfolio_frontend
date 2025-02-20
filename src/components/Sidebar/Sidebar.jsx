@@ -1,8 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import "./sidebar.css";
 import useSwipe from "./swipe.js";
 import { motion } from "framer-motion";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+
+  const handleDoubleClick = () => {
+    navigate("/login");
+  };
+
   const {
     sidebarVisible,
     handleTouchStart,
@@ -95,7 +102,9 @@ const Sidebar = () => {
         </div>
       </nav>
       <div className="nav_footer">
-        <span className="copywrite">&copy; 2025-2026</span>
+        <span className="copyright" onDoubleClick={handleDoubleClick}>
+          &copy; 2025-2026
+        </span>
       </div>
     </div>
   );
