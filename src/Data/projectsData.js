@@ -1,7 +1,33 @@
 export const projectData = [
   {
     imgSrc:
-      "https://github.com/YugamPatel/WeatherApp/blob/main/WeatherApp.png?raw=true",
+      "https://res.cloudinary.com/dwig4hupj/image/upload/v1740506681/108shots_so_mtlcbu.png",
+    projectUrl: "https://github.com/YugamPatel/UofM_Spaces",
+    title: "Yugamazing.com",
+    stack: [
+      "Vite",
+      "Redux",
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Node",
+      "MongoDB",
+      "Express",
+      "Google-Maps API",
+    ],
+  },
+
+  {
+    imgSrc:
+      "https://res.cloudinary.com/dwig4hupj/image/upload/v1740506303/659shots_so_xm0lkp.png",
+    projectUrl: "https://github.com/YugamPatel/UofM_Spaces",
+    title: "UofM Spaces",
+    stack: ["Mapbox-gl", "Vite", "HTML", "CSS", "Javascript", "Node"],
+  },
+
+  {
+    imgSrc:
+      "https://res.cloudinary.com/dwig4hupj/image/upload/v1740460332/weather_emau0q.png",
     projectUrl: "https://github.com/YugamPatel/WeatherApp",
     liveUrl: "https://cloudcast10.netlify.app",
     title: "Weather App",
@@ -10,7 +36,7 @@ export const projectData = [
 
   {
     imgSrc:
-      "https://github.com/YugamPatel/Amazon-Clone/raw/main/amazon-clone.png",
+      "https://res.cloudinary.com/dwig4hupj/image/upload/v1740462747/219shots_so_nlvsng.png",
     projectUrl: "https://github.com/YugamPatel/Amazon-Clone",
     liveUrl: "https://clone-amazon10.netlify.app",
     title: "Amazon Clone",
@@ -19,7 +45,7 @@ export const projectData = [
 
   {
     imgSrc:
-      "https://github.com/YugamPatel/Books/blob/main/showcase/Screenshot%202024-01-20%20at%2011.55.48%E2%80%AFAM.png?raw=true",
+      "https://res.cloudinary.com/dwig4hupj/image/upload/v1740462746/925shots_so_bq692x.png",
     projectUrl: "https://github.com/YugamPatel/Books/",
     title: "Books App ",
     stack: ["ReactJs", "TailwindCss", "NodeJs", "MongoDB", "ExpressJs"],
@@ -31,20 +57,20 @@ export const projectData = [
     title: "Flutter TODO App",
     stack: ["Flutter", "Dart", "Swagger API"],
     video: true,
-  },
-
-  {
-    imgSrc: "https://github.com/YugamPatel/FlutterMovieApp/raw/main/page1.png",
-    projectUrl: "https://github.com/YugamPatel/FlutterMovieApp",
-    title: "Flutter Movies App",
-    stack: ["Flutter", "Dart", "Tmdb API"],
     cover: false,
   },
 
   {
     imgSrc:
-      "https://github.com/YugamPatel/FlutterWeatherApp/raw/main/flutterWeatherAppV2.png",
-    projectUrl: "https://github.com/YugamPatel/FlutterWeatherApp",
+      "https://res.cloudinary.com/dwig4hupj/image/upload/v1740462747/618shots_so_s7vkgj.png",
+    projectUrl: "https://github.com/YugamPatel/FlutterMovieApp",
+    title: "Flutter Movies App",
+    stack: ["Flutter", "Dart", "Tmdb API"],
+  },
+
+  {
+    imgSrc:
+      "https://res.cloudinary.com/dwig4hupj/image/upload/v1740462745/184shots_so_agamm3.png",
     title: "Flutter Weather App",
     stack: ["Flutter", "Dart", "OpenWeather API"],
     cover: false,
