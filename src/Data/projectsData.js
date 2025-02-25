@@ -1,7 +1,7 @@
 export const projectData = [
   {
     imgSrc:
-      "https://res.cloudinary.com/dwig4hupj/image/upload/v1740506681/108shots_so_mtlcbu.png",
+      "https://res.cloudinary.com/dwig4hupj/image/upload/v1740507224/108shots_so_mtlcbu.png",
     projectUrl: "https://github.com/YugamPatel/UofM_Spaces",
     title: "Yugamazing.com",
     stack: [
