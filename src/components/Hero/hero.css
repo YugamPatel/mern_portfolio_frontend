@@ -125,6 +125,10 @@
   background-color: #a73030; /* Slightly darker on hover */
 }
 
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
 .social-icons a {
   text-decoration: none;
   font-size: 30px;
