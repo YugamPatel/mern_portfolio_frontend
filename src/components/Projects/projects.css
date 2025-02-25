@@ -15,14 +15,15 @@
 
 .project .title {
   font-size: 80px;
-  color: rgb(105, 103, 103);
-  text-shadow: 2px 4px 0 rgba(5, 245, 233, 0.602);
+  color: rgba(255, 89, 89, 0.831);
+  text-shadow: 2px 2px 0 rgba(159, 159, 159, 0.602);
   align-self: flex-start;
   letter-spacing: 0.6px;
   margin-left: 3%;
   margin-bottom: 20px;
   transition: 0.3s ease;
 }
+
 
 /* .project .title:hover {
   transform: scale(1.05);
@@ -37,7 +38,7 @@
 .project-card {
   width: 100%;
   border-radius: var(--primary-border-radius);
-  height: 450px;
+  padding-bottom: 20px;
   background-color: rgb(44, 44, 44);
   overflow: hidden;
   display: flex;
@@ -59,17 +60,18 @@
 }
 
 .cardImg {
-  width: 100%;
-  height: 78%;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  /* height: 78%; */
   position: relative;
 }
 
 .cardImg .coverImg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: calc(var(--primary-border-radius) + 2%);
-  padding: 2% 2% 0px 2%;
+  padding: 1.5% 1.5% 0px 1.5%;
 }
 
 .cardImg .containImg {
@@ -162,7 +164,7 @@
 .morph p {
   text-wrap: wrap;
   color: rgba(225, 225, 225, 0.777);
-  padding: 5px 3px 3px 0px ;
+  padding: 5px 10px 3px 0px;
   font-size: clamp(0.9rem, 0.3048rem + 2.3983vw, 1.13rem);
   text-overflow: ellipsis;
   word-spacing: 5px;
@@ -170,9 +172,10 @@
 
 @media (min-width: 1350px) {
   .gridDesign {
-    gap: 50px;
+    /* gap: 50px; */
   }
 }
+
 @media (max-width: 1000px) {
   .gridDesign {
     display: grid;
@@ -192,9 +195,6 @@
 
   .project .title {
     align-self: center;
-  }
-  .morph p {
-    /* font-size: 22px; */
   }
 }
 
@@ -217,12 +217,9 @@
     align-self: center;
     font-size: 50px;
   }
-  .project-card {
-    width: 100%;
-    height: 380px;
-  }
-  .morph p{
-    padding: 2px 2px 2px 0px ;
+
+  .morph p {
+    padding: 2px 2px 2px 0px;
   }
 }
 

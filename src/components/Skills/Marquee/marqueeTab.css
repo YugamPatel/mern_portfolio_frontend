@@ -1,7 +1,8 @@
 :root {
   --font-size-skills: 9.5vw;
   --marquee: 130px !important;
-  --marquee-height: 110px !important;
+  --marquee-height: 90px !important;
+  /* --marquee-height: 110px !important; */
 }
 
 .marquee {
@@ -16,11 +17,12 @@
 .marquee p {
   display: flex; /* Use Flexbox for the <p> that contains <span> elements */
   justify-content: space-evenly; /* Space <span> elements evenly */
-  gap: 15px; /* You can adjust this value for the gap between <span> elements */
+  gap: 15px; /* Value for the gap between <span> elements */
   color: #87a4b6;
   transition: all 0.6s ease-in-out;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   overflow-y: hidden;
+  margin: 15px 0px;
 }
 
 .marquee span {
@@ -28,7 +30,7 @@
   min-height: var(--marquee-height);
   min-width: calc(var(--marquee) * 1.2);
   max-width: calc(var(--marquee) * 2.8);
-  margin: 15px 15px;
+  margin: 0px 15px;
   background: rgba(28, 26, 36, 0.65);
   padding: 0px 15px;
   border-radius: var(--primary-border-radius);
