@@ -15,7 +15,7 @@
 
 .project .title {
   font-size: 80px;
-  color: rgba(255, 89, 89, 0.831);
+  color: rgba(255, 89, 89, 0.752);
   text-shadow: 2px 2px 0 rgba(159, 159, 159, 0.602);
   align-self: flex-start;
   letter-spacing: 0.6px;
@@ -23,11 +23,6 @@
   margin-bottom: 20px;
   transition: 0.3s ease;
 }
-
-
-/* .project .title:hover {
-  transform: scale(1.05);
-} */
 
 .projects-container {
   width: 100%;
