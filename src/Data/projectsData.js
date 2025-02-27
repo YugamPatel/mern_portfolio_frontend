@@ -2,7 +2,7 @@ export const projectData = [
   {
     imgSrc:
       "https://res.cloudinary.com/dwig4hupj/image/upload/v1740507224/108shots_so_mtlcbu.png",
-    projectUrl: "https://github.com/YugamPatel/UofM_Spaces",
+    projectUrl: "https://github.com/YugamPatel/mern_portfolio_frontend",
     title: "Yugamazing.com",
     stack: [
       "Vite",
@@ -52,15 +52,6 @@ export const projectData = [
   },
 
   {
-    imgSrc: "https://video-hover-1.superhi.com/7-ui.mp4",
-    projectUrl: "https://github.com/YugamPatel/FlutterToDo",
-    title: "Flutter TODO App",
-    stack: ["Flutter", "Dart", "Swagger API"],
-    video: true,
-    cover: false,
-  },
-
-  {
     imgSrc:
       "https://res.cloudinary.com/dwig4hupj/image/upload/v1740462747/618shots_so_s7vkgj.png",
     projectUrl: "https://github.com/YugamPatel/FlutterMovieApp",
@@ -75,6 +66,15 @@ export const projectData = [
     stack: ["Flutter", "Dart", "OpenWeather API"],
     cover: false,
   },
+
+  // {
+  //   imgSrc: "https://video-hover-1.superhi.com/7-ui.mp4",
+  //   projectUrl: "https://github.com/YugamPatel/FlutterToDo",
+  //   title: "Flutter TODO App",
+  //   stack: ["Flutter", "Dart", "Swagger API"],
+  //   video: true,
+  //   cover: false,
+  // },
 ];
 
 export default projectData;
