@@ -52,7 +52,7 @@ A modern and responsive portfolio website built with Vite.js that showcases my p
   - ### *Hero Section*
 <img width="1440" alt="image" src="https://github.com/user-attachments/assets/0064b777-c415-4df7-865c-ed76c5d56a07" />
 
-  - *Skills Section*
+  - ### *Skills Section*
 <img width="1440" alt="image" src="https://github.com/user-attachments/assets/bf707eeb-7a63-434e-837a-a89b012c9084" />
 
   - ### *Project's Section*
