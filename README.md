@@ -26,7 +26,6 @@ A modern and responsive portfolio website built with Vite.js that showcases my p
 
 - **Professional Contact**
   - User-friendly contact form with validation
-  - Direct email integration
   - Social media connections
 
 - **Thoughtful Design**
@@ -50,5 +49,19 @@ A modern and responsive portfolio website built with Vite.js that showcases my p
   - Netlify for the frontend.
 
 ## Preview's
+  - ### *Hero Section*
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/0064b777-c415-4df7-865c-ed76c5d56a07" />
+
+  - *Skills Section*
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/bf707eeb-7a63-434e-837a-a89b012c9084" />
+
+  - ### *Project's Section*
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/36a7bb72-ed78-431f-9ecd-9500ee77a8d5" />
+
+  - ### *Contact Me Page*
+<img width="1349" alt="image" src="https://github.com/user-attachments/assets/8da91cbc-e14f-4316-8740-da023ae5bde0" />
+
+
+
 
 
