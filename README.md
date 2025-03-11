@@ -1,7 +1,7 @@
 # 🚀 Personal Portfolio - Frontend
 A modern and responsive portfolio website built with Vite.js that showcases my professional journey, skills, and projects. The site features smooth animations, interactive elements, and a clean, professional design optimized for performance.
 
-![Portfolio Preview](https://github.com/user-attachments/assets/eb61305e-6a70-4a33-9219-cc0d771c5216)
+![Portfolio Architectural Diagram](https://github.com/user-attachments/assets/eb61305e-6a70-4a33-9219-cc0d771c5216)
 
 ## ✨ Key Features
 - **Responsive Design**
@@ -48,5 +48,7 @@ A modern and responsive portfolio website built with Vite.js that showcases my p
 - **Deployment**: 
   - AWS EC2 for the backend
   - Netlify for the frontend.
+
+## Preview's
 
 
