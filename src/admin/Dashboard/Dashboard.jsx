@@ -15,7 +15,7 @@ const Dashboard = () => {
   if (loading) return <p>Loading user data...</p>;
 
   return (
-    <div
+    <div className="dashboard"
       style={{
         padding: "20px",
         height: "100vh",
@@ -27,7 +27,19 @@ const Dashboard = () => {
         backgroundColor: "#f5f5f5",
       }}
     >
-      {user ? <h1>Welcome, {user.username}!</h1> : <p>Error: User not found</p>}
+      <div
+        style={{
+          padding: "20px",
+          border: "1px solid #ddd",
+          borderRadius: "4px",
+          backgroundColor: "#fff",
+        }}
+      >
+        <h1>Dashboard</h1>
+        <p>Welcome, {user.name}</p>
+        <p>Email: {user.email}</p>
+        <p>Role: {user.role}</p>
+        </div>
     </div>
   );
 };

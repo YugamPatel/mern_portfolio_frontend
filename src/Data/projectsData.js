@@ -63,6 +63,7 @@ export const projectData = [
     imgSrc:
       "https://res.cloudinary.com/dwig4hupj/image/upload/v1740462745/184shots_so_agamm3.png",
     title: "Flutter Weather App",
+    projectUrl:"https://github.com/YugamPatel/FlutterWeatherApp",
     stack: ["Flutter", "Dart", "OpenWeather API"],
     cover: false,
   },
