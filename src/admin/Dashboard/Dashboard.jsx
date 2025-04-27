@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
-import { use } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import "./dashboard.css";
+import UpdateBox from "./components/UpdateBox/updateBox";
 
 const Dashboard = () => {
   const { user, loading } = useSelector((state) => state.auth);
@@ -15,31 +16,10 @@ const Dashboard = () => {
   if (loading) return <p>Loading user data...</p>;
 
   return (
-    <div className="dashboard"
-      style={{
-        padding: "20px",
-        height: "100vh",
-        width: "100%",
-        overflow: "hide",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#f5f5f5",
-      }}
-    >
-      <div
-        style={{
-          padding: "20px",
-          border: "1px solid #ddd",
-          borderRadius: "4px",
-          backgroundColor: "#fff",
-        }}
-      >
-        <h1>Dashboard</h1>
-        <p>Welcome, {user.name}</p>
-        <p>Email: {user.email}</p>
-        <p>Role: {user.role}</p>
-        </div>
+    <div id="dashboard">
+      <div className="admin-grid-parent">
+        <UpdateBox />
+      </div>
     </div>
   );
 };
