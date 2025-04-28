@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { Navigate, Outlet } from "react-router-dom";
 import { verifyUser } from "../redux/actions/authActions";
 import Spinner from "./Spinner/Spinner";
-import Dashboard from "../admin/Dashboard/Dashboard";
 
 const ProtectedRoute = () => {
   const dispatch = useDispatch();

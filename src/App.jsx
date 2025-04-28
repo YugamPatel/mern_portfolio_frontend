@@ -7,7 +7,7 @@ import Spinner from "./components/Spinner/Spinner.jsx";
 import Page404 from "./pages/404/Page404.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import { getUserData } from "./redux/actions/userAction.js";
-import { verifyUser } from "./redux/actions/authActions.js";
+import UserAdmin from "./admin/SubPages/UserAdmin/UserAdmin.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Dashboard from "./admin/Dashboard/Dashboard.jsx";
 
@@ -37,7 +37,7 @@ function App() {
       {loading ? (
         <Spinner />
       ) : (
-        <motion.dev
+        <motion.div
           initial={{ opacity: 0.6 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
@@ -49,11 +49,12 @@ function App() {
             {/* Protected Routes */}
             <Route element={<ProtectedRoute />}>
               <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dashboard/user" element={<UserAdmin />} />
             </Route>
 
             <Route path="*" element={<Page404 />} />
           </Routes>
-        </motion.dev>
+        </motion.div>
       )}
     </>
   );

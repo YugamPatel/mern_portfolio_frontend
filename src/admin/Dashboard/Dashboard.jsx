@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import "./dashboard.css";
 import UpdateBox from "./components/UpdateBox/updateBox";
+import { adminSections } from "../section";
 
 const Dashboard = () => {
   const { user, loading } = useSelector((state) => state.auth);
@@ -10,15 +11,15 @@ const Dashboard = () => {
     console.log("🚀 Fetching user data...");
   }, []);
 
-  console.log;
   console.log("🚀 Dashboard Rendered, User:", user);
 
   if (loading) return <p>Loading user data...</p>;
-
   return (
     <div id="dashboard">
       <div className="admin-grid-parent">
-        <UpdateBox />
+        {adminSections.map((sec) => (
+          <UpdateBox key={sec.key} section={sec} />
+        ))}
       </div>
     </div>
   );
