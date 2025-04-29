@@ -47,7 +47,7 @@ const Homepage = ({ user = null }) => {
         softSkills: user.softSkills ?? localSkillsData.softSkills,
       });
     }
-  }, []);
+  }, [user]);
 
   useEffect(() => {
     const handleResize = () => {

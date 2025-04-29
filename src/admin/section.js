@@ -10,7 +10,8 @@ export const adminSections = [
     key: "hero",
     label: "Hero Section",
     icon: "💥",
-    actionType: "UPDATE_HOME", // matches your Redux action types
+    actionType: "UPDATE_HOME",
+    route: "/dashboard/hero", 
     updateAction: (dispatch, payload) => dispatch(updateHome(payload)), // import updateHome from your actions
   },
   {

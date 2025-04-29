@@ -7,9 +7,9 @@ import Spinner from "./components/Spinner/Spinner.jsx";
 import Page404 from "./pages/404/Page404.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import { getUserData } from "./redux/actions/userAction.js";
-import UserAdmin from "./admin/SubPages/UserAdmin/UserAdmin.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Dashboard from "./admin/Dashboard/Dashboard.jsx";
+import HeroAdmin from "./admin/SubPages/HeroAdmin/HeroAdmin.jsx";
 
 function App() {
   const dispatch = useDispatch();
@@ -49,7 +49,7 @@ function App() {
             {/* Protected Routes */}
             <Route element={<ProtectedRoute />}>
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/dashboard/user" element={<UserAdmin />} />
+              <Route path="/dashboard/hero" element={<HeroAdmin />} />
             </Route>
 
             <Route path="*" element={<Page404 />} />
