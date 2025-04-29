@@ -8,9 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-
-}
 
 /*  TO BE CHECKED BEFORE DEPLOYMENT ------------
  -----------------------------------------------
@@ -167,7 +164,7 @@ li {
     left: 5px;
   }
   .homepage {
-    margin: 0px;
+    padding: 2px 0px 0px 0px;
   }
   .headerImage {
     opacity: 1;
