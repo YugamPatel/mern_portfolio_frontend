@@ -13,9 +13,10 @@ import { modernAboutData as localModernAboutData } from "../../Data/modernAboutD
 import { aboutData as localAboutData } from "../../Data/aboutData.js";
 import { eduAndWorkData as localEduAndWorkData } from "../../Data/eduAndWorkData.js";
 import { skillsData as localSkillsData } from "../../Data/skillsData.js";
+import useWindowWidth from "../../hooks/useWindowWidth.js";
 
 const Homepage = ({ user = null }) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const windowWidth = useWindowWidth();
   const [modernAboutData, setModernAboutData] = useState(localModernAboutData);
   const [aboutData, setAboutData] = useState(localAboutData);
   const [heroData, setHeroData] = useState(localHeroData);
@@ -24,11 +25,9 @@ const Homepage = ({ user = null }) => {
 
   useEffect(() => {
     if (user?.hero) {
-      // console.log("Updating heroData from API:", user.hero);
       setHeroData(user.hero);
     }
     if (user?.about) {
-      // console.log("Updating aboutData from API:", user.about);
       setAboutData(user.about);
     }
     if (user?.modernAbout) {
@@ -48,16 +47,6 @@ const Homepage = ({ user = null }) => {
       });
     }
   }, [user]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <div className="homepage" id="homePage">
