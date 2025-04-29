@@ -5,12 +5,11 @@
 }
 
 html {
-  background: linear-gradient(to bottom, #3c8193, #8c92ac, #003366, #333333);
   scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(to bottom, #3c8193, #8c92ac, #003366, #333333);
+
 }
 
 /*  TO BE CHECKED BEFORE DEPLOYMENT ------------

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./homepage.css";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Hero from "../../components/Hero/Hero";
@@ -49,7 +49,7 @@ const Homepage = ({ user = null }) => {
   }, [user]);
 
   return (
-    <div className="homepage" id="homePage">
+    <div id="homepage">
       <Sidebar></Sidebar>
       <Hero heroData={heroData}></Hero>
       {windowWidth > 1200 ? (
