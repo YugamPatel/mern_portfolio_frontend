@@ -37,10 +37,10 @@ function App() {
       {loading ? (
         <Spinner />
       ) : (
-        <motion.dev
-          initial={{ opacity: 0.6 }}
+        <motion.div
+          initial={{ opacity: 0.4 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <Routes>
             <Route path="/" element={<Homepage user={userData} />} />
@@ -53,7 +53,7 @@ function App() {
 
             <Route path="*" element={<Page404 />} />
           </Routes>
-        </motion.dev>
+        </motion.div>
       )}
     </>
   );
