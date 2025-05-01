@@ -101,6 +101,8 @@ const HeroAdmin = () => {
       return copy;
     });
   };
+  const removeType = (idx) =>
+    setTypewriter((prev) => prev.filter((_, i) => i !== idx));
 
   // ─── On submit, assemble nested form object ─────────────────────
   const handleSubmit = (e) => {
@@ -209,11 +211,20 @@ const HeroAdmin = () => {
               <section className="section-typewriter">
                 <span>Typewriter Text</span>
                 {typewriter.map((line, i) => (
-                  <input
-                    key={i}
-                    value={line}
-                    onChange={(e) => updateType(i, e.target.value)}
-                  />
+                  <div key={i} className="typewriter-row">
+                    <input
+                      key={i}
+                      value={line}
+                      onChange={(e) => updateType(i, e.target.value)}
+                    />
+                    <button
+                      type="button"
+                      onClick={() => removeType(i)}
+                      className="delete-btn"
+                    >
+                      Delete
+                    </button>
+                  </div>
                 ))}
                 <button type="button" onClick={addType} className="add-btn">
                   + Add Line
