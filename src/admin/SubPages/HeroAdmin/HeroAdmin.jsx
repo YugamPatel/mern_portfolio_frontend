@@ -294,27 +294,39 @@ const HeroAdmin = () => {
 
               {/* Hero Background Image */}
               <section className="section-hero-image">
-                <label className="checkbox-label">
-                  <input
-                    type="checkbox"
-                    checked={heroIsRandom}
-                    onChange={(e) => setHeroIsRandom(e.target.checked)}
-                  />
-                  Use Random Image
-                </label>
+                <div className="hero-checkbox">
+                  <label className="checkbox-label">
+                    <input
+                      type="checkbox"
+                      className="hero-checkbox-input"
+                      checked={heroIsRandom}
+                      onChange={(e) => setHeroIsRandom(e.target.checked)}
+                    />
+                    <span>Use Random Image</span>
+                  </label>
+                </div>
+
                 {!heroIsRandom && (
                   <div className="hero-image-edit">
-                    <img src={heroImg} alt="Hero bg" className="hero-preview" />
-                    <button type="button" className="edit-photo-btn">
-                      Edit Photo
-                    </button>
-                    <label>
-                      URL
-                      <input
-                        value={heroImg}
-                        onChange={(e) => setHeroImg(e.target.value)}
+                    <div className="hero-image">
+                      <img
+                        src={heroImg}
+                        alt="Hero bg"
+                        className="hero-preview"
                       />
-                    </label>
+                    </div>
+                    <div className="hero-image-edit">
+                      <button type="button" className="edit-photo-btn">
+                        <span>Edit Photo</span>
+                      </button>
+                      <label>
+                        <span>URL</span>
+                        <input
+                          value={heroImg}
+                          onChange={(e) => setHeroImg(e.target.value)}
+                        />
+                      </label>
+                    </div>
                   </div>
                 )}
               </section>
