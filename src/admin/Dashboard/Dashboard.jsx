@@ -3,17 +3,18 @@ import { useSelector } from "react-redux";
 import "./dashboard.css";
 import UpdateBox from "./components/UpdateBox/updateBox";
 import { adminSections } from "../section";
+import Spinner from "../../components/Spinner/Spinner";
 
 const Dashboard = () => {
-  const { user, loading } = useSelector((state) => state.auth);
+  const doTest = () => {
+    const { user, loading } = useSelector((state) => state.auth);
+    console.log("🚀 Dashboard Rendered, User:", user);
+    return loading;
+  };
+  const loading = doTest();
 
-  useEffect(() => {
-    console.log("🚀 Fetching user data...");
-  }, []);
-
-  console.log("🚀 Dashboard Rendered, User:", user);
-
-  if (loading) return <p>Loading user data...</p>;
+  if (loading) return <Spinner />;
+  
   return (
     <div id="dashboard">
       <div className="admin-grid-parent">

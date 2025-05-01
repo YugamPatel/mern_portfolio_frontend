@@ -24,11 +24,9 @@ const Homepage = ({ user = null }) => {
 
   useEffect(() => {
     if (user?.hero) {
-      // console.log("Updating heroData from API:", user.hero);
       setHeroData(user.hero);
     }
     if (user?.about) {
-      // console.log("Updating aboutData from API:", user.about);
       setAboutData(user.about);
     }
     if (user?.modernAbout) {
@@ -60,7 +58,7 @@ const Homepage = ({ user = null }) => {
   }, []);
 
   return (
-    <div className="homepage" id="homePage">
+    <div className="homepage">
       <Sidebar></Sidebar>
       <Hero heroData={heroData}></Hero>
       {windowWidth > 1200 ? (
