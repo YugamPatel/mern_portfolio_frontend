@@ -1,122 +1,334 @@
-// src/admin/Hero/HeroAdmin.jsx
+// src/admin/SubPages/HeroAdmin/HeroAdmin.jsx
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   getHeroData,
   updateHeroData,
-} from "../../../redux/actions/heroActions.js";
-import Spinner from "../../../components/Spinner/Spinner.jsx";
+} from "../../../redux/actions/heroActions";
+import Spinner from "../../../components/Spinner/Spinner";
 import "./HeroAdmin.css";
 
 const HeroAdmin = () => {
   const dispatch = useDispatch();
-  const {
-    heroData: hero,
-    loading,
-    error,
-    message, // success message after update
-  } = useSelector((state) => state.hero);
+  const { heroData, loading, error, message } = useSelector((s) => s.hero);
 
-  // ─── Flattened form state ────────────────────────────────────────
+  // ─── Flattened state for each piece ─────────────────────────────
   const [intro, setIntro] = useState("");
   const [name, setName] = useState("");
-  const [subtitle, setSubtitle] = useState("");
+  const [subTitle, setSubTitle] = useState("");
+
+  const [socialLinks, setSocialLinks] = useState([]); // array of { name, url, iconClass }
+
+  const [profileImg, setProfileImg] = useState("");
+  const [profileTransform, setProfileTransform] = useState("");
+  const [profileObjectPosition, setProfileObjectPosition] = useState("");
+  const [profileTransformPreview, setProfileTransformPreview] = useState("");
+  const [profileObjectPositionPreview, setProfileObjectPositionPreview] =
+    useState("");
+
+  const [heroIsRandom, setHeroIsRandom] = useState(true);
+  const [heroImg, setHeroImg] = useState("");
+
+  const [typewriter, setTypewriter] = useState([]); // array of strings
+
   const [buttonText, setButtonText] = useState("");
   const [buttonUrl, setButtonUrl] = useState("");
 
-  // ─── 1) Fetch current hero on mount ─────────────────────────────
+  const previewStyle = {
+    transform: profileTransformPreview,
+    objectPosition: profileObjectPositionPreview,
+  };
+
+  // ─── Load existing data on mount ────────────────────────────────
   useEffect(() => {
     dispatch(getHeroData());
   }, [dispatch]);
 
-  // ─── 2) When hero loads, populate each piece of state ────────────
+  // ─── When heroData updates, seed each piece of state ───────────
   useEffect(() => {
-    if (hero.heroTitle) {
-      setIntro(hero.heroTitle.intro || "");
-      setName(hero.heroTitle.name || "");
-    }
-    if (hero.heroSubTitle) {
-      setSubtitle(hero.heroSubTitle.subTitle || "");
-    }
-    if (hero.button) {
-      setButtonText(hero.button.name || "");
-      setButtonUrl(hero.button.url || "");
-    }
-  }, [hero]);
+    if (!heroData) return;
 
-  // ─── 3) Submit handler assembles nested object ─────────────────
+    // Hero Title
+    setIntro(heroData.heroTitle?.intro || "");
+    setName(heroData.heroTitle?.name || "");
+
+    // Subtitle
+    setSubTitle(heroData.heroSubTitle?.subTitle || "");
+
+    // Social Links
+    setSocialLinks(heroData.socialLinks || []);
+
+    // Profile Image & Style
+    setProfileImg(heroData.profileImage?.img || "");
+    setProfileTransform(heroData.profileImage?.style?.transform || "");
+    setProfileObjectPosition(
+      heroData.profileImage?.style?.objectPosition || ""
+    );
+    setProfileTransformPreview(profileTransform);
+    setProfileObjectPositionPreview(profileObjectPosition);
+
+    // Hero Background
+    setHeroIsRandom(heroData.heroImage?.isRandom ?? true);
+    setHeroImg(heroData.heroImage?.img || "");
+
+    // Typewriter
+    setTypewriter(heroData.typewriter || []);
+
+    // Button
+    setButtonText(heroData.button?.name || "");
+    setButtonUrl(heroData.button?.url || "");
+  }, [heroData]);
+
+  // ─── Social Links handlers ───────────────────────────────────────
+  const addSocial = () =>
+    setSocialLinks((prev) => [...prev, { name: "", url: "", iconClass: "" }]);
+  const updateSocial = (idx, field, val) => {
+    setSocialLinks((prev) => {
+      const copy = [...prev];
+      copy[idx] = { ...copy[idx], [field]: val };
+      return copy;
+    });
+  };
+  const removeSocial = (idx) =>
+    setSocialLinks((prev) => prev.filter((_, i) => i !== idx));
+
+  // ─── Typewriter handlers ────────────────────────────────────────
+  const addType = () => setTypewriter((prev) => [...prev, ""]);
+  const updateType = (idx, val) => {
+    setTypewriter((prev) => {
+      const copy = [...prev];
+      copy[idx] = val;
+      return copy;
+    });
+  };
+
+  // ─── On submit, assemble nested form object ─────────────────────
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(
-      updateHeroData({
-        heroTitle: { intro, name },
-        heroSubTitle: { subTitle: subtitle },
-        button: { name: buttonText, url: buttonUrl },
-      })
-    );
+    const payload = {
+      heroTitle: { intro, name },
+      heroSubTitle: { subTitle },
+      socialLinks,
+      profileImage: {
+        img: profileImg,
+        style: {
+          transform: profileTransform,
+          objectPosition: profileObjectPosition,
+        },
+      },
+      heroImage: { isRandom: heroIsRandom, img: heroImg },
+      typewriter,
+      button: { name: buttonText, url: buttonUrl },
+    };
+    dispatch(updateHeroData(payload));
   };
 
   if (loading) return <Spinner />;
 
   return (
     <div className="hero-admin">
-      <h2>Edit Hero Section</h2>
-
-      {/* Show fetch or update errors */}
+      <h2>Update Hero Section</h2>
       {error && <p className="error">{error}</p>}
-
-      {/* Show success message after update */}
       {message && <p className="success">{message}</p>}
+      <div className="hero-admin-container">
+        <form onSubmit={handleSubmit}>
+          {/* Hero Title */}
 
-      <form onSubmit={handleSubmit}>
-        <label>
-          Intro
-          <input
-            type="text"
-            value={intro}
-            onChange={(e) => setIntro(e.target.value)}
-          />
-        </label>
+          <div className="hero-admin-flex">
+            <div className="flex-left-column">
+              <section className="section-hero-title">
+                <label>
+                  <span>Intro</span>
+                  <input
+                    value={intro}
+                    onChange={(e) => setIntro(e.target.value)}
+                  />
+                </label>
+                <label>
+                  <span>Name</span>
+                  <input
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </label>
+              </section>
 
-        <label>
-          Name
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </label>
+              {/* Hero SubTitle & Social Links */}
+              <section className="section-hero-subtitle">
+                <label>
+                  <span>SubTitle</span>
+                  <input
+                    value={subTitle}
+                    onChange={(e) => setSubTitle(e.target.value)}
+                  />
+                </label>
+                <div className="social-links">
+                  <div className="social-links-span">Social Links</div>
+                  {socialLinks.map((link, i) => (
+                    <div key={i} className="social-inputs">
+                      {link.iconClass ? (
+                        <i className={link.iconClass}></i>
+                      ) : (
+                        <i className="fa-solid fa-link"></i>
+                      )}
+                      <input
+                        placeholder="Name"
+                        value={link.name}
+                        onChange={(e) =>
+                          updateSocial(i, "name", e.target.value)
+                        }
+                      />
+                      <input
+                        placeholder="URL"
+                        value={link.url}
+                        onChange={(e) => updateSocial(i, "url", e.target.value)}
+                      />
+                      <input
+                        placeholder="Icon Class"
+                        value={link.iconClass}
+                        onChange={(e) =>
+                          updateSocial(i, "iconClass", e.target.value)
+                        }
+                      />
+                      <button
+                        type="button"
+                        onClick={() => removeSocial(i)}
+                        className="delete-btn"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  ))}
+                  <button type="button" onClick={addSocial} className="add-btn">
+                    + Add Social
+                  </button>
+                </div>
+              </section>
 
-        <label>
-          Subtitle
-          <input
-            type="text"
-            value={subtitle}
-            onChange={(e) => setSubtitle(e.target.value)}
-          />
-        </label>
+              {/* Typewriter Lines */}
+              <section className="section-typewriter">
+                <span>Typewriter Text</span>
+                {typewriter.map((line, i) => (
+                  <input
+                    key={i}
+                    value={line}
+                    onChange={(e) => updateType(i, e.target.value)}
+                  />
+                ))}
+                <button type="button" onClick={addType} className="add-btn">
+                  + Add Line
+                </button>
+              </section>
 
-        <label>
-          Button Text
-          <input
-            type="text"
-            value={buttonText}
-            onChange={(e) => setButtonText(e.target.value)}
-          />
-        </label>
+              {/* Call-to-Action Button */}
+              <section className="section-button">
+                <label>
+                  <span>Button Text</span>
+                  <input
+                    value={buttonText}
+                    onChange={(e) => setButtonText(e.target.value)}
+                  />
+                </label>
+                <label>
+                  <span>Button URL</span>
+                  <input
+                    value={buttonUrl}
+                    onChange={(e) => setButtonUrl(e.target.value)}
+                  />
+                </label>
+              </section>
+            </div>
 
-        <label>
-          Button URL
-          <input
-            type="text"
-            value={buttonUrl}
-            onChange={(e) => setButtonUrl(e.target.value)}
-          />
-        </label>
+            <div className="flex-right-column">
+              {/* Profile Image & Style */}
+              <section className="section-profile-image">
+                <span>Profile Image</span>
+                <div className="profile-preview-container">
+                  <div className="profile-preview-left">
+                    <div className="profile-preview">
+                      <div className="profile-layer">
+                        <div className="profile-circle-container">
+                          <img
+                            src={profileImg}
+                            style={previewStyle}
+                            alt="Profile"
+                            className="profile-circle"
+                          />
+                        </div>
+                        {/* profile-circle-container */}
+                      </div>
+                      {/* profile-layer */}
+                    </div>
+                    {/* profile-preview */}
+                  </div>
+                  {/* profile-preview-left */}
+                  <div className="profile-preview-right">
+                    <label>
+                      Transform
+                      <input
+                        value={profileTransform}
+                        onChange={(e) => {
+                          setProfileTransform(e.target.value);
+                          setProfileTransformPreview(e.target.value);
+                        }}
+                      />
+                    </label>
+                    <label>
+                      Object Position
+                      <input
+                        value={profileObjectPosition}
+                        onChange={(e) => {
+                          setProfileObjectPosition(e.target.value);
+                          setProfileObjectPositionPreview(e.target.value);
+                        }}
+                      />
+                    </label>
+                    <button type="button" className="edit-photo-btn">
+                      Edit Photo
+                    </button>
+                  </div>
+                  {/* profile-preview-right */}
+                </div>
+                {/* profile-preview-container */}
+              </section>
 
-        <button type="submit">Save Hero</button>
-      </form>
-    </div>
+              {/* Hero Background Image */}
+              <section className="section-hero-image">
+                <label className="checkbox-label">
+                  <input
+                    type="checkbox"
+                    checked={heroIsRandom}
+                    onChange={(e) => setHeroIsRandom(e.target.checked)}
+                  />
+                  Use Random Image
+                </label>
+                {!heroIsRandom && (
+                  <div className="hero-image-edit">
+                    <img src={heroImg} alt="Hero bg" className="hero-preview" />
+                    <button type="button" className="edit-photo-btn">
+                      Edit Photo
+                    </button>
+                    <label>
+                      URL
+                      <input
+                        value={heroImg}
+                        onChange={(e) => setHeroImg(e.target.value)}
+                      />
+                    </label>
+                  </div>
+                )}
+              </section>
+            </div>
+          </div>
+          {/*hero-admin-flex */}
+
+          <button type="submit" className="save-btn">
+            Save Changes
+          </button>
+        </form>
+      </div>
+      {/* hero-admin-container */}
+    </div> /* hero-admin */
   );
 };
 

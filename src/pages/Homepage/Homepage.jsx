@@ -49,7 +49,7 @@ const Homepage = ({ user = null }) => {
   }, [user]);
 
   return (
-    <div id="homepage">
+    <div className="homepage">
       <Sidebar></Sidebar>
       <Hero heroData={heroData}></Hero>
       {windowWidth > 1200 ? (
