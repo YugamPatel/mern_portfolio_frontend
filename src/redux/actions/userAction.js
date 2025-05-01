@@ -4,7 +4,7 @@ export const getUserData = () => async (dispatch) => {
   try {
     dispatch({ type: "GET_USER_REQUEST" }); // Start loading
 
-    const response = await client.get("/api/get-user");
+    const response = await client.get("/api/get-user"); // Fetch user data
 
     if (!response.data || !response.data.success) {
       throw new Error(response.data.message || "Invalid API response");
@@ -12,7 +12,7 @@ export const getUserData = () => async (dispatch) => {
 
     dispatch({
       type: "GET_USER_SUCCESS",
-      payload: response.data.output, // Assuming API returns { data: userObject }
+      payload: response.data.output, 
     });
   } catch (error) {
     console.error("Error fetching user data:", error);
