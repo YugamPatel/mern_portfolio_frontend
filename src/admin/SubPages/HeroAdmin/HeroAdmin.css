@@ -102,6 +102,11 @@
   flex: 1;
 }
 
+.typewriter-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
 .add-btn,
 .delete-btn,
 .save-btn,
