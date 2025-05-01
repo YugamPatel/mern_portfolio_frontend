@@ -6,8 +6,8 @@ import {
   updateHeroData,
 } from "../../../redux/actions/heroActions";
 import Spinner from "../../../components/Spinner/Spinner";
+import ProfileImage from "../../../components/ProfileImage/ProfileImage";
 import "./HeroAdmin.css";
-
 const HeroAdmin = () => {
   const dispatch = useDispatch();
   const { heroData, loading, error, message } = useSelector((s) => s.hero);
@@ -246,18 +246,10 @@ const HeroAdmin = () => {
                 <div className="profile-preview-container">
                   <div className="profile-preview-left">
                     <div className="profile-preview">
-                      <div className="profile-layer">
-                        <div className="profile-circle-container">
-                          <img
-                            src={profileImg}
-                            style={previewStyle}
-                            alt="Profile"
-                            className="profile-circle"
-                          />
-                        </div>
-                        {/* profile-circle-container */}
-                      </div>
-                      {/* profile-layer */}
+                      <ProfileImage
+                        src={profileImg}
+                        styleOverrides={previewStyle}
+                      ></ProfileImage>
                     </div>
                     {/* profile-preview */}
                   </div>

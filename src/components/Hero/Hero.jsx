@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import "./hero.css";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
+import ProfileImage from "../ProfileImage/ProfileImage";
+
 
 const Hero = ({ heroData }) => {
   const textAnimate = () => {
@@ -30,16 +32,11 @@ const Hero = ({ heroData }) => {
           />
         </div>
 
-        <div className="profile">
-          <div className="profileImage">
-            <img
-              className="smallImage"
-              style={heroData.profileImage.style}
-              src={heroData.profileImage.img}
-              alt=""
-            />
-          </div>
-        </div>
+        <ProfileImage
+          src={heroData.profileImage.img}
+          styleOverrides={heroData.profileImage.style}
+          className={"profile"}
+        ></ProfileImage>
 
         <div className="text">
           <div className="nameH1">
