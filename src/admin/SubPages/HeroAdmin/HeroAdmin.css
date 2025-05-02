@@ -3,14 +3,19 @@
   height: 100%;
   padding: 1.5rem;
   background: #2a2a2a;
-  border-radius: 8px;
+  padding: 2rem;
   color: #eee;
   font-family: "Poppins", sans-serif;
+  overflow: scroll;
 }
 
-.hero-admin h2 {
-  text-align: center;
-  margin-bottom: 1rem;
+.hero-admin-title {
+  font-size: 2rem;
+  font-weight: bold;
+  align-self: flex-start;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  font-family: cursive, "Poppins", sans-serif;
 }
 
 .hero-admin form {
@@ -46,6 +51,13 @@
   margin: 0 0 0.5rem;
 }
 
+.hero-admin-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap-reverse;
+}
+
 /* Labels & Inputs */
 .hero-admin-flex label {
   display: flex;
@@ -62,12 +74,6 @@
   border-radius: 4px;
   background: #222;
   color: #eee;
-}
-
-.hero-admin-flex {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
 }
 
 .flex-right-column {
@@ -234,9 +240,8 @@
 
 /* Final Save */
 .save-btn {
-  margin-top: 1rem;
-  align-self: center;
-  padding: 0.6rem 1.2rem;
+  align-self: flex-start;
+  padding: 0.75rem 1.2rem;
 }
 
 .hero-admin-container input:not(.hero-checkbox-input) {
