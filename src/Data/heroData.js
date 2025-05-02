@@ -9,24 +9,10 @@ export const heroData = {
   },
 
   profileImage: {
-    //[
-    // img: "https://res.cloudinary.com/dwig4hupj/image/upload/v1707009431/portfolio/home/profile/yfgodod5m1tpqk4hbll7.jpg",
-    // style: {
-    //   transform: "scale(2.4)",
-    //   objectPosition: "center 10px",
-    // },
-    // ],
-
-    // [
-    // img: "https://res.cloudinary.com/dwig4hupj/image/upload/v1736968311/img_kfxabo.jpg",
-    // style: {
-    //   transform: "scale(2)",
-    //   objectPosition: "10px -90px",
-    // },
-    // ],
-
-    //[
-    img: "https://res.cloudinary.com/dwig4hupj/image/upload/v1736968666/img2_wfcmtu.jpg",
+    img: {
+      public_id: "img",
+      url: "https://res.cloudinary.com/dwig4hupj/image/upload/v1736968666/img2_wfcmtu.jpg",
+    },
     style: {
       transform: "scale(2.8)",
       objectPosition: "0px 10px",
