@@ -129,7 +129,7 @@ const HeroAdmin = () => {
 
   return (
     <div className="hero-admin">
-      <h2>Update Hero Section</h2>
+      <h2 className="hero-admin-title">Update Hero Section</h2>
       {error && <p className="error">{error}</p>}
       {message && <p className="success">{message}</p>}
       <div className="hero-admin-container">
@@ -344,7 +344,6 @@ const HeroAdmin = () => {
             </div>
           </div>
           {/*hero-admin-flex */}
-
           <button type="submit" className="save-btn">
             Save Changes
           </button>
