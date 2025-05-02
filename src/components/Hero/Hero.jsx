@@ -33,7 +33,7 @@ const Hero = ({ heroData }) => {
         </div>
 
         <ProfileImage
-          src={heroData.profileImage.img}
+          src={heroData.profileImage.img?.url}
           styleOverrides={heroData.profileImage.style}
           className={"profile"}
         ></ProfileImage>

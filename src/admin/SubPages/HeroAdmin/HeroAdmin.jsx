@@ -122,7 +122,10 @@ const HeroAdmin = () => {
 
     const fd = new FormData();
     fd.append("image", file);
-    console.log("🚀 Uploading to:", client.defaults.baseURL + "/api/upload/profile");
+    console.log(
+      "🚀 Uploading to:",
+      client.defaults.baseURL + "/api/upload/profile"
+    );
     try {
       const { data } = await client.post("api/upload/profile", fd, {
         headers: { "Content-Type": "multipart/form-data" },
@@ -312,7 +315,7 @@ const HeroAdmin = () => {
                   <div className="profile-preview-left">
                     <div className="profile-preview">
                       <ProfileImage
-                        src={profileImg?.img?.url}
+                        src={profileImgUrl}
                         styleOverrides={previewStyle}
                       ></ProfileImage>
                     </div>
