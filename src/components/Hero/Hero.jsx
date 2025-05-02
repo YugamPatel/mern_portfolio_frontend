@@ -35,7 +35,7 @@ const Hero = ({ heroData }) => {
             <img
               className="smallImage"
               style={heroData.profileImage.style}
-              src={heroData.profileImage.img.url}
+              src={heroData.profileImage.img?.url}
               alt=""
             />
           </div>
