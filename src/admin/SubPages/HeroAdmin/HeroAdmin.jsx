@@ -1,6 +1,7 @@
 // src/admin/SubPages/HeroAdmin/HeroAdmin.jsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import client from "../../../api/apiClient";
 import {
   getHeroData,
   updateHeroData,
@@ -19,12 +20,15 @@ const HeroAdmin = () => {
 
   const [socialLinks, setSocialLinks] = useState([]); // array of { name, url, iconClass }
 
-  const [profileImg, setProfileImg] = useState("");
+  const [profileImgUrl, setProfileImgUrl] = useState("");
+  const [profileImgId, setProfileImgId] = useState("");
   const [profileTransform, setProfileTransform] = useState("");
   const [profileObjectPosition, setProfileObjectPosition] = useState("");
   const [profileTransformPreview, setProfileTransformPreview] = useState("");
   const [profileObjectPositionPreview, setProfileObjectPositionPreview] =
     useState("");
+
+  const fileInputRef = useRef();
 
   const [heroIsRandom, setHeroIsRandom] = useState(true);
   const [heroImg, setHeroImg] = useState("");
@@ -59,7 +63,8 @@ const HeroAdmin = () => {
     setSocialLinks(heroData.socialLinks || []);
 
     // Profile Image & Style
-    setProfileImg(heroData.profileImage?.img || "");
+    setProfileImgUrl(heroData.profileImage?.img?.url || "");
+    setProfileImgId(heroData.profileImage?.img?.public_id || "");
     setProfileTransform(heroData.profileImage?.style?.transform || "");
     setProfileObjectPosition(
       heroData.profileImage?.style?.objectPosition || ""
@@ -82,6 +87,7 @@ const HeroAdmin = () => {
   // ─── Social Links handlers ───────────────────────────────────────
   const addSocial = () =>
     setSocialLinks((prev) => [...prev, { name: "", url: "", iconClass: "" }]);
+
   const updateSocial = (idx, field, val) => {
     setSocialLinks((prev) => {
       const copy = [...prev];
@@ -89,11 +95,13 @@ const HeroAdmin = () => {
       return copy;
     });
   };
+
   const removeSocial = (idx) =>
     setSocialLinks((prev) => prev.filter((_, i) => i !== idx));
 
   // ─── Typewriter handlers ────────────────────────────────────────
   const addType = () => setTypewriter((prev) => [...prev, ""]);
+
   const updateType = (idx, val) => {
     setTypewriter((prev) => {
       const copy = [...prev];
@@ -101,8 +109,44 @@ const HeroAdmin = () => {
       return copy;
     });
   };
+
   const removeType = (idx) =>
     setTypewriter((prev) => prev.filter((_, i) => i !== idx));
+
+  // ─── File upload handlers ───────────────────────────────────────
+  const openFileDialog = () => fileInputRef.current?.click();
+
+  const handleProfileImageSelect = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const fd = new FormData();
+    fd.append("image", file);
+    console.log("🚀 Uploading to:", client.defaults.baseURL + "/api/upload/profile");
+    try {
+      const { data } = await client.post("api/upload/profile", fd, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+
+      if (data.success) {
+        setProfileImgUrl(data.output.url);
+        setProfileImgId(data.output.public_id);
+      } else {
+        console.error("Upload error:", data.message);
+      }
+    } catch (err) {
+      // log everything about the Axios error
+      console.error("Upload failed message:", err.message);
+      if (err.response) {
+        console.error("Upload failed status:", err.response.status);
+        console.error("Upload failed response data:", err.response.data);
+      } else if (err.request) {
+        console.error("No response received, request was:", err.request);
+      } else {
+        console.error("Axios config error:", err.config);
+      }
+    }
+  };
 
   // ─── On submit, assemble nested form object ─────────────────────
   const handleSubmit = (e) => {
@@ -112,7 +156,10 @@ const HeroAdmin = () => {
       heroSubTitle: { subTitle },
       socialLinks,
       profileImage: {
-        img: profileImg,
+        img: {
+          public_id: profileImgId,
+          url: profileImgUrl,
+        },
         style: {
           transform: profileTransform,
           objectPosition: profileObjectPosition,
@@ -254,15 +301,22 @@ const HeroAdmin = () => {
               {/* Profile Image & Style */}
               <section className="section-profile-image">
                 <span>Profile Image</span>
+                <input
+                  type="file"
+                  accept="image/*"
+                  ref={fileInputRef}
+                  style={{ display: "none" }}
+                  onChange={handleProfileImageSelect}
+                />
                 <div className="profile-preview-container">
                   <div className="profile-preview-left">
                     <div className="profile-preview">
                       <div className="profile-layer">
                         <div className="profile-circle-container">
                           <img
-                            src={profileImg}
+                            src={profileImgUrl}
                             style={previewStyle}
-                            alt="Profile"
+                            alt="Profile Photo"
                             className="profile-circle"
                           />
                         </div>
@@ -294,7 +348,11 @@ const HeroAdmin = () => {
                         }}
                       />
                     </label>
-                    <button type="button" className="edit-photo-btn">
+                    <button
+                      type="button"
+                      className="edit-photo-btn"
+                      onClick={openFileDialog}
+                    >
                       Edit Photo
                     </button>
                   </div>
