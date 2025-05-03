@@ -1,5 +1,4 @@
-// src/admin/SubPages/HeroAdmin/HeroAdmin.jsx
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, act } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import client from "../../../api/apiClient";
 import {
@@ -14,6 +13,7 @@ const HeroAdmin = () => {
   const { heroData, loading, error, message } = useSelector((s) => s.hero);
 
   // ─── Flattened state for each piece ─────────────────────────────
+  const [loader, setLoader] = useState(loading);
   const [intro, setIntro] = useState("");
   const [name, setName] = useState("");
   const [subTitle, setSubTitle] = useState("");
@@ -122,32 +122,30 @@ const HeroAdmin = () => {
 
     const fd = new FormData();
     fd.append("image", file);
+
     console.log(
       "🚀 Uploading to:",
-      client.defaults.baseURL + "/api/upload/profile"
+      client.defaults.baseURL + "/api/upload/profile",
+      fd
     );
+
     try {
+      setLoader(true);
       const { data } = await client.post("api/upload/profile", fd, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
       if (data.success) {
+        setLoader(false);
         setProfileImgUrl(data.output.url);
         setProfileImgId(data.output.public_id);
       } else {
+        setLoader(false);
         console.error("Upload error:", data.message);
       }
     } catch (err) {
-      // log everything about the Axios error
+      setLoader(false);
       console.error("Upload failed message:", err.message);
-      if (err.response) {
-        console.error("Upload failed status:", err.response.status);
-        console.error("Upload failed response data:", err.response.data);
-      } else if (err.request) {
-        console.error("No response received, request was:", err.request);
-      } else {
-        console.error("Axios config error:", err.config);
-      }
     }
   };
 
@@ -175,7 +173,7 @@ const HeroAdmin = () => {
     dispatch(updateHeroData(payload));
   };
 
-  if (loading) return <Spinner />;
+  if (loader) return <Spinner />;
 
   return (
     <div className="hero-admin">
