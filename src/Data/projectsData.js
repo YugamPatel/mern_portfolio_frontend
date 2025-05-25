@@ -19,6 +19,25 @@ export const projectData = [
 
   {
     imgSrc:
+      "https://res.cloudinary.com/dwig4hupj/image/upload/v1748199662/rwhmpu80fcwyunual5ot.png",
+    projectUrl: "https://github.com/YugamPatel/skyTasks",
+    title: "SkyTask",
+    stack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "React-DND",
+      "Node.js",
+      "PostgreSQL",
+      "AWS EC2",
+      "RDS",
+      "Cognito",
+      "S3",
+    ],
+  },
+
+  {
+    imgSrc:
       "https://res.cloudinary.com/dwig4hupj/image/upload/v1740506303/659shots_so_xm0lkp.png",
     projectUrl: "https://github.com/YugamPatel/UofM_Spaces",
     title: "UofM Spaces",
@@ -63,7 +82,7 @@ export const projectData = [
     imgSrc:
       "https://res.cloudinary.com/dwig4hupj/image/upload/v1740462745/184shots_so_agamm3.png",
     title: "Flutter Weather App",
-    projectUrl:"https://github.com/YugamPatel/FlutterWeatherApp",
+    projectUrl: "https://github.com/YugamPatel/FlutterWeatherApp",
     stack: ["Flutter", "Dart", "OpenWeather API"],
     cover: false,
   },
