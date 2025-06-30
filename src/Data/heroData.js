@@ -2,10 +2,8 @@ export const heroData = {
   heroImage: {
     isRandom: false,
     randomImg:
-      "https://source.unsplash.com/random/?&mountains&forest&gradient&galaxy&ocean&landscape",
-    // img: "https://images.unsplash.com/photo-1517928260182-5688aead3066?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    // img: "https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&w=2900&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    img: "https://images.unsplash.com/photo-1496450681664-3df85efbd29f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://res.cloudinary.com/dwig4hupj/image/upload/v1748202823/img_hr4t9q.avif",
+    img: "https://res.cloudinary.com/dwig4hupj/image/upload/v1748202823/img_hr4t9q.avif",
   },
 
   profileImage: {
