@@ -1,0 +1,53 @@
+/*
+ * SkillTab — Colour-Coded Skill Tag Grid
+ *
+ * A static grid of 16 skill tags, each styled with a unique colour
+ * defined in skillTab.css via className. The entire grid scales from
+ * 0.4 → 1 with an easeInOut transition when it enters the viewport.
+ *
+ * The skill list here is intentionally hardcoded rather than data-driven
+ * because each tag has a dedicated CSS class for its colour — adding a
+ * new skill requires both a list entry and a CSS rule anyway.
+ */
+
+import React from "react";
+import "./skillTab.css";
+import { motion } from "framer-motion";
+
+const SkillTab = () => {
+  const containerVariant = {
+    hidden: { scale: 0.4 },
+    visible: { scale: 1, transition: { duration: 0.5, ease: "easeInOut" } },
+  };
+
+  return (
+    <motion.div
+      id="box"
+      variants={containerVariant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <ul id="info">
+        <li className="html5">html5</li>
+        <li className="css3">css3</li>
+        <li className="javascript">javascript</li>
+        <li className="react">react</li>
+        <li className="gsap">gsap</li>
+        <li className="java">java</li>
+        <li className="sql">sql</li>
+        <li className="cpp">c++</li>
+        <li className="express">express</li>
+        <li className="objectoriented">Object-oriented</li>
+        <li className="android">Android studio</li>
+        <li className="responsive">responsive layout</li>
+        <li className="flutter">flutter</li>
+        <li className="teamb">Team Building</li>
+        <li className="framer">Framer-motion</li>
+        <li className="creative">Creative thinking</li>
+      </ul>
+    </motion.div>
+  );
+};
+
+export default SkillTab;

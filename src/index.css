@@ -132,27 +132,8 @@ li {
     font-size: 23px;
   }
 
-  .education {
-    padding: 10px 6% 10px 9%;
-  }
-  main.row {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;
-    -webkit-tap-highlight-color: transparent;
-  }
-  .row .col:nth-child(2) {
-    margin-top: 10px;
-  }
-  .col header.title {
-    padding: 0px 0px 20px 30px;
-    margin-top: 10%;
-  }
-
-  .box:hover {
-    box-shadow: none;
-    border: 0.7px solid hsl(0, 0%, 92%);
-  }
+  /* education layout — handled in education.css */
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media screen and (max-width: 634px) {
@@ -183,15 +164,7 @@ li {
 }
 
 @media screen and (max-width: 400px) {
-  .education {
-    padding: 10px 0px 10px 9%;
-  }
-  .col .contents {
-    padding: 0px 15px 0px 30px;
-  }
-  .box {
-    padding: 20px 12px;
-  }
+  /* education padding & box padding — handled in education.css / educationCard.css */
   .headerImage {
     min-height: 195px;
   }

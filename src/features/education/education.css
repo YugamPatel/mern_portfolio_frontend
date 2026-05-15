@@ -1,0 +1,131 @@
+/* ─────────────────────────────────────────────
+   Education — Section layout & timeline
+   ───────────────────────────────────────────── */
+
+.education {
+  margin-left: var(--sidebar-total-width);
+  max-width: calc(100% - var(--sidebar-total-width));
+  min-height: 80vh;
+  padding: 70px 5% 90px;
+  border-radius: var(--primary-border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  background: #021d35;
+  user-select: none;
+}
+
+.Merriweather {
+  font-family: "Merriweather", serif;
+}
+
+/* ── Two-column grid ── */
+main.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 44px;
+  width: 100%;
+  max-width: 1160px;
+  align-items: start;
+}
+
+/* ── Column section header ── */
+.col header.title {
+  padding: 0 0 28px 0;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.col header.title h1 {
+  border-top: none;
+  border-bottom: none;
+  padding: 0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-size: 1.5rem;     /* 12 px — small-caps label, not a large heading */
+  font-weight: 600;
+  letter-spacing: 0.18em; /* generous tracking for all-caps labels */
+  text-transform: uppercase;
+  color: #6a90aa;         /* readable but clearly subordinate to the cards */
+}
+
+/* Short gradient rule after the label */
+.col header.title h1::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  border-radius: 1px;
+  background: linear-gradient(to right, #3b9edd, transparent);
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+/* ── Vertical timeline ── */
+.col .contents {
+  padding: 0 10px 0 28px;
+  border-left: none;   /* remove old flat grey border */
+  border-radius: 0;
+  position: relative;
+}
+
+/* Glowing gradient line drawn by a pseudo-element */
+.col .contents::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(43, 149, 220, 0.45) 12%,
+    rgba(43, 149, 220, 0.45) 88%,
+    transparent 100%
+  );
+  border-radius: 2px;
+}
+
+/* ─── Tablet (≤ 850px) ────────────────────────── */
+@media screen and (max-width: 850px) {
+  .education {
+    padding: 50px 6% 60px 10%;
+  }
+
+  main.row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 0;
+  }
+
+  .row .col:nth-child(2) {
+    margin-top: 16px;
+  }
+
+  .col header.title {
+    padding: 0 0 20px 0;
+    margin-top: 8%;
+  }
+
+  .col .contents::before {
+    /* Keep the line but shift it to align with the narrower indent */
+    left: 0;
+  }
+}
+
+/* ─── Small mobile (≤ 400px) ─────────────────── */
+@media screen and (max-width: 400px) {
+  .education {
+    padding: 40px 0 50px 9%;
+  }
+
+  .col .contents {
+    padding: 0 10px 0 22px;
+  }
+}

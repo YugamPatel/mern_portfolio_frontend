@@ -1,0 +1,39 @@
+/*
+ * NotFoundPage — 404 Error Page
+ *
+ * Displayed for any route that doesn't match the app's defined paths.
+ * Provides a clear message and a link back to the home page so visitors
+ * never end up with no way out.
+ */
+
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Page404.css";
+
+const NotFoundPage = () => {
+  return (
+    <section className="page_404">
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-12">
+            <div className="col-sm-10 col-sm-offset-1 text-center">
+
+              <div className="four_zero_four_bg">
+                <h1 className="text-center">404</h1>
+              </div>
+
+              <div className="contant_box_404">
+                <h3 className="h2">Look like you&apos;re lost</h3>
+                <p>The page you are looking for is not available.</p>
+                <Link to="/" className="link_404">Go to Home</Link>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default NotFoundPage;
