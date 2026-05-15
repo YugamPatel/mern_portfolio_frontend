@@ -49,10 +49,18 @@ const HomePage = ({ user = null }) => {
     if (user?.about)       setAboutData(user.about);
     if (user?.modernAbout) setModernAboutData(user.modernAbout);
 
-    if (user?.education || user?.work) {
+    /* Only accept backend edu/work data if it carries the new shape (bullets array).
+       Old backend responses lack this field and would render empty cards. */
+    const hasNewShape = (arr) =>
+      Array.isArray(arr) && arr.length > 0 && Array.isArray(arr[0]?.bullets);
+
+    const apiEdu  = hasNewShape(user?.education) ? user.education : null;
+    const apiWork = hasNewShape(user?.work)       ? user.work      : null;
+
+    if (apiEdu || apiWork) {
       setEduAndWorkData({
-        education: user?.education ?? localEduAndWorkData.education,
-        work:      user?.work      ?? localEduAndWorkData.work,
+        education: apiEdu  ?? localEduAndWorkData.education,
+        work:      apiWork ?? localEduAndWorkData.work,
       });
     }
 
