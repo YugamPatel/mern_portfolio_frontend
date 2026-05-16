@@ -69,6 +69,6 @@ export const heroData = {
 
   button: {
     name: "Download Resume",
-    url: "https://drive.google.com/file/d/1KKZr2A57vq246mbtlaWcooCoVDqyiRtK/view?usp=sharing",
+    url: "https://drive.google.com/file/d/1zYO_QN3ajWdsdCQOQKv6bl1eBOxfbXGE/view?usp=sharing",
   },
 };
